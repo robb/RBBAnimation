@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */; };
+		5466C56318082D4200652BDC /* RBBBlockBasedArraySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */; };
 		54F3AE2E1807394800E1E688 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
 		54F3AE331807394800E1E688 /* RBBAnimation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54F3AE321807394800E1E688 /* RBBAnimation.h */; };
 		54F3AE351807394800E1E688 /* RBBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F3AE341807394800E1E688 /* RBBAnimation.m */; };
@@ -14,7 +16,6 @@
 		54F3AE3D1807394800E1E688 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
 		54F3AE3F1807394800E1E688 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE3E1807394800E1E688 /* UIKit.framework */; };
 		54F3AE421807394800E1E688 /* libRBBAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2A1807394800E1E688 /* libRBBAnimation.a */; };
-		54F3AE4A1807394800E1E688 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F3AE491807394800E1E688 /* Specs.m */; };
 		5EFA48C4C2284A9AA5BD1B09 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD960C698C3E4DB198BD591C /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5466C55F18082BEB00652BDC /* RBBBlockBasedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBBlockBasedArray.h; sourceTree = "<group>"; };
+		5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBBlockBasedArray.m; sourceTree = "<group>"; };
+		5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBBlockBasedArraySpec.m; sourceTree = "<group>"; };
 		54F3AE2A1807394800E1E688 /* libRBBAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRBBAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F3AE2D1807394800E1E688 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		54F3AE311807394800E1E688 /* RBBAnimation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RBBAnimation-Prefix.pch"; sourceTree = "<group>"; };
@@ -50,7 +54,6 @@
 		54F3AE3A1807394800E1E688 /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F3AE3B1807394800E1E688 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		54F3AE3E1807394800E1E688 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		54F3AE491807394800E1E688 /* Specs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
 		54F3AE5318073A1900E1E688 /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 		FC82F1A3B2AC473AB09336C0 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
 		FD960C698C3E4DB198BD591C /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +119,8 @@
 			children = (
 				54F3AE321807394800E1E688 /* RBBAnimation.h */,
 				54F3AE341807394800E1E688 /* RBBAnimation.m */,
+				5466C55F18082BEB00652BDC /* RBBBlockBasedArray.h */,
+				5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */,
 				54F3AE301807394800E1E688 /* Supporting Files */,
 			);
 			path = RBBAnimation;
@@ -132,7 +137,7 @@
 		54F3AE431807394800E1E688 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				54F3AE491807394800E1E688 /* Specs.m */,
+				5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */,
 				54F3AE441807394800E1E688 /* Supporting Files */,
 			);
 			path = Specs;
@@ -275,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */,
 				54F3AE351807394800E1E688 /* RBBAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54F3AE4A1807394800E1E688 /* Specs.m in Sources */,
+				5466C56318082D4200652BDC /* RBBBlockBasedArraySpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
