@@ -1,0 +1,8 @@
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+
+    #import <Specta/Specta.h>
+
+    #define EXP_SHORTHAND
+    #import <Expecta/Expecta.h>
+#endif
