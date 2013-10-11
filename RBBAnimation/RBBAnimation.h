@@ -6,8 +6,16 @@
 //  Copyright (c) 2013 Robert Böhnke. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 
-@interface RBBAnimation : NSObject
+typedef id (^RBBAnimationBlock)(CGFloat fraction);
+
+@interface RBBAnimation : CAAnimation
+
++ (id)animationWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block;
+
+- (id)initWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block;
+
+@property (readwrite, nonatomic, copy) NSString *keyPath;
 
 @end

@@ -10,16 +10,16 @@
 
 @implementation RBBBlockBasedArray {
     NSUInteger _count;
-    id (^_block)(NSUInteger);
+    RBBBlockBasedArrayBlock _block;
 }
 
 #pragma mark - Lifecycle
 
-+ (instancetype)arrayWithCount:(NSUInteger)count block:(id (^)(NSUInteger))block {
++ (instancetype)arrayWithCount:(NSUInteger)count block:(RBBBlockBasedArrayBlock)block {
     return [[self alloc] initWithCount:count block:block];
 }
 
-- (instancetype)initWithCount:(NSUInteger)count block:(id (^)(NSUInteger))block {
+- (instancetype)initWithCount:(NSUInteger)count block:(RBBBlockBasedArrayBlock)block {
     self = [super init];
     if (self == nil) return nil;
 

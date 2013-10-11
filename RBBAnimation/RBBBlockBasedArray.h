@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef id (^RBBBlockBasedArrayBlock)(NSUInteger idx);
+
 @interface RBBBlockBasedArray : NSArray
 
-+ (instancetype)arrayWithCount:(NSUInteger)count block:(id (^)(NSUInteger))block;
++ (instancetype)arrayWithCount:(NSUInteger)count block:(RBBBlockBasedArrayBlock)block;
 
-- (instancetype)initWithCount:(NSUInteger)count block:(id (^)(NSUInteger))block;
+- (instancetype)initWithCount:(NSUInteger)count block:(RBBBlockBasedArrayBlock)block;
 
 @end
