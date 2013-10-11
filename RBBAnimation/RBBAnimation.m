@@ -10,16 +10,14 @@
 
 #import "RBBAnimation.h"
 
-@interface RBBKeyframeAnimation : CAKeyframeAnimation
-
-+ (id)animationWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block;
+@interface RBBAnimation ()
 
 @property (readonly, nonatomic, copy) RBBAnimationBlock block;
 @property (readonly, nonatomic, assign) CGFloat frameCount;
 
 @end
 
-@implementation RBBKeyframeAnimation
+@implementation RBBAnimation
 
 #pragma mark - Lifecycle
 
@@ -53,26 +51,6 @@
     self.values = [RBBBlockBasedArray arrayWithCount:self.frameCount block:^(NSUInteger idx) {
         return weakSelf.block(idx / weakSelf.frameCount);
     }];
-}
-
-@end
-
-@implementation RBBAnimation
-
-+ (id)animation {
-    return [RBBKeyframeAnimation animation];
-}
-
-+ (id)animationWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block {
-    return [RBBKeyframeAnimation animationWithKeyPath:path block:block];
-}
-
-- (id)init {
-    return (RBBAnimation *)[[RBBKeyframeAnimation alloc] init];
-}
-
-- (id)initWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block {
-    return (RBBAnimation *)[RBBKeyframeAnimation animationWithKeyPath:path block:block];
 }
 
 @end

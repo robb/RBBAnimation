@@ -10,12 +10,10 @@
 
 typedef id (^RBBAnimationBlock)(CGFloat fraction);
 
-@interface RBBAnimation : CAAnimation
+@interface RBBAnimation : CAKeyframeAnimation
 
 + (id)animationWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block;
 
 - (id)initWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block;
-
-@property (readwrite, nonatomic, copy) NSString *keyPath;
 
 @end
