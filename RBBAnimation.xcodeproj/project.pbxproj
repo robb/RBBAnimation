@@ -322,7 +322,7 @@
 				ORGANIZATIONNAME = "Robert Böhnke";
 				TargetAttributes = {
 					54F3AE391807394800E1E688 = {
-						TestTargetID = 5466C567180849D100652BDC;
+						TestTargetID = 5466C567180849D100652BDC /* RBBAnimationTest */;
 					};
 				};
 			};

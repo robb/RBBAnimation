@@ -12,24 +12,28 @@
 
 @implementation RBBTweenAnimation
 
-+ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to block:(RBBEasingFunction)easingFunction {
++ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to {
+    return [self tweenWithKeyPath:keyPath from:from to:to easingFunction:RBBEasingFunctionLinear];
+}
+
++ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to easingFunction:(RBBEasingFunction)easingFunction {
     NSParameterAssert(strcmp(from.objCType, to.objCType) == 0);
 
     RBBAnimationBlock block;
 
     if (strcmp(from.objCType, @encode(CGRect)) == 0) {
-        return [self tweenWithKeyPath:keyPath fromCGRect:[from CGRectValue] toCGRect:[to CGRectValue] block:easingFunction];
+        return [self tweenWithKeyPath:keyPath fromCGRect:[from CGRectValue] toCGRect:[to CGRectValue] easingFunction:easingFunction];
     }
 
     if ([from isKindOfClass:NSNumber.class]) {
-        return [self tweenWithKeyPath:keyPath fromCGFloat:[(NSNumber *) from floatValue] toCGFloat:[(NSNumber *) to floatValue] block:easingFunction];
+        return [self tweenWithKeyPath:keyPath fromCGFloat:[(NSNumber *) from floatValue] toCGFloat:[(NSNumber *) to floatValue] easingFunction:easingFunction];
     }
 
     NSAssert(block != nil, @"Unsupported value type: %s", from.objCType);
     return nil;
 }
 
-+ (id)tweenWithKeyPath:(NSString *)keyPath fromCGRect:(CGRect)from toCGRect:(CGRect)to block:(RBBEasingFunction)easingFunction {
++ (id)tweenWithKeyPath:(NSString *)keyPath fromCGRect:(CGRect)from toCGRect:(CGRect)to easingFunction:(RBBEasingFunction)easingFunction {
     CGFloat deltaX = to.origin.x - from.origin.x;
     CGFloat deltaY = to.origin.y - from.origin.y;
     CGFloat deltaWidth = to.size.width - from.size.width;
@@ -51,7 +55,7 @@
     return [self animationWithKeyPath:keyPath block:block];
 }
 
-+ (id)tweenWithKeyPath:(NSString *)keyPath fromCGFloat:(CGFloat)from toCGFloat:(CGFloat)to block:(RBBEasingFunction)easingFunction {
++ (id)tweenWithKeyPath:(NSString *)keyPath fromCGFloat:(CGFloat)from toCGFloat:(CGFloat)to easingFunction:(RBBEasingFunction)easingFunction {
     CGFloat delta = to - from;
 
     RBBAnimationBlock block = ^(CGFloat fraction) {

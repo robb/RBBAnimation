@@ -33,7 +33,7 @@
         tweenWithKeyPath:@"position.y"
         from:@(-100.0f)
         to:@(100.0f)
-        block:RBBCubicBezier(0.68, -0.55, 0.265, 1.55)];
+        easingFunction:RBBCubicBezier(0.68, -0.55, 0.265, 1.55)];
 
     easeInOutBack.additive = YES;
     easeInOutBack.duration = 0.6;
@@ -42,8 +42,7 @@
     RBBAnimation *scale = [RBBTweenAnimation
         tweenWithKeyPath:@"bounds"
         from:[NSValue valueWithCGRect:CGRectMake(0, 0, 0, 0)]
-        to:[NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)]
-        block:RBBEasingFunctionLinear];
+        to:[NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)]];
 
     scale.additive = YES;
     scale.duration = 1;
