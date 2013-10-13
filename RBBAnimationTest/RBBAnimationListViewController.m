@@ -9,6 +9,7 @@
 #import "RBBAnimation.h"
 #import "RBBAnimation+Name.h"
 #import "RBBAnimationViewController.h"
+#import "RBBCubicBezier.h"
 #import "RBBTweenAnimation.h"
 
 #import "RBBAnimationListViewController.h"
@@ -28,15 +29,15 @@
 
     self.title = @"Animations";
 
-    RBBAnimation *tween = [RBBTweenAnimation
+    RBBAnimation *easeInOutBack = [RBBTweenAnimation
         tweenWithKeyPath:@"position.y"
         from:@(-100.0f)
         to:@(100.0f)
-        block:RBBEasingFunctionLinear];
+        block:RBBCubicBezier(0.68, -0.55, 0.265, 1.55)];
 
-    tween.additive = YES;
-    tween.duration = 2;
-    tween.name = @"linear tween";
+    easeInOutBack.additive = YES;
+    easeInOutBack.duration = 0.6;
+    easeInOutBack.name = @"ease in out back";
 
     RBBAnimation *scale = [RBBTweenAnimation
         tweenWithKeyPath:@"bounds"
@@ -59,7 +60,7 @@
     sinus.name = @"sine wave";
 
     self.animations = @[
-        tween,
+        easeInOutBack,
         scale,
         sinus
     ];
