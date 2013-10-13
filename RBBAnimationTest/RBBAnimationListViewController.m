@@ -9,6 +9,7 @@
 #import "RBBAnimation.h"
 #import "RBBAnimation+Name.h"
 #import "RBBAnimationViewController.h"
+#import "RBBTweenAnimation.h"
 
 #import "RBBAnimationListViewController.h"
 
@@ -27,6 +28,26 @@
 
     self.title = @"Animations";
 
+    RBBAnimation *tween = [RBBTweenAnimation
+        tweenWithKeyPath:@"position.y"
+        from:@(-100.0f)
+        to:@(100.0f)
+        block:RBBLinearTweenAnimation];
+
+    tween.additive = YES;
+    tween.duration = 2;
+    tween.name = @"linear tween";
+
+    RBBAnimation *scale = [RBBTweenAnimation
+        tweenWithKeyPath:@"bounds"
+        from:[NSValue valueWithCGRect:CGRectMake(0, 0, 0, 0)]
+        to:[NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)]
+        block:RBBLinearTweenAnimation];
+
+    scale.additive = YES;
+    scale.duration = 1;
+    scale.name = @"scale";
+
     RBBAnimation *sinus = [RBBAnimation
         animationWithKeyPath:@"position.y"
         block:^(CGFloat fraction) {
@@ -35,9 +56,11 @@
 
     sinus.additive = YES;
     sinus.duration = 2;
-    sinus.name = @"position.x = sin(t)";
+    sinus.name = @"sine wave";
 
     self.animations = @[
+        tween,
+        scale,
         sinus
     ];
 }

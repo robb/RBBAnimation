@@ -26,6 +26,9 @@
 }
 
 - (id)initWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block {
+    NSParameterAssert(path != nil);
+    NSParameterAssert(block != nil);
+
     self = [super init];
     if (self == nil) return nil;
 
