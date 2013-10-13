@@ -32,7 +32,7 @@
         tweenWithKeyPath:@"position.y"
         from:@(-100.0f)
         to:@(100.0f)
-        block:RBBLinearTweenAnimation];
+        block:RBBEasingFunctionLinear];
 
     tween.additive = YES;
     tween.duration = 2;
@@ -42,7 +42,7 @@
         tweenWithKeyPath:@"bounds"
         from:[NSValue valueWithCGRect:CGRectMake(0, 0, 0, 0)]
         to:[NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)]
-        block:RBBLinearTweenAnimation];
+        block:RBBEasingFunctionLinear];
 
     scale.additive = YES;
     scale.duration = 1;
@@ -51,7 +51,7 @@
     RBBAnimation *sinus = [RBBAnimation
         animationWithKeyPath:@"position.y"
         block:^(CGFloat fraction) {
-          return @(100 * sin(fraction * 2 * M_PI));
+            return @(100 * sin(fraction * 2 * M_PI));
         }];
 
     sinus.additive = YES;

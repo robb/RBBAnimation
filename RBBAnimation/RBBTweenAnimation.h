@@ -8,16 +8,16 @@
 
 #import "RBBAnimation.h"
 
-typedef CGFloat (^RBBTweenAnimationBlock)(CGFloat fraction);
+typedef CGFloat (^RBBEasingFunction)(CGFloat fraction);
 
-extern RBBTweenAnimationBlock const RBBLinearTweenAnimation;
+extern RBBEasingFunction const RBBEasingFunctionLinear;
 
 @interface RBBTweenAnimation : RBBAnimation
 
-+ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to block:(RBBTweenAnimationBlock)tween;
++ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to block:(RBBEasingFunction)easingFunction;
 
-+ (id)tweenWithKeyPath:(NSString *)keyPath fromCGFloat:(CGFloat)from toCGFloat:(CGFloat)to block:(RBBTweenAnimationBlock)tween;
-+ (id)tweenWithKeyPath:(NSString *)keyPath fromCGRect:(CGRect)from toCGRect:(CGRect)to block:(RBBTweenAnimationBlock)tween;
++ (id)tweenWithKeyPath:(NSString *)keyPath fromCGFloat:(CGFloat)from toCGFloat:(CGFloat)to block:(RBBEasingFunction)easingFunction;
++ (id)tweenWithKeyPath:(NSString *)keyPath fromCGRect:(CGRect)from toCGRect:(CGRect)to block:(RBBEasingFunction)easingFunction;
 
 @property (readonly, nonatomic, strong) NSValue *fromValue;
 @property (readonly, nonatomic, strong) NSValue *toValue;
