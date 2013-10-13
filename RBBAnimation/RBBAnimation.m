@@ -42,6 +42,17 @@
     return self.duration * 60;
 }
 
+#pragma mark - NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    RBBAnimation *copy = [super copyWithZone:zone];
+    if (copy == nil) return nil;
+
+    copy->_block = [_block copy];
+
+    return copy;
+}
+
 #pragma mark - CAAnimation
 
 - (void)setDuration:(CFTimeInterval)duration {

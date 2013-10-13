@@ -10,4 +10,8 @@
 
 @interface RBBAnimationViewController : UIViewController
 
+- (instancetype)initWithAnimation:(RBBAnimation *)animation;
+
+@property (readonly, nonatomic, strong) RBBAnimation *animation;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "RBBAnimation.h"
+#import "RBBAnimation+Name.h"
 
 #import "RBBAnimationViewController.h"
 
@@ -17,6 +18,18 @@
 @end
 
 @implementation RBBAnimationViewController
+
+- (instancetype)initWithAnimation:(RBBAnimation *)animation {
+    self = [super init];
+    if (self == nil) return nil;
+
+    _animation = animation;
+    self.title = animation.name;
+
+    return self;
+}
+
+#pragma mark - Properties
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,16 +48,9 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
-    RBBAnimation *animation = [RBBAnimation
-        animationWithKeyPath:@"position.y"
-        block:^(CGFloat fraction) {
-            return @(CGRectGetMidY(self.view.frame) - 200 * sin(fraction * 2 * M_PI));
-        }];
+    self.animation.repeatCount = HUGE_VALF;
 
-    animation.duration = 2;
-    animation.repeatCount = HUGE_VALF;
-
-    [self.rectangle.layer addAnimation:animation forKey:@"animation"];
+    [self.rectangle.layer addAnimation:self.animation forKey:@"Animation"];
 }
 
 @end
