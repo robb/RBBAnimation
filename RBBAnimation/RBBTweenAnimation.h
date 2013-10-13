@@ -8,9 +8,7 @@
 
 #import "RBBAnimation.h"
 
-typedef CGFloat (^RBBEasingFunction)(CGFloat fraction);
-
-extern RBBEasingFunction const RBBEasingFunctionLinear;
+#import "RBBEasingFunction.h"
 
 @interface RBBTweenAnimation : RBBAnimation
 

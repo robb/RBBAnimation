@@ -12,6 +12,7 @@
 		545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */; };
 		545D5ABC180B239000FC94AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 545D5ABB180B239000FC94AB /* UIKit.framework */; };
 		545D5ABF180B2D3F00FC94AB /* RBBCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5ABE180B2D3F00FC94AB /* RBBCubicBezier.m */; };
+		545D5AC2180B5E8400FC94AB /* RBBEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AC1180B5E8400FC94AB /* RBBEasingFunction.m */; };
 		5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */; };
 		5466C56318082D4200652BDC /* RBBBlockBasedArraySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */; };
 		5466C569180849D100652BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
@@ -74,6 +75,8 @@
 		545D5ABB180B239000FC94AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		545D5ABD180B2D3F00FC94AB /* RBBCubicBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBCubicBezier.h; sourceTree = "<group>"; };
 		545D5ABE180B2D3F00FC94AB /* RBBCubicBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBCubicBezier.m; sourceTree = "<group>"; };
+		545D5AC0180B5E8400FC94AB /* RBBEasingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBEasingFunction.h; sourceTree = "<group>"; };
+		545D5AC1180B5E8400FC94AB /* RBBEasingFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBEasingFunction.m; sourceTree = "<group>"; };
 		5466C55F18082BEB00652BDC /* RBBBlockBasedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBBlockBasedArray.h; sourceTree = "<group>"; };
 		5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBBlockBasedArray.m; sourceTree = "<group>"; };
 		5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBBlockBasedArraySpec.m; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 				54F3AE341807394800E1E688 /* RBBAnimation.m */,
 				545D5AB8180B1FAE00FC94AB /* RBBTweenAnimation.h */,
 				545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */,
+				545D5AC0180B5E8400FC94AB /* RBBEasingFunction.h */,
+				545D5AC1180B5E8400FC94AB /* RBBEasingFunction.m */,
 				545D5ABD180B2D3F00FC94AB /* RBBCubicBezier.h */,
 				545D5ABE180B2D3F00FC94AB /* RBBCubicBezier.m */,
 				5466C55F18082BEB00652BDC /* RBBBlockBasedArray.h */,
@@ -317,7 +322,7 @@
 				ORGANIZATIONNAME = "Robert Böhnke";
 				TargetAttributes = {
 					54F3AE391807394800E1E688 = {
-						TestTargetID = 5466C567180849D100652BDC /* RBBAnimationTest */;
+						TestTargetID = 5466C567180849D100652BDC;
 					};
 				};
 			};
@@ -453,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				545D5ABF180B2D3F00FC94AB /* RBBCubicBezier.m in Sources */,
+				545D5AC2180B5E8400FC94AB /* RBBEasingFunction.m in Sources */,
 				5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */,
 				545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */,
 				54F3AE351807394800E1E688 /* RBBAnimation.m in Sources */,

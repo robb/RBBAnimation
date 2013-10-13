@@ -10,10 +10,6 @@
 
 #import "RBBTweenAnimation.h"
 
-RBBEasingFunction const RBBEasingFunctionLinear = ^(CGFloat fraction) {
-    return fraction;
-};
-
 @implementation RBBTweenAnimation
 
 + (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to block:(RBBEasingFunction)easingFunction {
