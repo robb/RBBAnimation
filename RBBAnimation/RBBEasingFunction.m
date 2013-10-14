@@ -43,3 +43,19 @@ RBBEasingFunction const RBBEasingFunctionEaseInOutCubic = ^(CGFloat t) {
         return (t - 1) * powf(2 * t - 2, 2) + 1;
     }
 };
+
+RBBEasingFunction const RBBEasingFunctionEaseInQuart = ^(CGFloat t) {
+    return t * t * t * t;
+};
+
+RBBEasingFunction const RBBEasingFunctionEaseOutQuart = ^(CGFloat t) {
+    return powf(t - 1, 4) + 1;
+};
+
+RBBEasingFunction const RBBEasingFunctionEaseInOutQuart = ^(CGFloat t) {
+    if (t < 0.5) {
+        return 8 * powf(t, 4);
+    } else {
+        return -1 / 2 * powf(2 * t - 2, 4) + 1;
+    }
+};
