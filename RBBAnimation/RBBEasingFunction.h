@@ -11,7 +11,12 @@
 typedef CGFloat (^RBBEasingFunction)(CGFloat t);
 
 extern RBBEasingFunction const RBBEasingFunctionLinear;
+
 extern RBBEasingFunction const RBBEasingFunctionEaseInQuad;
 extern RBBEasingFunction const RBBEasingFunctionEaseOutQuad;
 extern RBBEasingFunction const RBBEasingFunctionEaseInOutQuad;
+
+extern RBBEasingFunction const RBBEasingFunctionEaseInCubic;
+extern RBBEasingFunction const RBBEasingFunctionEaseOutCubic;
+extern RBBEasingFunction const RBBEasingFunctionEaseInOutCubic;
 
