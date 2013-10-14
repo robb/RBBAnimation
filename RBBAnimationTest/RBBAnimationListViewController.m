@@ -11,6 +11,7 @@
 #import "RBBAnimationViewController.h"
 #import "RBBCubicBezier.h"
 #import "RBBTweenAnimation.h"
+#import "RBBSpringAnimation.h"
 
 #import "RBBAnimationListViewController.h"
 
@@ -48,6 +49,18 @@
     scale.duration = 1;
     scale.name = @"scale";
 
+    RBBAnimation *spring = [RBBSpringAnimation
+        springAnimationWithKeyPath:@"position.y"
+        from:@(-150.0f)
+        to:@(200.0f)
+        mass:6
+        stiffness:300
+        damping:30];
+
+    spring.additive = YES;
+//    spring.duration = 4;
+    spring.name = @"spring";
+
     RBBAnimation *sinus = [RBBAnimation
         animationWithKeyPath:@"position.y"
         block:^(CGFloat elapsed, CGFloat duration) {
@@ -60,6 +73,7 @@
 
     self.animations = @[
         easeInOutBack,
+        spring,
         scale,
         sinus
     ];
