@@ -8,7 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-typedef id (^RBBAnimationBlock)(CGFloat fraction);
+typedef id (^RBBAnimationBlock)(CGFloat t, CGFloat duration);
 
 @interface RBBAnimation : CAKeyframeAnimation
 

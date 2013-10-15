@@ -39,8 +39,8 @@
     CGFloat deltaWidth = to.size.width - from.size.width;
     CGFloat deltaHeight = to.size.height - from.size.height;
 
-    RBBAnimationBlock block = ^(CGFloat fraction) {
-        CGFloat scaleFactor = easingFunction(fraction);
+    RBBAnimationBlock block = ^(CGFloat elapsed, CGFloat duration) {
+        CGFloat scaleFactor = easingFunction(elapsed / duration);
 
         CGRect rect = {
             .origin.x = from.origin.x + scaleFactor * deltaX,
@@ -58,8 +58,8 @@
 + (id)tweenWithKeyPath:(NSString *)keyPath fromCGFloat:(CGFloat)from toCGFloat:(CGFloat)to easingFunction:(RBBEasingFunction)easingFunction {
     CGFloat delta = to - from;
 
-    RBBAnimationBlock block = ^(CGFloat fraction) {
-        return @(from + easingFunction(fraction) * delta);
+    RBBAnimationBlock block = ^(CGFloat elapsed, CGFloat duration) {
+        return @(from + easingFunction(elapsed / duration) * delta);
     };
 
     return [self animationWithKeyPath:keyPath block:block];

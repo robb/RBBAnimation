@@ -50,8 +50,8 @@
 
     RBBAnimation *sinus = [RBBAnimation
         animationWithKeyPath:@"position.y"
-        block:^(CGFloat fraction) {
-            return @(100 * sin(fraction * 2 * M_PI));
+        block:^(CGFloat elapsed, CGFloat duration) {
+            return @(100 * sin((elapsed / duration) * 2 * M_PI));
         }];
 
     sinus.additive = YES;

@@ -14,6 +14,7 @@
 
 @property (readonly, nonatomic, copy) RBBAnimationBlock block;
 @property (readonly, nonatomic, assign) CGFloat frameCount;
+@property (readonly, nonatomic, assign) CGFloat frameRate;
 
 @end
 
@@ -42,7 +43,11 @@
 #pragma mark - Properties
 
 - (CGFloat)frameCount {
-    return self.duration * 60;
+    return self.duration * self.frameRate;
+}
+
+- (CGFloat)frameRate {
+    return 60;
 }
 
 #pragma mark - NSCopying
@@ -63,7 +68,7 @@
 
     __weak typeof(self) weakSelf = self;
     self.values = [RBBBlockBasedArray arrayWithCount:self.frameCount block:^(NSUInteger idx) {
-        return weakSelf.block(idx / weakSelf.frameCount);
+        return weakSelf.block(idx / weakSelf.frameRate, weakSelf.duration);
     }];
 }
 
