@@ -58,7 +58,7 @@
         damping:30];
 
     spring.additive = YES;
-//    spring.duration = 4;
+    spring.duration = 4;
     spring.name = @"spring";
 
     RBBAnimation *sinus = [RBBAnimation
