@@ -48,11 +48,7 @@
         };
     }
 
-    RBBSpringAnimation *animation = [self tweenWithKeyPath:keyPath from:from to:to interpolation:damping];
-
-    animation.duration = 5;
-
-    return animation;
+    return [self tweenWithKeyPath:keyPath from:from to:to interpolation:damping];
 }
 
 @end

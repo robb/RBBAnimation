@@ -51,4 +51,10 @@
     return _block(index);
 }
 
+#pragma mark - NSObject
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[self.class allocWithZone:zone] initWithCount:_count block:_block];
+}
+
 @end
