@@ -66,9 +66,11 @@
 - (void)setDuration:(CFTimeInterval)duration {
     [super setDuration:duration];
 
-    __weak typeof(self) weakSelf = self;
+    RBBAnimationBlock block = self.block;
+    CGFloat frameRate = self.frameRate;
+
     self.values = [RBBBlockBasedArray arrayWithCount:self.frameCount block:^(NSUInteger idx) {
-        return weakSelf.block(idx / weakSelf.frameRate, weakSelf.duration);
+        return block(idx / frameRate, duration);
     }];
 }
 
