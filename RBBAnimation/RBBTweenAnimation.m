@@ -33,8 +33,6 @@
 + (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to interpolation:(RBBInterpolationFunction)interpolation {
     NSParameterAssert(strcmp(from.objCType, to.objCType) == 0);
 
-    RBBAnimationBlock block;
-
     if (strcmp(from.objCType, @encode(CGRect)) == 0) {
         return [self tweenWithKeyPath:keyPath fromCGRect:[from CGRectValue] toCGRect:[to CGRectValue] interpolation:interpolation];
     }
@@ -47,7 +45,7 @@
         return [self tweenWithKeyPath:keyPath fromCGFloat:[(NSNumber *) from floatValue] toCGFloat:[(NSNumber *) to floatValue] interpolation:interpolation];
     }
 
-    NSAssert(block != nil, @"Unsupported value type: %s", from.objCType);
+    NSAssert(NO, @"Unsupported value type: %s", from.objCType);
     return nil;
 }
 
