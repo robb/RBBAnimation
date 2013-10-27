@@ -135,6 +135,7 @@ extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to) {
         #endif
     }
 
-    NSCAssert(NO, @"Cannot interpolate for Objective-C %s", from.objCType);
-    return nil;
+    return ^(CGFloat fraction) {
+        return fraction < 0.5 ? from : to;
+    };
 }
