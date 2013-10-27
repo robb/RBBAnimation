@@ -17,7 +17,7 @@
 @property (readwrite, nonatomic, assign) CGFloat stiffness;
 @property (readwrite, nonatomic, assign) CGFloat velocity;
 
-@property (readwrite, nonatomic, strong) NSValue *from;
-@property (readwrite, nonatomic, strong) NSValue *to;
+@property (readwrite, nonatomic, strong) NSValue *fromValue;
+@property (readwrite, nonatomic, strong) NSValue *toValue;
 
 @end

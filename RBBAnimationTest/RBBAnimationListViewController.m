@@ -33,8 +33,8 @@
 
     RBBTweenAnimation *easeInOutBack = [RBBTweenAnimation animationWithKeyPath:@"position.y"];
 
-    easeInOutBack.from = @(-100.0f);
-    easeInOutBack.to = @(100.0f);
+    easeInOutBack.fromValue = @(-100.0f);
+    easeInOutBack.toValue = @(100.0f);
     easeInOutBack.easing = RBBCubicBezier(0.68, -0.55, 0.265, 1.55);
 
     easeInOutBack.additive = YES;
@@ -43,8 +43,8 @@
 
     RBBTweenAnimation *scale = [RBBTweenAnimation animationWithKeyPath:@"bounds"];
 
-    scale.from = [NSValue valueWithCGRect:CGRectMake(0, 0, 0, 0)];
-    scale.to = [NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)];
+    scale.fromValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 0, 0)];
+    scale.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)];
 
     scale.additive = YES;
     scale.duration = 1;
@@ -52,8 +52,8 @@
 
     RBBSpringAnimation *spring = [RBBSpringAnimation animationWithKeyPath:@"position.y"];
 
-    spring.from = @(-150.0f);
-    spring.to = @(200.0f);
+    spring.fromValue = @(-150.0f);
+    spring.toValue = @(200.0f);
     spring.mass = 6;
     spring.stiffness = 300;
     spring.damping = 30;
@@ -63,8 +63,8 @@
     spring.rbb_name = @"spring";
 
     RBBTweenAnimation *sinus = [RBBTweenAnimation animationWithKeyPath:@"position.y"];
-    sinus.from = @(0);
-    sinus.to = @(100);
+    sinus.fromValue = @(0);
+    sinus.toValue = @(100);
     sinus.easing = ^CGFloat (CGFloat fraction) {
         return sin((fraction) * 2 * M_PI);
     };

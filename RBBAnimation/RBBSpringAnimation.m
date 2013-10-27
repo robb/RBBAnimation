@@ -62,7 +62,7 @@
         };
     }
 
-    RBBLinearInterpolation lerp = RBBInterpolate(self.from, self.to);
+    RBBLinearInterpolation lerp = RBBInterpolate(self.fromValue, self.toValue);
     return ^(CGFloat t, CGFloat _) {
         return lerp(oscillation(t));
     };
@@ -79,8 +79,8 @@
     copy->_stiffness = _stiffness;
     copy->_velocity = _velocity;
 
-    copy->_from = _from;
-    copy->_to = _to;
+    copy->_fromValue = _fromValue;
+    copy->_toValue = _toValue;
 
     return copy;
 }

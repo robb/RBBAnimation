@@ -12,8 +12,8 @@
 
 @interface RBBTweenAnimation : RBBAnimation
 
-@property (readwrite, nonatomic, strong) NSValue *from;
-@property (readwrite, nonatomic, strong) NSValue *to;
+@property (readwrite, nonatomic, strong) NSValue *fromValue;
+@property (readwrite, nonatomic, strong) NSValue *toValue;
 
 @property (readwrite, nonatomic, copy) RBBEasingFunction easing;
 

@@ -37,7 +37,7 @@
     NSParameterAssert(self.easing != nil);
 
     RBBEasingFunction easing = [self.easing copy];
-    RBBLinearInterpolation lerp = RBBInterpolate(self.from, self.to);
+    RBBLinearInterpolation lerp = RBBInterpolate(self.fromValue, self.toValue);
 
     return ^(CGFloat elapsed, CGFloat duration) {
         return lerp(easing(elapsed / duration));
@@ -52,8 +52,8 @@
 
     copy->_easing = _easing;
 
-    copy->_from = _from;
-    copy->_to = _to;
+    copy->_fromValue = _fromValue;
+    copy->_toValue = _toValue;
 
     return copy;
 }
