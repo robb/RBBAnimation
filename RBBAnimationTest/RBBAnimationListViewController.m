@@ -6,10 +6,11 @@
 //  Copyright (c) 2013 Robert Böhnke. All rights reserved.
 //
 
-#import "RBBAnimation.h"
 #import "CAAnimation+Name.h"
+#import "RBBAnimation.h"
 #import "RBBAnimationViewController.h"
 #import "RBBCubicBezier.h"
+#import "RBBCustomAnimation.h"
 #import "RBBTweenAnimation.h"
 #import "RBBSpringAnimation.h"
 
@@ -72,11 +73,20 @@
     sinus.duration = 2;
     sinus.rbb_name = @"sine wave";
 
+    RBBCustomAnimation *rainbow = [RBBCustomAnimation animationWithKeyPath:@"backgroundColor"];
+    rainbow.animationBlock = ^(CGFloat elapsed, CGFloat duration) {
+        return (id)[UIColor colorWithHue:elapsed / duration saturation:1 brightness:1 alpha:1].CGColor;
+    };
+
+    rainbow.duration = 5;
+    rainbow.rbb_name = @"rainbow";
+
     self.animations = @[
         easeInOutBack,
         spring,
         scale,
-        sinus
+        sinus,
+        rainbow
     ];
 }
 
