@@ -7,70 +7,35 @@
 //
 
 #import "RBBBlockBasedArray.h"
+#import "RBBLinearInterpolation.h"
 
 #import "RBBAnimation.h"
 
 @interface RBBAnimation ()
 
-@property (readonly, nonatomic, copy) RBBAnimationBlock block;
-@property (readonly, nonatomic, assign) CGFloat frameCount;
-@property (readonly, nonatomic, assign) CGFloat frameRate;
-
 @end
 
 @implementation RBBAnimation
 
-#pragma mark - Lifecycle
+#pragma mark - KVO
 
-+ (id)animationWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block {
-    return [[self alloc] initWithKeyPath:path block:block];
++ (NSSet *)keyPathsForValuesAffectingValues {
+    return [NSSet setWithArray:@[ @"animationBlock", @"duration" ]];
 }
 
-- (id)initWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block {
-    NSParameterAssert(path != nil);
-    NSParameterAssert(block != nil);
+#pragma mark - CAKeyframeAnimation
 
-    self = [super init];
-    if (self == nil) return nil;
-
-    _block = [block copy];
-
-    self.keyPath = path;
-
-    return self;
+- (void)setValues:(NSArray *)values {
+    return;
 }
 
-#pragma mark - Properties
+- (NSArray *)values {
+    RBBAnimationBlock block = [self.animationBlock copy];
 
-- (CGFloat)frameCount {
-    return self.duration * self.frameRate;
-}
+    CGFloat duration = self.duration;
 
-- (CGFloat)frameRate {
-    return 60;
-}
-
-#pragma mark - NSCopying
-
-- (id)copyWithZone:(NSZone *)zone {
-    RBBAnimation *copy = [super copyWithZone:zone];
-    if (copy == nil) return nil;
-
-    copy->_block = [_block copy];
-
-    return copy;
-}
-
-#pragma mark - CAAnimation
-
-- (void)setDuration:(CFTimeInterval)duration {
-    [super setDuration:duration];
-
-    RBBAnimationBlock block = self.block;
-    CGFloat frameRate = self.frameRate;
-
-    self.values = [RBBBlockBasedArray arrayWithCount:self.frameCount block:^(NSUInteger idx) {
-        return block(idx / frameRate, duration);
+    return [RBBBlockBasedArray arrayWithCount:duration * 60 block:^id(NSUInteger idx) {
+        return block(idx / 60.0, duration);
     }];
 }
 

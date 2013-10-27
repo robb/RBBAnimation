@@ -12,8 +12,12 @@ typedef id (^RBBAnimationBlock)(CGFloat t, CGFloat duration);
 
 @interface RBBAnimation : CAKeyframeAnimation
 
-+ (id)animationWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block;
+@property (readonly, nonatomic, copy) RBBAnimationBlock animationBlock;
 
-- (id)initWithKeyPath:(NSString *)path block:(RBBAnimationBlock)block;
+@end
+
+@interface RBBAnimation (Unavailable)
+
+- (void)setValues:(NSArray *)values __attribute__((unavailable("values cannot be set on RBBAnimation")));
 
 @end

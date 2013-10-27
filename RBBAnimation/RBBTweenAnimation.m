@@ -14,24 +14,48 @@
 
 @implementation RBBTweenAnimation
 
-+ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to {
-    return [self tweenWithKeyPath:keyPath from:from to:to easingFunction:RBBEasingFunctionLinear];
+#pragma mark - Lifecycle
+
+- (id)init {
+    self = [super init];
+    if (self == nil) return nil;
+
+    self.easing = RBBEasingFunctionLinear;
+
+    return self;
 }
 
-+ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to easingFunction:(RBBEasingFunction)easingFunction {
-    RBBLinearInterpolation lerp = RBBInterpolate(from, to);
+#pragma mark - KVO
 
-    return [self animationWithKeyPath:keyPath block:^id(CGFloat t, CGFloat duration) {
-        return lerp(easingFunction(t / duration));
-    }];
++ (NSSet *)keyPathsForValuesAffectingAnimationBlock {
+    return [NSSet setWithArray:@[ @"from", @"to", @"easing" ]];
 }
 
-+ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to interpolation:(RBBScalingFunction)scalingFunction {
-    RBBLinearInterpolation lerp = RBBInterpolate(from, to);
+#pragma mark - RBBAnimation
 
-    return [self animationWithKeyPath:keyPath block:^id(CGFloat t, CGFloat duration) {
-        return lerp(scalingFunction(t, duration));
-    }];
+- (RBBAnimationBlock)animationBlock {
+    NSParameterAssert(self.easing != nil);
+
+    RBBEasingFunction easing = [self.easing copy];
+    RBBLinearInterpolation lerp = RBBInterpolate(self.from, self.to);
+
+    return ^(CGFloat elapsed, CGFloat duration) {
+        return lerp(easing(elapsed / duration));
+    };
+}
+
+#pragma mark - NSObject
+
+- (id)copyWithZone:(NSZone *)zone {
+    RBBTweenAnimation *copy = [super copyWithZone:zone];
+    if (copy == nil) return nil;
+
+    copy->_easing = _easing;
+
+    copy->_from = _from;
+    copy->_to = _to;
+
+    return copy;
 }
 
 @end

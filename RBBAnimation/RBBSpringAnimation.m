@@ -11,27 +11,17 @@
 
 #import "RBBSpringAnimation.h"
 
-@interface RBBSpringAnimation ()
-
-@property (readonly, nonatomic, copy) CGFloat (^oscillation)(CGFloat);
-
-@end
-
 @implementation RBBSpringAnimation
 
 #pragma mark - KVO
 
-+ (NSSet *)keyPathsForValuesAffectingValues {
-    return [NSSet setWithArray:@[ @"oscillation", @"duration", @"from", @"to" ]];
-}
-
-+ (NSSet *)keyPathsForValuesAffectingOscillation {
-    return [NSSet setWithArray:@[ @"damping", @"mass", @"stiffness", @"velocity" ]];
++ (NSSet *)keyPathsForValuesAffectingAnimationBlock {
+    return [NSSet setWithArray:@[ @"damping", @"mass", @"stiffness", @"velocity", @"from", @"to" ]];
 }
 
 #pragma mark - RBBSpringAnimation
 
-- (CGFloat (^)(CGFloat))oscillation {
+- (RBBAnimationBlock)animationBlock {
     CGFloat b = self.damping;
     CGFloat m = self.mass;
     CGFloat k = self.stiffness;
@@ -48,43 +38,34 @@
 
     CGFloat x0 = -1;
 
+    CGFloat (^oscillation)(CGFloat);
     if (beta < omega0) {
         // Underdamped
-        return ^(CGFloat t) {
+        oscillation = ^(CGFloat t) {
             CGFloat envelope = expf(-beta * t);
 
             return -x0 + envelope * (x0 * cosf(omega1 * t) + ((beta * x0 + v0) / omega1) * sinf(omega1 * t));
         };
     } else if (beta == omega0) {
         // Critically damped
-        return ^(CGFloat t) {
+        oscillation = ^(CGFloat t) {
             CGFloat envelope = expf(-beta * t);
 
             return -x0 + envelope * (x0 + (beta * x0 + v0) * t);
         };
     } else {
         // Overdamped
-        return ^(CGFloat t) {
+        oscillation = ^(CGFloat t) {
             CGFloat envelope = expf(-beta * t);
 
             return -x0 + envelope * (x0 * coshf(omega2 * t) + ((beta * x0 + v0) / omega2) * sinhf(omega2 * t));
         };
     }
-}
 
-#pragma mark - CAKeyframeAnimation
-
-- (void)setValues:(NSArray *)values {
-    return;
-}
-
-- (NSArray *)values {
-    CGFloat (^oscillation)(CGFloat) = [self.oscillation copy];
     RBBLinearInterpolation lerp = RBBInterpolate(self.from, self.to);
-
-    return [RBBBlockBasedArray arrayWithCount:self.duration * 60 block:^id(NSUInteger idx) {
-        return lerp(oscillation(idx / 60.0));
-    }];
+    return ^(CGFloat t, CGFloat _) {
+        return lerp(oscillation(t));
+    };
 }
 
 #pragma mark - NSObject

@@ -8,7 +8,9 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface RBBSpringAnimation : CAKeyframeAnimation
+#import "RBBAnimation.h"
+
+@interface RBBSpringAnimation : RBBAnimation
 
 @property (readwrite, nonatomic, assign) CGFloat damping;
 @property (readwrite, nonatomic, assign) CGFloat mass;
@@ -17,11 +19,5 @@
 
 @property (readwrite, nonatomic, strong) NSValue *from;
 @property (readwrite, nonatomic, strong) NSValue *to;
-
-@end
-
-@interface RBBSpringAnimation (Unavailable)
-
-- (void)setValues:(NSArray *)values __attribute__((unavailable("values cannot be set on RBBSpringAnimation")));
 
 @end

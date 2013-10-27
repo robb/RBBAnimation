@@ -30,20 +30,20 @@
 
     self.title = @"Animations";
 
-    RBBAnimation *easeInOutBack = [RBBTweenAnimation
-        tweenWithKeyPath:@"position.y"
-        from:@(-100.0f)
-        to:@(100.0f)
-        easingFunction:RBBCubicBezier(0.68, -0.55, 0.265, 1.55)];
+    RBBTweenAnimation *easeInOutBack = [RBBTweenAnimation animationWithKeyPath:@"position.y"];
+
+    easeInOutBack.from = @(-100.0f);
+    easeInOutBack.to = @(100.0f);
+    easeInOutBack.easing = RBBCubicBezier(0.68, -0.55, 0.265, 1.55);
 
     easeInOutBack.additive = YES;
     easeInOutBack.duration = 0.6;
     easeInOutBack.rbb_name = @"ease in out back";
 
-    RBBAnimation *scale = [RBBTweenAnimation
-        tweenWithKeyPath:@"bounds"
-        from:[NSValue valueWithCGRect:CGRectMake(0, 0, 0, 0)]
-        to:[NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)]];
+    RBBTweenAnimation *scale = [RBBTweenAnimation animationWithKeyPath:@"bounds"];
+
+    scale.from = [NSValue valueWithCGRect:CGRectMake(0, 0, 0, 0)];
+    scale.to = [NSValue valueWithCGRect:CGRectMake(0, 0, 100, 100)];
 
     scale.additive = YES;
     scale.duration = 1;
@@ -59,14 +59,14 @@
 
     spring.additive = YES;
     spring.duration = 4;
-    spring.values = @[];
     spring.rbb_name = @"spring";
 
-    RBBAnimation *sinus = [RBBAnimation
-        animationWithKeyPath:@"position.y"
-        block:^(CGFloat elapsed, CGFloat duration) {
-            return @(100 * sin((elapsed / duration) * 2 * M_PI));
-        }];
+    RBBTweenAnimation *sinus = [RBBTweenAnimation animationWithKeyPath:@"position.y"];
+    sinus.from = @(0);
+    sinus.to = @(100);
+    sinus.easing = ^CGFloat (CGFloat fraction) {
+        return sin((fraction) * 2 * M_PI);
+    };
 
     sinus.additive = YES;
     sinus.duration = 2;
