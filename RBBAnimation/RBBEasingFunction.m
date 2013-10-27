@@ -8,6 +8,12 @@
 
 #import "RBBEasingFunction.h"
 
+#if CGFLOAT_IS_DOUBLE
+#define POW(X, Y) pow(X, Y)
+#else
+#define POW(X, Y) powf(X, Y)
+#endif
+
 RBBEasingFunction const RBBEasingFunctionLinear = ^(CGFloat t) {
     return t;
 };
@@ -33,14 +39,14 @@ RBBEasingFunction const RBBEasingFunctionEaseInCubic = ^(CGFloat t) {
 };
 
 RBBEasingFunction const RBBEasingFunctionEaseOutCubic = ^(CGFloat t) {
-    return powf(t - 1, 3) + 1;
+    return POW(t - 1, 3) + 1;
 };
 
 RBBEasingFunction const RBBEasingFunctionEaseInOutCubic = ^(CGFloat t) {
     if (t < 0.5) {
-        return 4 * powf(t, 3);
+        return 4 * POW(t, 3);
     } else {
-        return (t - 1) * powf(2 * t - 2, 2) + 1;
+        return (t - 1) * POW(2 * t - 2, 2) + 1;
     }
 };
 
@@ -49,13 +55,13 @@ RBBEasingFunction const RBBEasingFunctionEaseInQuart = ^(CGFloat t) {
 };
 
 RBBEasingFunction const RBBEasingFunctionEaseOutQuart = ^(CGFloat t) {
-    return powf(t - 1, 4) + 1;
+    return POW(t - 1, 4) + 1;
 };
 
 RBBEasingFunction const RBBEasingFunctionEaseInOutQuart = ^(CGFloat t) {
     if (t < 0.5) {
-        return 8 * powf(t, 4);
+        return 8 * POW(t, 4);
     } else {
-        return -1 / 2 * powf(2 * t - 2, 4) + 1;
+        return -1 / 2 * POW(2 * t - 2, 4) + 1;
     }
 };
