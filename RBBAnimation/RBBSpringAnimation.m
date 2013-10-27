@@ -13,6 +13,19 @@
 
 @implementation RBBSpringAnimation
 
+#pragma mark - Lifecycle
+
+- (id)init {
+    self = [super init];
+    if (self == nil) return nil;
+
+    self.damping = 10;
+    self.mass = 1;
+    self.stiffness = 100;
+
+    return self;
+}
+
 #pragma mark - KVO
 
 + (NSSet *)keyPathsForValuesAffectingAnimationBlock {
