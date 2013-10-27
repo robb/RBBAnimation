@@ -8,10 +8,20 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-#import "RBBTweenAnimation.h"
+@interface RBBSpringAnimation : CAKeyframeAnimation
 
-@interface RBBSpringAnimation : RBBTweenAnimation
+@property (readwrite, nonatomic, assign) CGFloat damping;
+@property (readwrite, nonatomic, assign) CGFloat mass;
+@property (readwrite, nonatomic, assign) CGFloat stiffness;
+@property (readwrite, nonatomic, assign) CGFloat velocity;
 
-+ (id)springAnimationWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to mass:(CGFloat)mass stiffness:(CGFloat)stiffness damping:(CGFloat)damping;
+@property (readwrite, nonatomic, strong) NSValue *from;
+@property (readwrite, nonatomic, strong) NSValue *to;
+
+@end
+
+@interface RBBSpringAnimation (Unavailable)
+
+- (void)setValues:(NSArray *)values __attribute__((unavailable("values cannot be set on RBBSpringAnimation")));
 
 @end

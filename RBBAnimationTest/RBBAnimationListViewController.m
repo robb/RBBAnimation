@@ -7,7 +7,7 @@
 //
 
 #import "RBBAnimation.h"
-#import "RBBAnimation+Name.h"
+#import "CAAnimation+Name.h"
 #import "RBBAnimationViewController.h"
 #import "RBBCubicBezier.h"
 #import "RBBTweenAnimation.h"
@@ -38,7 +38,7 @@
 
     easeInOutBack.additive = YES;
     easeInOutBack.duration = 0.6;
-    easeInOutBack.name = @"ease in out back";
+    easeInOutBack.rbb_name = @"ease in out back";
 
     RBBAnimation *scale = [RBBTweenAnimation
         tweenWithKeyPath:@"bounds"
@@ -47,19 +47,20 @@
 
     scale.additive = YES;
     scale.duration = 1;
-    scale.name = @"scale";
+    scale.rbb_name = @"scale";
 
-    RBBAnimation *spring = [RBBSpringAnimation
-        springAnimationWithKeyPath:@"position.y"
-        from:@(-150.0f)
-        to:@(200.0f)
-        mass:6
-        stiffness:300
-        damping:30];
+    RBBSpringAnimation *spring = [RBBSpringAnimation animationWithKeyPath:@"position.y"];
+
+    spring.from = @(-150.0f);
+    spring.to = @(200.0f);
+    spring.mass = 6;
+    spring.stiffness = 300;
+    spring.damping = 30;
 
     spring.additive = YES;
     spring.duration = 4;
-    spring.name = @"spring";
+    spring.values = @[];
+    spring.rbb_name = @"spring";
 
     RBBAnimation *sinus = [RBBAnimation
         animationWithKeyPath:@"position.y"
@@ -69,7 +70,7 @@
 
     sinus.additive = YES;
     sinus.duration = 2;
-    sinus.name = @"sine wave";
+    sinus.rbb_name = @"sine wave";
 
     self.animations = @[
         easeInOutBack,
@@ -89,7 +90,7 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 
     RBBAnimation *animation = self.animations[indexPath.row];
-    cell.textLabel.text = animation.name;
+    cell.textLabel.text = animation.rbb_name;
 
     return cell;
 }

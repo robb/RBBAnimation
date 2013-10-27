@@ -1,5 +1,5 @@
 //
-//  RBBAnimation+Name.m
+//  CAAnimation+Name.m
 //  RBBAnimation
 //
 //  Created by Robert Böhnke on 10/13/13.
@@ -8,10 +8,10 @@
 
 #import <libextobjc/EXTSynthesize.h>
 
-#import "RBBAnimation+Name.h"
+#import "CAAnimation+Name.h"
 
-@implementation RBBAnimation (Name)
+@implementation CAAnimation (Name)
 
-@synthesizeAssociation(RBBAnimation, name);
+@synthesizeAssociation(CAAnimation, rbb_name);
 
 @end

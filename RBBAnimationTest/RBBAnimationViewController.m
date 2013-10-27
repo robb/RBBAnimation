@@ -7,7 +7,7 @@
 //
 
 #import "RBBAnimation.h"
-#import "RBBAnimation+Name.h"
+#import "CAAnimation+Name.h"
 
 #import "RBBAnimationViewController.h"
 
@@ -24,7 +24,7 @@
     if (self == nil) return nil;
 
     _animation = animation;
-    self.title = animation.name;
+    self.title = animation.rbb_name;
 
     return self;
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		545D5AB6180AFCA500FC94AB /* RBBAnimation+Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB3180AFCA500FC94AB /* RBBAnimation+Name.m */; };
+		545D5AB6180AFCA500FC94AB /* CAAnimation+Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */; };
 		545D5AB7180AFCA500FC94AB /* RBBAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB5180AFCA500FC94AB /* RBBAnimationListViewController.m */; };
 		545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */; };
 		545D5ABC180B239000FC94AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 545D5ABB180B239000FC94AB /* UIKit.framework */; };
@@ -68,8 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		545D5AB2180AFCA500FC94AB /* RBBAnimation+Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RBBAnimation+Name.h"; sourceTree = "<group>"; };
-		545D5AB3180AFCA500FC94AB /* RBBAnimation+Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RBBAnimation+Name.m"; sourceTree = "<group>"; };
+		545D5AB2180AFCA500FC94AB /* CAAnimation+Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Name.h"; sourceTree = "<group>"; };
+		545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+Name.m"; sourceTree = "<group>"; };
 		545D5AB4180AFCA500FC94AB /* RBBAnimationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBAnimationListViewController.h; sourceTree = "<group>"; };
 		545D5AB5180AFCA500FC94AB /* RBBAnimationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBAnimationListViewController.m; sourceTree = "<group>"; };
 		545D5AB8180B1FAE00FC94AB /* RBBTweenAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBTweenAnimation.h; sourceTree = "<group>"; };
@@ -154,8 +154,8 @@
 			children = (
 				5466C576180849D200652BDC /* RBBAppDelegate.h */,
 				5466C577180849D200652BDC /* RBBAppDelegate.m */,
-				545D5AB2180AFCA500FC94AB /* RBBAnimation+Name.h */,
-				545D5AB3180AFCA500FC94AB /* RBBAnimation+Name.m */,
+				545D5AB2180AFCA500FC94AB /* CAAnimation+Name.h */,
+				545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */,
 				545D5AB4180AFCA500FC94AB /* RBBAnimationListViewController.h */,
 				545D5AB5180AFCA500FC94AB /* RBBAnimationListViewController.m */,
 				5466C59618084BA200652BDC /* RBBAnimationViewController.h */,
@@ -332,7 +332,7 @@
 				ORGANIZATIONNAME = "Robert Böhnke";
 				TargetAttributes = {
 					54F3AE391807394800E1E688 = {
-						TestTargetID = 5466C567180849D100652BDC /* RBBAnimationTest */;
+						TestTargetID = 5466C567180849D100652BDC;
 					};
 				};
 			};
@@ -456,7 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				545D5AB7180AFCA500FC94AB /* RBBAnimationListViewController.m in Sources */,
-				545D5AB6180AFCA500FC94AB /* RBBAnimation+Name.m in Sources */,
+				545D5AB6180AFCA500FC94AB /* CAAnimation+Name.m in Sources */,
 				5466C59818084BA200652BDC /* RBBAnimationViewController.m in Sources */,
 				5466C574180849D200652BDC /* main.m in Sources */,
 				5466C578180849D200652BDC /* RBBAppDelegate.m in Sources */,
