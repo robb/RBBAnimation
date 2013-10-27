@@ -109,7 +109,7 @@ static RBBLinearInterpolation RBBInterpolateCGFloat(CGFloat from, CGFloat to) {
 };
 
 extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to) {
-    NSCParameterAssert(strcmp(from.objCType, to.objCType) == 0);
+    NSCParameterAssert(([from isKindOfClass:NSNumber.class] && [to isKindOfClass:NSNumber.class]) || strcmp(from.objCType, to.objCType) == 0);
 
     if (strcmp(from.objCType, @encode(CATransform3D)) == 0) {
         return RBBInterpolateCATransform3D(from.CATransform3DValue, to.CATransform3DValue);
