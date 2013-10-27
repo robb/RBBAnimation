@@ -86,6 +86,20 @@ static RBBLinearInterpolation RBBInterpolateCGPoint(CGPoint from, CGPoint to) {
     };
 }
 
+static RBBLinearInterpolation RBBInterpolateCGSize(CGSize from, CGSize to) {
+    CGFloat deltaWidth = to.width - from.width;
+    CGFloat deltaHeight = to.height - from.height;
+
+    return ^(CGFloat fraction) {
+        CGSize size = {
+            .width = from.width + fraction * deltaWidth,
+            .height = from.height + fraction * deltaHeight,
+        };
+
+        return [NSValue valueWithCGSize:size];
+    };
+}
+
 static RBBLinearInterpolation RBBInterpolateCGFloat(CGFloat from, CGFloat to) {
     CGFloat delta = to - from;
 
@@ -107,6 +121,10 @@ extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to) {
 
     if (strcmp(from.objCType, @encode(CGPoint)) == 0) {
         return RBBInterpolateCGPoint(from.CGPointValue, to.CGPointValue);
+    }
+
+    if (strcmp(from.objCType, @encode(CGSize)) == 0) {
+        return RBBInterpolateCGSize(from.CGSizeValue, to.CGSizeValue);
     }
 
     if ([from isKindOfClass:NSNumber.class]) {
