@@ -23,7 +23,7 @@
     CGFloat v0 = 0;
     CGFloat x0 = -1;
 
-    RBBInterpolationFunction damping;
+    RBBScalingFunction damping;
 
     if (beta < omega0) {
         // Underdamped

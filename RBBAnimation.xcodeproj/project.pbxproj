@@ -25,6 +25,7 @@
 		5466C57A180849D200652BDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5466C579180849D200652BDC /* Images.xcassets */; };
 		5466C59518084B6A00652BDC /* libRBBAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2A1807394800E1E688 /* libRBBAnimation.a */; };
 		5466C59818084BA200652BDC /* RBBAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C59718084BA200652BDC /* RBBAnimationViewController.m */; };
+		54D5EA89181AE8620014896C /* RBBLinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */; };
 		54F3AE2E1807394800E1E688 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
 		54F3AE331807394800E1E688 /* RBBAnimation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54F3AE321807394800E1E688 /* RBBAnimation.h */; };
 		54F3AE351807394800E1E688 /* RBBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F3AE341807394800E1E688 /* RBBAnimation.m */; };
@@ -94,6 +95,8 @@
 		5466C579180849D200652BDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5466C59618084BA200652BDC /* RBBAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBAnimationViewController.h; sourceTree = "<group>"; };
 		5466C59718084BA200652BDC /* RBBAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBAnimationViewController.m; sourceTree = "<group>"; };
+		54D5EA87181AE8620014896C /* RBBLinearInterpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBLinearInterpolation.h; sourceTree = "<group>"; };
+		54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBLinearInterpolation.m; sourceTree = "<group>"; };
 		54F3AE2A1807394800E1E688 /* libRBBAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRBBAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F3AE2D1807394800E1E688 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		54F3AE311807394800E1E688 /* RBBAnimation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RBBAnimation-Prefix.pch"; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 			children = (
 				54F3AE321807394800E1E688 /* RBBAnimation.h */,
 				54F3AE341807394800E1E688 /* RBBAnimation.m */,
+				54D5EA87181AE8620014896C /* RBBLinearInterpolation.h */,
+				54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */,
 				545D5AB8180B1FAE00FC94AB /* RBBTweenAnimation.h */,
 				545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */,
 				545D5AC3180C138D00FC94AB /* RBBSpringAnimation.h */,
@@ -463,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				545D5ABF180B2D3F00FC94AB /* RBBCubicBezier.m in Sources */,
+				54D5EA89181AE8620014896C /* RBBLinearInterpolation.m in Sources */,
 				545D5AC2180B5E8400FC94AB /* RBBEasingFunction.m in Sources */,
 				5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */,
 				545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */,

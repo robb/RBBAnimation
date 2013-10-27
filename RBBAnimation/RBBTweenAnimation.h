@@ -10,7 +10,7 @@
 
 #import "RBBEasingFunction.h"
 
-typedef CGFloat (^RBBInterpolationFunction)(CGFloat elapsed, CGFloat duration);
+typedef CGFloat (^RBBScalingFunction)(CGFloat elapsed, CGFloat duration);
 
 @interface RBBTweenAnimation : RBBAnimation
 
@@ -18,6 +18,6 @@ typedef CGFloat (^RBBInterpolationFunction)(CGFloat elapsed, CGFloat duration);
 
 + (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to easingFunction:(RBBEasingFunction)easingFunction;
 
-+ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to interpolation:(RBBInterpolationFunction)interpolation;
++ (id)tweenWithKeyPath:(NSString *)keyPath from:(NSValue *)from to:(NSValue *)to interpolation:(RBBScalingFunction)scalingFunction;
 
 @end
