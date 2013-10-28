@@ -52,14 +52,14 @@
 
     RBBSpringAnimation *spring = [RBBSpringAnimation animationWithKeyPath:@"position.y"];
 
-    spring.fromValue = @(-150.0f);
-    spring.toValue = @(200.0f);
-    spring.mass = 6;
-    spring.stiffness = 300;
-    spring.damping = 30;
+    spring.fromValue = @(-100.0f);
+    spring.toValue = @(100.0f);
+    spring.mass = 1;
+    spring.damping = 10;
+    spring.stiffness = 100;
 
     spring.additive = YES;
-    spring.duration = 4;
+    spring.duration = [spring durationForEpsilon:0.01];
     spring.rbb_name = @"spring";
 
     RBBTweenAnimation *sinus = [RBBTweenAnimation animationWithKeyPath:@"position.y"];
