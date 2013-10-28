@@ -20,4 +20,6 @@
 @property (readwrite, nonatomic, strong) NSValue *fromValue;
 @property (readwrite, nonatomic, strong) NSValue *toValue;
 
+- (CFTimeInterval)durationForEpsilon:(double)epsilon;
+
 @end

@@ -34,6 +34,19 @@
 
 #pragma mark - RBBSpringAnimation
 
+- (CFTimeInterval)durationForEpsilon:(double)epsilon {
+    CGFloat beta = self.damping / (2 * self.mass);
+
+    CFTimeInterval duration = 0;
+    while (expf(-beta * duration) >= epsilon) {
+        duration += 0.1;
+    }
+
+    return duration;
+}
+
+#pragma mark - RBBAnimation
+
 - (RBBAnimationBlock)animationBlock {
     CGFloat b = self.damping;
     CGFloat m = self.mass;
