@@ -73,6 +73,15 @@
     sinus.duration = 2;
     sinus.rbb_name = @"sine wave";
 
+    RBBTweenAnimation *bounce = [RBBTweenAnimation animationWithKeyPath:@"position.y"];
+    bounce.fromValue = @(-100);
+    bounce.toValue = @(100);
+    bounce.easing = RBBEasingFunctionEaseOutBounce;
+
+    bounce.additive = YES;
+    bounce.duration = 0.8;
+    bounce.rbb_name = @"bounce";
+
     RBBCustomAnimation *rainbow = [RBBCustomAnimation animationWithKeyPath:@"backgroundColor"];
     rainbow.animationBlock = ^(CGFloat elapsed, CGFloat duration) {
         return (id)[UIColor colorWithHue:elapsed / duration saturation:1 brightness:1 alpha:1].CGColor;
@@ -86,6 +95,7 @@
         spring,
         scale,
         sinus,
+        bounce,
         rainbow
     ];
 }

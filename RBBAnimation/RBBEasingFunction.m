@@ -65,3 +65,23 @@ RBBEasingFunction const RBBEasingFunctionEaseInOutQuart = ^(CGFloat t) {
         return -1 / 2 * POW(2 * t - 2, 4) + 1;
     }
 };
+
+RBBEasingFunction const RBBEasingFunctionEaseInBounce = ^CGFloat(CGFloat t) {
+    return 1.0 - RBBEasingFunctionEaseOutBounce(1.0 - t);
+};
+
+RBBEasingFunction const RBBEasingFunctionEaseOutBounce = ^CGFloat(CGFloat t) {
+    if (t < 4.0 / 11.0) {
+        return POW(11.0 / 4.0, 2) * POW(t, 2);
+    }
+
+    if (t < 8.0 / 11.0) {
+        return 3.0 / 4.0 + POW(11.0 / 4.0, 2) * POW(t - 6.0 / 11.0, 2);
+    }
+
+    if (t < 10.0 / 11.0) {
+        return 15.0 /16.0 + POW(11.0 / 4.0, 2) * POW(t - 9.0 / 11.0, 2);
+    }
+
+    return 63.0 / 64.0 + POW(11.0 / 4.0, 2) * POW(t - 21.0 / 22.0, 2);
+};
