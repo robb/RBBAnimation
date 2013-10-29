@@ -37,7 +37,7 @@ rainbow.animationBlock = ^(CGFloat elapsed, CGFloat duration) {
 The arguments of the block are the current position of the animation as well as
 its total duration.
 
-Most of the time, You will probably want to use the higher-level
+Most of the time, you will probably want to use the higher-level
 `RBBTweenAnimation`.
 
 ## RBBSpringAnimation
