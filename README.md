@@ -71,7 +71,24 @@ spring.duration = [spring durationForEpsilon:0.01];
 interpolated.
 
 It supports the same cubic Bezier interpolation that you get from
-`CAMediaTimingFunction` as well more complex easing functions such as 
+`CAMediaTimingFunction` using the `RBBCubicBezier` helper function:
+
+<p align="center">
+    <img src="http://robb.is/img/rbbanimation/ease-in-out-back.gif" alt="Ease In Out Back" title="RBBCubicBezier(0.68, -0.55, 0.265, 1.55)">
+</p>
+
+```objc
+RBBTweenAnimation *easeInOutBack = [RBBTweenAnimation animationWithKeyPath:@"position.y"];
+
+easeInOutBack.fromValue = @(-100.0f);
+easeInOutBack.toValue = @(100.0f);
+easeInOutBack.easing = RBBCubicBezier(0.68, -0.55, 0.265, 1.55);
+
+easeInOutBack.additive = YES;
+easeInOutBack.duration = 0.6;
+```
+
+However, `RBBTweenAnimation` also supports more complex easing functions such as
 `RBBEasingFunctionEaseOutBounce`:
 
 <p align="center">
