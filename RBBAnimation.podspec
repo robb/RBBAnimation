@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary = "Block-based animations made easy."
   s.description = <<-DESC
     RBBAnimation is a subclass of CAKeyframeAnimation that allows you to
-    declare your __animations using blocks__ instead of writing out all the
+    declare your animations using blocks instead of writing out all the
     individual key-frames.
 
     It also comes with a replacement for CASpringAnimation.
