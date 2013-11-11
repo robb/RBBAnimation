@@ -12,6 +12,26 @@ CASpringAnimation](#rbbspringanimation), [support for custom easing functions
 such as bouncing](#rbbtweenanimation) as well as hooks to allow your writing
 your [own animations fully from scratch](#rbbcustomanimation).
 
+## Installation
+
+To install RBBAnimation, I recommend the excellent [CocoaPods]. Simply add this
+to your Podfile
+
+```ruby
+pod 'RBBAnimation', '0.1.0'
+```
+
+and you are ready to go!
+
+If you'd like to run the bundled test app, make sure to install its dependencies
+by running
+
+```sh
+pod install
+```
+
+after cloning the repo.
+
 ## RBBCustomAnimation
 
 Use `RBBCustomAnimation` to create arbitrary animations by passing in an
@@ -135,3 +155,4 @@ free to follow me on Twitter where I'm [@ceterum_censeo][twitter].
 [caspringanimation]: https://github.com/nst/iOS-Runtime-Headers/blob/master/Frameworks/QuartzCore.framework/CASpringAnimation.h
 [robb]: http://robb.is
 [twitter]: https://twitter.com/ceterum_censeo
+[cocoapods]: http://cocoapods.org/
