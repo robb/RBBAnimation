@@ -20,6 +20,8 @@
 @property (readwrite, nonatomic, strong) NSValue *fromValue;
 @property (readwrite, nonatomic, strong) NSValue *toValue;
 
+@property (readwrite, nonatomic, assign) BOOL allowsOverdamping;
+
 - (CFTimeInterval)durationForEpsilon:(double)epsilon;
 
 @end

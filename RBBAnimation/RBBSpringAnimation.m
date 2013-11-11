@@ -29,7 +29,7 @@
 #pragma mark - KVO
 
 + (NSSet *)keyPathsForValuesAffectingAnimationBlock {
-    return [NSSet setWithArray:@[ @"damping", @"mass", @"stiffness", @"velocity", @"from", @"to" ]];
+    return [NSSet setWithArray:@[ @"damping", @"mass", @"stiffness", @"velocity", @"from", @"to", @"allowsOverdamping" ]];
 }
 
 #pragma mark - RBBSpringAnimation
@@ -63,6 +63,8 @@
     CGFloat omega2 = sqrtf((beta * beta) - (omega0 * omega0));
 
     CGFloat x0 = -1;
+
+    if (!self.allowsOverdamping && beta > omega0) beta = omega0;
 
     CGFloat (^oscillation)(CGFloat);
     if (beta < omega0) {
@@ -107,6 +109,8 @@
 
     copy->_fromValue = _fromValue;
     copy->_toValue = _toValue;
+
+    copy->_allowsOverdamping = _allowsOverdamping;
 
     return copy;
 }
