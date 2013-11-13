@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27961E8418341FCF00BEB9EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27961E8318341FCF00BEB9EC /* Cocoa.framework */; };
+		27961E8E18341FCF00BEB9EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27961E8C18341FCF00BEB9EC /* InfoPlist.strings */; };
+		27961E9018341FCF00BEB9EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27961E8F18341FCF00BEB9EC /* main.m */; };
+		27961E9418341FCF00BEB9EC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 27961E9218341FCF00BEB9EC /* Credits.rtf */; };
+		27961E9718341FCF00BEB9EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27961E9618341FCF00BEB9EC /* AppDelegate.m */; };
+		27961E9A18341FCF00BEB9EC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27961E9818341FCF00BEB9EC /* MainMenu.xib */; };
+		27961E9C18341FCF00BEB9EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27961E9B18341FCF00BEB9EC /* Images.xcassets */; };
+		27961ED71834292200BEB9EC /* RBBCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479BEA3181D8008009811FD /* RBBCustomAnimation.m */; };
+		27961ED81834292200BEB9EC /* RBBCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5ABE180B2D3F00FC94AB /* RBBCubicBezier.m */; };
+		27961ED91834292200BEB9EC /* RBBLinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */; };
+		27961EDA1834292200BEB9EC /* RBBEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AC1180B5E8400FC94AB /* RBBEasingFunction.m */; };
+		27961EDB1834292200BEB9EC /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */; };
+		27961EDC1834292200BEB9EC /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */; };
+		27961EDD1834292200BEB9EC /* RBBSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AC4180C138D00FC94AB /* RBBSpringAnimation.m */; };
+		27961EDE1834292200BEB9EC /* RBBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F3AE341807394800E1E688 /* RBBAnimation.m */; };
+		27961EE01834292200BEB9EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 545D5ABB180B239000FC94AB /* UIKit.framework */; };
+		27961EE11834292200BEB9EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
+		27961EE31834292200BEB9EC /* RBBAnimation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54F3AE321807394800E1E688 /* RBBAnimation.h */; };
+		27961EEA1834295500BEB9EC /* libRBBAnimationOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27961EE71834292200BEB9EC /* libRBBAnimationOSX.a */; };
 		545D5AB6180AFCA500FC94AB /* CAAnimation+Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */; };
 		545D5AB7180AFCA500FC94AB /* RBBAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB5180AFCA500FC94AB /* RBBAnimationListViewController.m */; };
 		545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */; };
@@ -39,6 +58,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		27961EE81834295000BEB9EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54F3AE221807394800E1E688 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27961ED51834292200BEB9EC;
+			remoteInfo = RBBAnimationOSX;
+		};
 		5466C59318084B6400652BDC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 54F3AE221807394800E1E688 /* Project object */;
@@ -56,6 +82,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		27961EE21834292200BEB9EC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				27961EE31834292200BEB9EC /* RBBAnimation.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54F3AE281807394800E1E688 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,6 +105,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		27961E8218341FCF00BEB9EC /* RBBAnimationMacTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBBAnimationMacTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27961E8318341FCF00BEB9EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		27961E8618341FCF00BEB9EC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		27961E8718341FCF00BEB9EC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		27961E8818341FCF00BEB9EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		27961E8B18341FCF00BEB9EC /* RBBAnimationMacTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RBBAnimationMacTest-Info.plist"; sourceTree = "<group>"; };
+		27961E8D18341FCF00BEB9EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27961E8F18341FCF00BEB9EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27961E9118341FCF00BEB9EC /* RBBAnimationMacTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RBBAnimationMacTest-Prefix.pch"; sourceTree = "<group>"; };
+		27961E9318341FCF00BEB9EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		27961E9518341FCF00BEB9EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27961E9618341FCF00BEB9EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27961E9918341FCF00BEB9EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		27961E9B18341FCF00BEB9EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		27961EE71834292200BEB9EC /* libRBBAnimationOSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRBBAnimationOSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		545D5AB2180AFCA500FC94AB /* CAAnimation+Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Name.h"; sourceTree = "<group>"; };
 		545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+Name.m"; sourceTree = "<group>"; };
 		545D5AB4180AFCA500FC94AB /* RBBAnimationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBAnimationListViewController.h; sourceTree = "<group>"; };
@@ -116,6 +167,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		27961E7F18341FCF00BEB9EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27961EEA1834295500BEB9EC /* libRBBAnimationOSX.a in Frameworks */,
+				27961E8418341FCF00BEB9EC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27961EDF1834292200BEB9EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27961EE01834292200BEB9EC /* UIKit.framework in Frameworks */,
+				27961EE11834292200BEB9EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5466C565180849D100652BDC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,6 +221,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27961E8518341FCF00BEB9EC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27961E8618341FCF00BEB9EC /* AppKit.framework */,
+				27961E8718341FCF00BEB9EC /* CoreData.framework */,
+				27961E8818341FCF00BEB9EC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		27961E8918341FCF00BEB9EC /* RBBAnimationMacTest */ = {
+			isa = PBXGroup;
+			children = (
+				27961E9518341FCF00BEB9EC /* AppDelegate.h */,
+				27961E9618341FCF00BEB9EC /* AppDelegate.m */,
+				27961E9818341FCF00BEB9EC /* MainMenu.xib */,
+				27961E9B18341FCF00BEB9EC /* Images.xcassets */,
+				27961E8A18341FCF00BEB9EC /* Supporting Files */,
+			);
+			path = RBBAnimationMacTest;
+			sourceTree = "<group>";
+		};
+		27961E8A18341FCF00BEB9EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27961E8B18341FCF00BEB9EC /* RBBAnimationMacTest-Info.plist */,
+				27961E8C18341FCF00BEB9EC /* InfoPlist.strings */,
+				27961E8F18341FCF00BEB9EC /* main.m */,
+				27961E9118341FCF00BEB9EC /* RBBAnimationMacTest-Prefix.pch */,
+				27961E9218341FCF00BEB9EC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5466C56D180849D200652BDC /* RBBAnimationTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +289,7 @@
 				54F3AE2F1807394800E1E688 /* RBBAnimation */,
 				54F3AE431807394800E1E688 /* Specs */,
 				5466C56D180849D200652BDC /* RBBAnimationTest */,
+				27961E8918341FCF00BEB9EC /* RBBAnimationMacTest */,
 				54F3AE2C1807394800E1E688 /* Frameworks */,
 				54F3AE2B1807394800E1E688 /* Products */,
 				FC82F1A3B2AC473AB09336C0 /* Pods-Specs.xcconfig */,
@@ -199,6 +303,8 @@
 				54F3AE2A1807394800E1E688 /* libRBBAnimation.a */,
 				54F3AE3A1807394800E1E688 /* Specs.octest */,
 				5466C568180849D100652BDC /* RBBAnimationTest.app */,
+				27961E8218341FCF00BEB9EC /* RBBAnimationMacTest.app */,
+				27961EE71834292200BEB9EC /* libRBBAnimationOSX.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +319,8 @@
 				FD960C698C3E4DB198BD591C /* libPods-Specs.a */,
 				5466C56A180849D100652BDC /* CoreGraphics.framework */,
 				9764F4EDA8D64676ADE7428E /* libPods-RBBAnimationTest.a */,
+				27961E8318341FCF00BEB9EC /* Cocoa.framework */,
+				27961E8518341FCF00BEB9EC /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -269,6 +377,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		27961E8118341FCF00BEB9EC /* RBBAnimationMacTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27961EB218341FD000BEB9EC /* Build configuration list for PBXNativeTarget "RBBAnimationMacTest" */;
+			buildPhases = (
+				27961E7E18341FCF00BEB9EC /* Sources */,
+				27961E7F18341FCF00BEB9EC /* Frameworks */,
+				27961E8018341FCF00BEB9EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27961EE91834295000BEB9EC /* PBXTargetDependency */,
+			);
+			name = RBBAnimationMacTest;
+			productName = RBBAnimationMacTest;
+			productReference = 27961E8218341FCF00BEB9EC /* RBBAnimationMacTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27961ED51834292200BEB9EC /* RBBAnimationOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27961EE41834292200BEB9EC /* Build configuration list for PBXNativeTarget "RBBAnimationOSX" */;
+			buildPhases = (
+				27961ED61834292200BEB9EC /* Sources */,
+				27961EDF1834292200BEB9EC /* Frameworks */,
+				27961EE21834292200BEB9EC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RBBAnimationOSX;
+			productName = RBBAnimation;
+			productReference = 27961EE71834292200BEB9EC /* libRBBAnimationOSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		5466C567180849D100652BDC /* RBBAnimationTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5466C58D180849D200652BDC /* Build configuration list for PBXNativeTarget "RBBAnimationTest" */;
@@ -347,6 +490,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 54F3AE211807394800E1E688;
 			productRefGroup = 54F3AE2B1807394800E1E688 /* Products */;
@@ -354,13 +498,26 @@
 			projectRoot = "";
 			targets = (
 				54F3AE291807394800E1E688 /* RBBAnimation */,
+				27961ED51834292200BEB9EC /* RBBAnimationOSX */,
 				54F3AE391807394800E1E688 /* Specs */,
 				5466C567180849D100652BDC /* RBBAnimationTest */,
+				27961E8118341FCF00BEB9EC /* RBBAnimationMacTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		27961E8018341FCF00BEB9EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27961E8E18341FCF00BEB9EC /* InfoPlist.strings in Resources */,
+				27961E9C18341FCF00BEB9EC /* Images.xcassets in Resources */,
+				27961E9418341FCF00BEB9EC /* Credits.rtf in Resources */,
+				27961E9A18341FCF00BEB9EC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5466C566180849D100652BDC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,6 +613,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		27961E7E18341FCF00BEB9EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27961E9718341FCF00BEB9EC /* AppDelegate.m in Sources */,
+				27961E9018341FCF00BEB9EC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27961ED61834292200BEB9EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27961ED71834292200BEB9EC /* RBBCustomAnimation.m in Sources */,
+				27961ED81834292200BEB9EC /* RBBCubicBezier.m in Sources */,
+				27961ED91834292200BEB9EC /* RBBLinearInterpolation.m in Sources */,
+				27961EDA1834292200BEB9EC /* RBBEasingFunction.m in Sources */,
+				27961EDB1834292200BEB9EC /* RBBBlockBasedArray.m in Sources */,
+				27961EDC1834292200BEB9EC /* RBBTweenAnimation.m in Sources */,
+				27961EDD1834292200BEB9EC /* RBBSpringAnimation.m in Sources */,
+				27961EDE1834292200BEB9EC /* RBBAnimation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5466C564180849D100652BDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +675,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		27961EE91834295000BEB9EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27961ED51834292200BEB9EC /* RBBAnimationOSX */;
+			targetProxy = 27961EE81834295000BEB9EC /* PBXContainerItemProxy */;
+		};
 		5466C59418084B6400652BDC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 54F3AE291807394800E1E688 /* RBBAnimation */;
@@ -507,6 +693,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		27961E8C18341FCF00BEB9EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27961E8D18341FCF00BEB9EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		27961E9218341FCF00BEB9EC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27961E9318341FCF00BEB9EC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		27961E9818341FCF00BEB9EC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27961E9918341FCF00BEB9EC /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		5466C570180849D200652BDC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -518,6 +728,81 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		27961EAE18341FD000BEB9EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RBBAnimationMacTest/RBBAnimationMacTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RBBAnimationMacTest/RBBAnimationMacTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		27961EAF18341FD000BEB9EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RBBAnimationMacTest/RBBAnimationMacTest-Prefix.pch";
+				INFOPLIST_FILE = "RBBAnimationMacTest/RBBAnimationMacTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		27961EE51834292200BEB9EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DSTROOT = /tmp/RBBAnimation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RBBAnimation/RBBAnimation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RBBAnimationOSX;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		27961EE61834292200BEB9EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DSTROOT = /tmp/RBBAnimation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RBBAnimation/RBBAnimation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RBBAnimationOSX;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		5466C58E180849D200652BDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9342CE394B974700B637D41C /* Pods-RBBAnimationTest.xcconfig */;
@@ -701,6 +986,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27961EB218341FD000BEB9EC /* Build configuration list for PBXNativeTarget "RBBAnimationMacTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27961EAE18341FD000BEB9EC /* Debug */,
+				27961EAF18341FD000BEB9EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		27961EE41834292200BEB9EC /* Build configuration list for PBXNativeTarget "RBBAnimationOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27961EE51834292200BEB9EC /* Debug */,
+				27961EE61834292200BEB9EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5466C58D180849D200652BDC /* Build configuration list for PBXNativeTarget "RBBAnimationTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
