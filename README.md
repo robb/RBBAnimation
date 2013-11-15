@@ -18,7 +18,7 @@ To install RBBAnimation, I recommend the excellent [CocoaPods]. Simply add this
 to your Podfile
 
 ```ruby
-pod 'RBBAnimation', '0.1.0'
+pod 'RBBAnimation', '0.2.0'
 ```
 
 and you are ready to go!

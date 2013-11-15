@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "RBBAnimation"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
   s.summary = "Block-based animations made easy."
   s.description = <<-DESC
     RBBAnimation is a subclass of CAKeyframeAnimation that allows you to
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
 
-  s.source = { :git => "https://github.com/robb/RBBAnimation.git", :tag => "0.1.0" }
+  s.source = { :git => "https://github.com/robb/RBBAnimation.git", :tag => "v0.2.0" }
 
   s.source_files = 'RBBAnimation', 'RBBAnimation/**/*.{h,m}'
 
