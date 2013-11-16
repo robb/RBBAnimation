@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 Robert Böhnke. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 
 #import "RBBLinearInterpolation.h"
 

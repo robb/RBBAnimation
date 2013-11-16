@@ -6,9 +6,27 @@
 //  Copyright (c) 2013 Robert Böhnke. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "RBBLinearInterpolation.h"
+
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#import <UIKit/UIKit.h>
+#define VALUE_FOR_RECT(rect) [NSValue valueWithCGRect:rect]
+#define RECT_VALUE(value) [value CGRectValue]
+#define VALUE_FOR_SIZE(size) [NSValue valueWithCGSize:size]
+#define SIZE_VALUE(value) [value CGSizeValue]
+#define VALUE_FOR_POINT(point) [NSValue valueWithCGPoint:point]
+#define POINT_VALUE(value) [value CGPointValue]
+
+#elif TARGET_OS_MAC
+
+#define VALUE_FOR_RECT(rect) [NSValue valueWithRect:rect]
+#define RECT_VALUE(value) [value rectValue]
+#define VALUE_FOR_SIZE(size) [NSValue valueWithSize:size]
+#define SIZE_VALUE(value) [value sizeValue]
+#define VALUE_FOR_POINT(point) [NSValue valueWithPoint:point]
+#define POINT_VALUE(value) [value pointValue]
+
+#endif
 
 static RBBLinearInterpolation RBBInterpolateCATransform3D(CATransform3D from, CATransform3D to) {
     CATransform3D delta = {
@@ -68,7 +86,7 @@ static RBBLinearInterpolation RBBInterpolateCGRect(CGRect from, CGRect to) {
             .size.height = from.size.height + fraction * deltaHeight
         };
 
-        return [NSValue valueWithCGRect:rect];
+        return VALUE_FOR_RECT(rect);
     };
 }
 
@@ -82,7 +100,7 @@ static RBBLinearInterpolation RBBInterpolateCGPoint(CGPoint from, CGPoint to) {
             .y = from.y + fraction * deltaY,
         };
 
-        return [NSValue valueWithCGPoint:point];
+        return VALUE_FOR_POINT(point);
     };
 }
 
@@ -96,7 +114,7 @@ static RBBLinearInterpolation RBBInterpolateCGSize(CGSize from, CGSize to) {
             .height = from.height + fraction * deltaHeight,
         };
 
-        return [NSValue valueWithCGSize:size];
+        return VALUE_FOR_SIZE(size);
     };
 }
 
@@ -116,15 +134,15 @@ extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to) {
     }
 
     if (strcmp(from.objCType, @encode(CGRect)) == 0) {
-        return RBBInterpolateCGRect(from.CGRectValue, to.CGRectValue);
+        return RBBInterpolateCGRect(RECT_VALUE(from), RECT_VALUE(to));
     }
 
     if (strcmp(from.objCType, @encode(CGPoint)) == 0) {
-        return RBBInterpolateCGPoint(from.CGPointValue, to.CGPointValue);
+        return RBBInterpolateCGPoint(POINT_VALUE(from), POINT_VALUE(to));
     }
 
     if (strcmp(from.objCType, @encode(CGSize)) == 0) {
-        return RBBInterpolateCGSize(from.CGSizeValue, to.CGSizeValue);
+        return RBBInterpolateCGSize(SIZE_VALUE(from), SIZE_VALUE(to));
     }
 
     if ([from isKindOfClass:NSNumber.class]) {
