@@ -30,12 +30,12 @@
 
 + (NSSet *)keyPathsForValuesAffectingAnimationBlock {
     return [NSSet setWithArray:@[
-        @"damping"
-        @"mass"
-        @"stiffness"
-        @"velocity"
-        @"fromValue"
-        @"toValue"
+        @"damping",
+        @"mass",
+        @"stiffness",
+        @"velocity",
+        @"fromValue",
+        @"toValue",
         @"allowsOverdamping"
     ]];
 }
