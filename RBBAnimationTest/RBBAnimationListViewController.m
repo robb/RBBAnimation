@@ -13,6 +13,7 @@
 #import "RBBCustomAnimation.h"
 #import "RBBTweenAnimation.h"
 #import "RBBSpringAnimation.h"
+#import "RBBRubberbandAnimation.h"
 
 #import "RBBAnimationListViewController.h"
 
@@ -62,6 +63,19 @@
     spring.duration = [spring durationForEpsilon:0.01];
     spring.rbb_name = @"spring";
 
+    RBBRubberbandAnimation *rubberband = [RBBRubberbandAnimation animationWithKeyPath:@"position"];
+
+    rubberband.from = CGPointMake(0, 0);
+    rubberband.to = CGPointMake(0, 0);
+    rubberband.mass = 1;
+    rubberband.damping = 10;
+    rubberband.stiffness = 100;
+    rubberband.velocity = CGVectorMake(100, 0);
+
+    rubberband.additive = YES;
+    rubberband.duration = [rubberband durationForEpsilon:0.01];
+    rubberband.rbb_name = @"rubberband";
+
     RBBTweenAnimation *sinus = [RBBTweenAnimation animationWithKeyPath:@"position.y"];
     sinus.fromValue = @(0);
     sinus.toValue = @(100);
@@ -93,6 +107,7 @@
     self.animations = @[
         easeInOutBack,
         spring,
+        rubberband,
         scale,
         sinus,
         bounce,

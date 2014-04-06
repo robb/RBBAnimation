@@ -14,6 +14,7 @@
 		545D5ABF180B2D3F00FC94AB /* RBBCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5ABE180B2D3F00FC94AB /* RBBCubicBezier.m */; };
 		545D5AC2180B5E8400FC94AB /* RBBEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AC1180B5E8400FC94AB /* RBBEasingFunction.m */; };
 		545D5AC5180C138D00FC94AB /* RBBSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AC4180C138D00FC94AB /* RBBSpringAnimation.m */; };
+		545FEFD618F177B000900B78 /* RBBRubberbandAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545FEFD518F177B000900B78 /* RBBRubberbandAnimation.m */; };
 		5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */; };
 		5466C56318082D4200652BDC /* RBBBlockBasedArraySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */; };
 		5466C569180849D100652BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
@@ -82,6 +83,8 @@
 		545D5AC1180B5E8400FC94AB /* RBBEasingFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBEasingFunction.m; sourceTree = "<group>"; };
 		545D5AC3180C138D00FC94AB /* RBBSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBSpringAnimation.h; sourceTree = "<group>"; };
 		545D5AC4180C138D00FC94AB /* RBBSpringAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBSpringAnimation.m; sourceTree = "<group>"; };
+		545FEFD418F177B000900B78 /* RBBRubberbandAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBRubberbandAnimation.h; sourceTree = "<group>"; };
+		545FEFD518F177B000900B78 /* RBBRubberbandAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBRubberbandAnimation.m; sourceTree = "<group>"; };
 		5466C55F18082BEB00652BDC /* RBBBlockBasedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBBlockBasedArray.h; sourceTree = "<group>"; };
 		5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBBlockBasedArray.m; sourceTree = "<group>"; };
 		5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBBlockBasedArraySpec.m; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */,
 				545D5AC3180C138D00FC94AB /* RBBSpringAnimation.h */,
 				545D5AC4180C138D00FC94AB /* RBBSpringAnimation.m */,
+				545FEFD418F177B000900B78 /* RBBRubberbandAnimation.h */,
+				545FEFD518F177B000900B78 /* RBBRubberbandAnimation.m */,
 				54D5EA87181AE8620014896C /* RBBLinearInterpolation.h */,
 				54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */,
 				545D5AC0180B5E8400FC94AB /* RBBEasingFunction.h */,
@@ -477,6 +482,7 @@
 				54D5EA89181AE8620014896C /* RBBLinearInterpolation.m in Sources */,
 				545D5AC2180B5E8400FC94AB /* RBBEasingFunction.m in Sources */,
 				5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */,
+				545FEFD618F177B000900B78 /* RBBRubberbandAnimation.m in Sources */,
 				545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */,
 				545D5AC5180C138D00FC94AB /* RBBSpringAnimation.m in Sources */,
 				54F3AE351807394800E1E688 /* RBBAnimation.m in Sources */,
