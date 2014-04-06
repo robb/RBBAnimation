@@ -60,8 +60,8 @@
     CGFloat b = self.damping;
     CGFloat m = self.mass;
     CGFloat k = self.stiffness;
-    CGFloat v_x0 = self.velocity.dx;
-    CGFloat v_y0 = self.velocity.dy;
+    CGFloat v_x0 = self.velocity.x;
+    CGFloat v_y0 = self.velocity.y;
 
     NSParameterAssert(m > 0);
     NSParameterAssert(k > 0);

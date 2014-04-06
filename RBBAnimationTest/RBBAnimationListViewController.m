@@ -70,7 +70,7 @@
     rubberband.mass = 1;
     rubberband.damping = 10;
     rubberband.stiffness = 100;
-    rubberband.velocity = CGVectorMake(100, 0);
+    rubberband.velocity = CGPointMake(100, 0);
 
     rubberband.additive = YES;
     rubberband.duration = [rubberband durationForEpsilon:0.01];
