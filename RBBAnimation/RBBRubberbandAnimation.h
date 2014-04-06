@@ -8,6 +8,16 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+#ifdef CGVECTOR_DEFINED
+typedef CGVector RBBVector;
+#else
+struct RBBVector {
+    CGFloat dx;
+    CGFloat dy;
+};
+typedef struct RBBVector RBBVector;
+#endif
+
 #import "RBBAnimation.h"
 
 @interface RBBRubberbandAnimation : RBBAnimation
@@ -15,7 +25,7 @@
 @property (readwrite, nonatomic, assign) CGFloat damping;
 @property (readwrite, nonatomic, assign) CGFloat mass;
 @property (readwrite, nonatomic, assign) CGFloat stiffness;
-@property (readwrite, nonatomic, assign) CGVector velocity;
+@property (readwrite, nonatomic, assign) RBBVector velocity;
 
 @property (readwrite, nonatomic, assign) CGPoint from;
 @property (readwrite, nonatomic, assign) CGPoint to;
