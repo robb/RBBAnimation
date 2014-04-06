@@ -128,7 +128,11 @@
     return ^(CGFloat t, CGFloat _) {
         CGPoint p = { .x = self.from.x + oscillationX(t), .y = self.from.y + oscillationY(t) };
 
+        #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
         return [NSValue valueWithCGPoint:p];
+        #elif TARGET_OS_MAC
+        return [NSValue valueWithPoint:p];
+        #endif
     };
 }
 
