@@ -8,7 +8,18 @@
 
 #import "RBBDampedHarmonicOscillaton.h"
 
-RBBOsciallation RBBDampedHarmonicOscillation(CGFloat x0, CGFloat v0, CGFloat omega0, CGFloat omega1, CGFloat omega2, CGFloat beta) {
+RBBOsciallation RBBDampedHarmonicOscillation(CGFloat x0, CGFloat b, CGFloat m, CGFloat k, CGFloat v0, BOOL allowsOverdamping) {
+    NSCAssert(m > 0, @"mass must be greater than zero.");
+    NSCAssert(k > 0, @"stiffness must be greater than zero.");
+    NSCAssert(b > 0, @"damping must be greater than zero.");
+
+    CGFloat beta = b / (2 * m);
+    CGFloat omega0 = sqrtf(k / m);
+    CGFloat omega1 = sqrtf((omega0 * omega0) - (beta * beta));
+    CGFloat omega2 = sqrtf((beta * beta) - (omega0 * omega0));
+
+    if (!allowsOverdamping && beta > omega0) beta = omega0;
+
     if (beta < omega0) {
         // Underdamped
         return ^(CGFloat t) {

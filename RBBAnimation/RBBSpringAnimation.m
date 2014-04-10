@@ -57,25 +57,7 @@
 #pragma mark - RBBAnimation
 
 - (RBBAnimationBlock)animationBlock {
-    CGFloat b = self.damping;
-    CGFloat m = self.mass;
-    CGFloat k = self.stiffness;
-    CGFloat v0 = self.velocity;
-
-    NSParameterAssert(m > 0);
-    NSParameterAssert(k > 0);
-    NSParameterAssert(b > 0);
-
-    CGFloat beta = b / (2 * m);
-    CGFloat omega0 = sqrtf(k / m);
-    CGFloat omega1 = sqrtf((omega0 * omega0) - (beta * beta));
-    CGFloat omega2 = sqrtf((beta * beta) - (omega0 * omega0));
-
-    CGFloat x0 = -1;
-
-    if (!self.allowsOverdamping && beta > omega0) beta = omega0;
-
-    CGFloat (^oscillation)(CGFloat) = RBBDampedHarmonicOscillation(x0, v0, omega0, omega1, omega2, beta);
+    CGFloat (^oscillation)(CGFloat) = RBBDampedHarmonicOscillation(-1, self.damping, self.mass, self.stiffness, self.velocity, self.allowsOverdamping);
 
     RBBLinearInterpolation lerp = RBBInterpolate(self.fromValue, self.toValue);
     return ^(CGFloat t, CGFloat _) {

@@ -10,4 +10,4 @@
 
 typedef CGFloat (^RBBOsciallation)(CGFloat t);
 
-RBBOsciallation RBBDampedHarmonicOscillation(CGFloat x0, CGFloat v0, CGFloat omega0, CGFloat omega1, CGFloat omega2, CGFloat beta);
+RBBOsciallation RBBDampedHarmonicOscillation(CGFloat x0, CGFloat damping, CGFloat mass, CGFloat stiffness, CGFloat velocity, BOOL allowsOverdamping);
