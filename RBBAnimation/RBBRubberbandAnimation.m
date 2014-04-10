@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #endif
 
+#import "RBBDampedHarmonicOscillaton.h"
+
 #import "RBBRubberbandAnimation.h"
 
 @implementation RBBRubberbandAnimation
@@ -77,53 +79,8 @@
 
     if (!self.allowsOverdamping && beta > omega0) beta = omega0;
 
-    CGFloat (^oscillationX)(CGFloat);
-    if (beta < omega0) {
-        // Underdamped
-        oscillationX = ^(CGFloat t) {
-            CGFloat envelope = expf(-beta * t);
-
-            return -x0 + envelope * (x0 * cosf(omega1 * t) + ((beta * x0 + v_x0) / omega1) * sinf(omega1 * t));
-        };
-    } else if (beta == omega0) {
-        // Critically damped
-        oscillationX = ^(CGFloat t) {
-            CGFloat envelope = expf(-beta * t);
-
-            return -x0 + envelope * (x0 + (beta * x0 + v_x0) * t);
-        };
-    } else {
-        // Overdamped
-        oscillationX = ^(CGFloat t) {
-            CGFloat envelope = expf(-beta * t);
-
-            return -x0 + envelope * (x0 * coshf(omega2 * t) + ((beta * x0 + v_x0) / omega2) * sinhf(omega2 * t));
-        };
-    }
-
-    CGFloat (^oscillationY)(CGFloat);
-    if (beta < omega0) {
-        // Underdamped
-        oscillationY = ^(CGFloat t) {
-            CGFloat envelope = expf(-beta * t);
-
-            return -y0 + envelope * (y0 * cosf(omega1 * t) + ((beta * y0 + v_y0) / omega1) * sinf(omega1 * t));
-        };
-    } else if (beta == omega0) {
-        // Critically damped
-        oscillationY = ^(CGFloat t) {
-            CGFloat envelope = expf(-beta * t);
-
-            return -y0 + envelope * (y0 + (beta * y0 + v_y0) * t);
-        };
-    } else {
-        // Overdamped
-        oscillationY = ^(CGFloat t) {
-            CGFloat envelope = expf(-beta * t);
-
-            return -y0 + envelope * (y0 * coshf(omega2 * t) + ((beta * y0 + v_y0) / omega2) * sinhf(omega2 * t));
-        };
-    }
+     CGFloat (^oscillationX)(CGFloat) = RBBDampedHarmonicOscillation(x0, v_x0, omega0, omega1, omega2, beta);
+     CGFloat (^oscillationY)(CGFloat) = RBBDampedHarmonicOscillation(y0, v_y0, omega0, omega1, omega2, beta);
 
     return ^(CGFloat t, CGFloat _) {
         CGPoint p = { .x = self.from.x + oscillationX(t), .y = self.from.y + oscillationY(t) };

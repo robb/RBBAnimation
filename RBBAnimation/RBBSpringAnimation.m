@@ -7,6 +7,7 @@
 //
 
 #import "RBBBlockBasedArray.h"
+#import "RBBDampedHarmonicOscillaton.h"
 #import "RBBLinearInterpolation.h"
 
 #import "RBBSpringAnimation.h"
@@ -74,29 +75,7 @@
 
     if (!self.allowsOverdamping && beta > omega0) beta = omega0;
 
-    CGFloat (^oscillation)(CGFloat);
-    if (beta < omega0) {
-        // Underdamped
-        oscillation = ^(CGFloat t) {
-            CGFloat envelope = expf(-beta * t);
-
-            return -x0 + envelope * (x0 * cosf(omega1 * t) + ((beta * x0 + v0) / omega1) * sinf(omega1 * t));
-        };
-    } else if (beta == omega0) {
-        // Critically damped
-        oscillation = ^(CGFloat t) {
-            CGFloat envelope = expf(-beta * t);
-
-            return -x0 + envelope * (x0 + (beta * x0 + v0) * t);
-        };
-    } else {
-        // Overdamped
-        oscillation = ^(CGFloat t) {
-            CGFloat envelope = expf(-beta * t);
-
-            return -x0 + envelope * (x0 * coshf(omega2 * t) + ((beta * x0 + v0) / omega2) * sinhf(omega2 * t));
-        };
-    }
+    CGFloat (^oscillation)(CGFloat) = RBBDampedHarmonicOscillation(x0, v0, omega0, omega1, omega2, beta);
 
     RBBLinearInterpolation lerp = RBBInterpolate(self.fromValue, self.toValue);
     return ^(CGFloat t, CGFloat _) {
