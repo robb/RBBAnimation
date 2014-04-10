@@ -20,4 +20,8 @@ typedef id (^RBBAnimationBlock)(CGFloat t, CGFloat duration);
 
 - (void)setValues:(NSArray *)values __attribute__((unavailable("values cannot be set on RBBAnimation")));
 
+@property (readwrite, atomic, assign) CGPathRef path __attribute__((unavailable("path is not available on RBBAnimation")));
+
+@property (readwrite, atomic, copy) NSString *rotationMode __attribute__((unavailable("rotationMode is not available on RBBAnimation")));
+
 @end
