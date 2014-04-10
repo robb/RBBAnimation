@@ -24,6 +24,8 @@
     self.mass = 1;
     self.stiffness = 100;
 
+    self.calculationMode = kCAAnimationDiscrete;
+
     return self;
 }
 
