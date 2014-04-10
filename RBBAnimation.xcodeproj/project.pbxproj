@@ -105,7 +105,7 @@
 		54F3AE311807394800E1E688 /* RBBAnimation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RBBAnimation-Prefix.pch"; sourceTree = "<group>"; };
 		54F3AE321807394800E1E688 /* RBBAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBBAnimation.h; sourceTree = "<group>"; };
 		54F3AE341807394800E1E688 /* RBBAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBBAnimation.m; sourceTree = "<group>"; };
-		54F3AE3A1807394800E1E688 /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F3AE3A1807394800E1E688 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F3AE3B1807394800E1E688 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		54F3AE3E1807394800E1E688 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		54F3AE5318073A1900E1E688 /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				54F3AE2A1807394800E1E688 /* libRBBAnimation.a */,
-				54F3AE3A1807394800E1E688 /* Specs.octest */,
+				54F3AE3A1807394800E1E688 /* Specs.xctest */,
 				5466C568180849D100652BDC /* RBBAnimationTest.app */,
 			);
 			name = Products;
@@ -324,7 +324,7 @@
 			);
 			name = Specs;
 			productName = Specs;
-			productReference = 54F3AE3A1807394800E1E688 /* Specs.octest */;
+			productReference = 54F3AE3A1807394800E1E688 /* Specs.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -337,7 +337,7 @@
 				ORGANIZATIONNAME = "Robert Böhnke";
 				TargetAttributes = {
 					54F3AE391807394800E1E688 = {
-						TestTargetID = 5466C567180849D100652BDC;
+						TestTargetID = 54F3AE291807394800E1E688;
 					};
 				};
 			};
@@ -656,7 +656,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC82F1A3B2AC473AB09336C0 /* Pods-Specs.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RBBAnimationTest.app/RBBAnimationTest";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -669,8 +668,6 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -678,7 +675,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC82F1A3B2AC473AB09336C0 /* Pods-Specs.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RBBAnimationTest.app/RBBAnimationTest";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -687,8 +683,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

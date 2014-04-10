@@ -1,5 +1,5 @@
 PODS:
-  - Expecta (0.2.2)
+  - Expecta (0.3.0)
   - libextobjc (0.3):
     - libextobjc/EXTADT
     - libextobjc/EXTAnnotation
@@ -85,17 +85,17 @@ PODS:
   - libextobjc/RuntimeExtensions (0.3)
   - libextobjc/UmbrellaHeader (0.3)
   - libffi (3.0.13)
-  - Specta (0.1.11)
+  - Specta (0.2.1)
 
 DEPENDENCIES:
-  - Expecta (= 0.2.2)
+  - Expecta (= 0.3)
   - libextobjc
-  - Specta (= 0.1.11)
+  - Specta (= 0.2.1)
 
 SPEC CHECKSUMS:
-  Expecta: 99adbb2e366a02796477523bfd426143350d9caf
+  Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
   libextobjc: 820a79dbbbc498611e04fffd07d2d52a5588e7ac
   libffi: 64ef39353e747bb2b25e1026afd96a157bf9231c
-  Specta: 82746c6fd70b104c5d37cfbadb7bf15a2cbc4da0
+  Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
 
 COCOAPODS: 0.29.0
