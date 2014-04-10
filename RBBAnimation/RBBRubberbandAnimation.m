@@ -98,17 +98,17 @@
 - (id)copyWithZone:(NSZone *)zone {
     RBBRubberbandAnimation *copy = [super copyWithZone:zone];
     if (copy == nil) return nil;
-    
+
     copy->_damping = _damping;
     copy->_mass = _mass;
     copy->_stiffness = _stiffness;
     copy->_velocity = _velocity;
-    
+
     copy->_from = _from;
     copy->_to = _to;
-    
+
     copy->_allowsOverdamping = _allowsOverdamping;
-    
+
     return copy;
 }
 
