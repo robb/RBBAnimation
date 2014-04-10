@@ -1,5 +1,7 @@
 target :RBBAnimationTest, :exclusive => true do
-  pod 'libextobjc'
+    pod 'libextobjc/EXTScope', '0.4'
+    pod 'libextobjc/EXTKeyPathCoding'
+    pod 'libextobjc/EXTSynthesize'
 end
 
 target :Specs, :exclusive => true do
