@@ -25,10 +25,6 @@
 
 #pragma mark - CAKeyframeAnimation
 
-- (void)setValues:(NSArray *)values {
-    return;
-}
-
 - (NSArray *)values {
     RBBAnimationBlock block = [self.animationBlock copy];
 
@@ -37,6 +33,28 @@
     return [RBBBlockBasedArray arrayWithCount:duration * 60 block:^id(NSUInteger idx) {
         return block(idx / 60.0, duration);
     }];
+}
+
+#pragma mark - Unavailable
+
+- (void)setPath:(CGPathRef)path {
+    return;
+}
+
+- (CGPathRef)path {
+    return NULL;
+}
+
+- (void)setRotationMode:(NSString *)rotationMode {
+    return;
+}
+
+- (NSString *)rotationMode {
+    return nil;
+}
+
+- (void)setValues:(NSArray *)values {
+    return;
 }
 
 @end
