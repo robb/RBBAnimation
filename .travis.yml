@@ -9,4 +9,7 @@ notifications:
         on_success: change
         on_failure: always
 
+before_script:
+    - export LANG=en_US.UTF-8
+
 script: xcodebuild -workspace RBBAnimation.xcworkspace -scheme RBBAnimation -sdk iphonesimulator test | xcpretty -c
