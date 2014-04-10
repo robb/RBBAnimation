@@ -1,5 +1,9 @@
 # RBBAnimation
 
+<a href="https://travis-ci.org/robb/RBBAnimation?branch=master">
+    <img src="https://travis-ci.org/robb/RBBAnimation.svg?branch=master" align="right">
+</a>
+
 `RBBAnimation` is a subclass of `CAKeyframeAnimation` that allows you to
 declare your __animations using blocks__ instead of writing out all the
 individual key-frames.
