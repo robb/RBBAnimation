@@ -1,101 +1,24 @@
 PODS:
-  - Expecta (0.2.2)
-  - libextobjc (0.3):
-    - libextobjc/EXTADT
-    - libextobjc/EXTAnnotation
-    - libextobjc/EXTAspect
-    - libextobjc/EXTBlockMethod
-    - libextobjc/EXTBlockTarget
-    - libextobjc/EXTConcreteProtocol
-    - libextobjc/EXTDispatchObject
-    - libextobjc/EXTFinalMethod
-    - libextobjc/EXTKeyPathCoding
-    - libextobjc/EXTMaybe
-    - libextobjc/EXTMixin
-    - libextobjc/EXTMultimethod
-    - libextobjc/EXTMultiObject
-    - libextobjc/EXTNil
-    - libextobjc/EXTPassthrough
-    - libextobjc/EXTPrivateMethod
-    - libextobjc/EXTProtocolCategory
-    - libextobjc/EXTSafeCategory
-    - libextobjc/EXTScope
-    - libextobjc/EXTSelectorChecking
-    - libextobjc/EXTSwizzle
-    - libextobjc/EXTSynthesize
-    - libextobjc/EXTTuple
-    - libextobjc/EXTVarargs
-    - libextobjc/NSInvocation+EXT
-    - libextobjc/NSMethodSignature+EXT
+  - Expecta (0.3.0)
+  - libextobjc/EXTKeyPathCoding (0.4):
     - libextobjc/RuntimeExtensions
-    - libextobjc/UmbrellaHeader
-  - libextobjc/EXTADT (0.3):
+  - libextobjc/EXTScope (0.4):
     - libextobjc/RuntimeExtensions
-  - libextobjc/EXTAnnotation (0.3):
+  - libextobjc/EXTSynthesize (0.4):
     - libextobjc/RuntimeExtensions
-  - libextobjc/EXTAspect (0.3):
-    - libextobjc/RuntimeExtensions
-    - libffi
-  - libextobjc/EXTBlockMethod (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTBlockTarget (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTConcreteProtocol (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTDispatchObject (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTFinalMethod (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTKeyPathCoding (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTMaybe (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTMixin (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTMultimethod (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTMultiObject (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTNil (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTPassthrough (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTPrivateMethod (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTProtocolCategory (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTSafeCategory (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTScope (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTSelectorChecking (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTSwizzle (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTSynthesize (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTTuple (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/EXTVarargs (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/NSInvocation+EXT (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/NSMethodSignature+EXT (0.3):
-    - libextobjc/RuntimeExtensions
-  - libextobjc/RuntimeExtensions (0.3)
-  - libextobjc/UmbrellaHeader (0.3)
-  - libffi (3.0.13)
-  - Specta (0.1.11)
+  - libextobjc/RuntimeExtensions (0.4)
+  - Specta (0.2.1)
 
 DEPENDENCIES:
-  - Expecta (= 0.2.2)
-  - libextobjc
-  - Specta (= 0.1.11)
+  - Expecta (= 0.3)
+  - libextobjc/EXTKeyPathCoding
+  - libextobjc/EXTScope (= 0.4)
+  - libextobjc/EXTSynthesize
+  - Specta (= 0.2.1)
 
 SPEC CHECKSUMS:
-  Expecta: 99adbb2e366a02796477523bfd426143350d9caf
-  libextobjc: 820a79dbbbc498611e04fffd07d2d52a5588e7ac
-  libffi: 64ef39353e747bb2b25e1026afd96a157bf9231c
-  Specta: 82746c6fd70b104c5d37cfbadb7bf15a2cbc4da0
+  Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
+  libextobjc: 2c9fc8226f0f38e562587f65172f93f0c9b4a47a
+  Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
 
-COCOAPODS: 0.29.0
+COCOAPODS: 0.31.1
