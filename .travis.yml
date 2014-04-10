@@ -1,9 +1,6 @@
 language: objective-c
 
 before_install:
-    - brew update || true
-    - brew install xctool || true
-    - brew upgrade xctool || true
     - gem update --system
     - gem install cocoapods xcpretty
 
