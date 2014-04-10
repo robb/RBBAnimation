@@ -29,6 +29,7 @@
 		5466C59818084BA200652BDC /* RBBAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C59718084BA200652BDC /* RBBAnimationViewController.m */; };
 		5479BEA4181D8008009811FD /* RBBCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479BEA3181D8008009811FD /* RBBCustomAnimation.m */; };
 		549ECA8418F6ECFC00D968C7 /* RBBSpringAnimationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */; };
+		549ECA8618F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 549ECA8518F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m */; };
 		54D5EA89181AE8620014896C /* RBBLinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */; };
 		54F3AE2E1807394800E1E688 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
 		54F3AE331807394800E1E688 /* RBBAnimation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54F3AE321807394800E1E688 /* RBBAnimation.h */; };
@@ -106,6 +107,7 @@
 		5479BEA2181D8008009811FD /* RBBCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBCustomAnimation.h; sourceTree = "<group>"; };
 		5479BEA3181D8008009811FD /* RBBCustomAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBCustomAnimation.m; sourceTree = "<group>"; };
 		549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBSpringAnimationSpec.m; sourceTree = "<group>"; };
+		549ECA8518F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBDampedHarmonicOscillatonSpec.m; sourceTree = "<group>"; };
 		54D5EA87181AE8620014896C /* RBBLinearInterpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBLinearInterpolation.h; sourceTree = "<group>"; };
 		54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBLinearInterpolation.m; sourceTree = "<group>"; };
 		54F3AE2A1807394800E1E688 /* libRBBAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRBBAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */,
+				549ECA8518F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m */,
 				549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */,
 				54F3AE441807394800E1E688 /* Supporting Files */,
 			);
@@ -504,6 +507,7 @@
 			files = (
 				5466C56318082D4200652BDC /* RBBBlockBasedArraySpec.m in Sources */,
 				549ECA8418F6ECFC00D968C7 /* RBBSpringAnimationSpec.m in Sources */,
+				549ECA8618F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

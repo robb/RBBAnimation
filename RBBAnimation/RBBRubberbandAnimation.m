@@ -59,17 +59,17 @@
 #pragma mark - RBBAnimation
 
 - (RBBAnimationBlock)animationBlock {
-    CGFloat x0 = self.from.x - self.to.x;
-    CGFloat y0 = self.from.y - self.to.y;
+    CGFloat deltaX = self.from.x - self.to.x;
+    CGFloat deltaY = self.from.y - self.to.y;
 
-    RBBOsciallation oscillationX = RBBDampedHarmonicOscillation(x0, self.damping, self.mass, self.stiffness, self.velocity.x, self.allowsOverdamping);
-    RBBOsciallation oscillationY = RBBDampedHarmonicOscillation(y0, self.damping, self.mass, self.stiffness, self.velocity.y, self.allowsOverdamping);
+    RBBOsciallation oscillationX = RBBDampedHarmonicOscillation(deltaX, self.damping, self.mass, self.stiffness, self.velocity.x, self.allowsOverdamping);
+    RBBOsciallation oscillationY = RBBDampedHarmonicOscillation(deltaY, self.damping, self.mass, self.stiffness, self.velocity.y, self.allowsOverdamping);
 
-    CGFloat xOffset = self.from.x;
-    CGFloat yOffset = self.from.y;
+    CGFloat x0 = self.to.x;
+    CGFloat y0 = self.to.y;
 
     return ^(CGFloat t, CGFloat _) {
-        CGPoint p = { .x = xOffset + oscillationX(t), .y = yOffset + oscillationY(t) };
+        CGPoint p = { .x = x0 + oscillationX(t), .y = y0 + oscillationY(t) };
 
         #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
         return [NSValue valueWithCGPoint:p];

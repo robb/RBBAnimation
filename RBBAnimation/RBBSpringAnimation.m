@@ -63,7 +63,7 @@
 
     RBBLinearInterpolation lerp = RBBInterpolate(self.fromValue, self.toValue);
     return ^(CGFloat t, CGFloat _) {
-        return lerp(oscillation(t));
+        return lerp(1 + oscillation(t));
     };
 }
 

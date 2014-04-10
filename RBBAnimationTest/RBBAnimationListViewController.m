@@ -65,12 +65,12 @@
 
     RBBRubberbandAnimation *rubberband = [RBBRubberbandAnimation animationWithKeyPath:@"position"];
 
-    rubberband.from = CGPointMake(0, 0);
-    rubberband.to = CGPointMake(0, 0);
+    rubberband.from = CGPointMake(0, -100);
+    rubberband.to = CGPointMake(0, 100);
     rubberband.mass = 1;
     rubberband.damping = 10;
     rubberband.stiffness = 100;
-    rubberband.velocity = CGPointMake(100, 0);
+    rubberband.velocity = CGPointMake(0, 0);
 
     rubberband.additive = YES;
     rubberband.duration = [rubberband durationForEpsilon:0.01];
