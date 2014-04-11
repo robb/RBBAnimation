@@ -14,7 +14,7 @@ DEPENDENCIES:
   - libextobjc/EXTKeyPathCoding
   - libextobjc/EXTScope (= 0.4)
   - libextobjc/EXTSynthesize
-  - Specta (= 0.2.1)
+  - Specta (~> 0.2.1)
 
 SPEC CHECKSUMS:
   Expecta: 322f1dc42610106a5ba9871b4924cf1635d80833
