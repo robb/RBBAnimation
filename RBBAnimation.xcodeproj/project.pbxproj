@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540F65A318F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */; };
 		545D5AB6180AFCA500FC94AB /* CAAnimation+Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */; };
 		545D5AB7180AFCA500FC94AB /* RBBAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB5180AFCA500FC94AB /* RBBAnimationListViewController.m */; };
 		545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */; };
@@ -23,10 +24,32 @@
 		5466C574180849D200652BDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C573180849D200652BDC /* main.m */; };
 		5466C578180849D200652BDC /* RBBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C577180849D200652BDC /* RBBAppDelegate.m */; };
 		5466C57A180849D200652BDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5466C579180849D200652BDC /* Images.xcassets */; };
-		5466C59518084B6A00652BDC /* libRBBAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2A1807394800E1E688 /* libRBBAnimation.a */; };
+		5466C59518084B6A00652BDC /* libRBBAnimation iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2A1807394800E1E688 /* libRBBAnimation iOS.a */; };
 		5466C59818084BA200652BDC /* RBBAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C59718084BA200652BDC /* RBBAnimationViewController.m */; };
 		5479BEA4181D8008009811FD /* RBBCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479BEA3181D8008009811FD /* RBBCustomAnimation.m */; };
 		549ECA8418F6ECFC00D968C7 /* RBBSpringAnimationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */; };
+		549ECA9618F814A000D968C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549ECA9518F814A000D968C7 /* Cocoa.framework */; };
+		549ECAAA18F814A000D968C7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE3B1807394800E1E688 /* XCTest.framework */; };
+		549ECAAB18F814A000D968C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549ECA9518F814A000D968C7 /* Cocoa.framework */; };
+		549ECAAE18F814A000D968C7 /* RBBAnimation Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549ECA9418F814A000D968C7 /* RBBAnimation Mac.framework */; };
+		549ECABD18F8155800D968C7 /* RBBBlockBasedArraySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */; };
+		549ECABE18F8155B00D968C7 /* RBBSpringAnimationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */; };
+		549ECABF18F8157200D968C7 /* RBBAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F3AE341807394800E1E688 /* RBBAnimation.m */; };
+		549ECAC018F8157200D968C7 /* RBBCustomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5479BEA2181D8008009811FD /* RBBCustomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549ECAC118F8157200D968C7 /* RBBCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479BEA3181D8008009811FD /* RBBCustomAnimation.m */; };
+		549ECAC218F8157200D968C7 /* RBBTweenAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 545D5AB8180B1FAE00FC94AB /* RBBTweenAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549ECAC318F8157200D968C7 /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */; };
+		549ECAC418F8157200D968C7 /* RBBSpringAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 545D5AC3180C138D00FC94AB /* RBBSpringAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549ECAC518F8157200D968C7 /* RBBSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AC4180C138D00FC94AB /* RBBSpringAnimation.m */; };
+		549ECAC618F8157200D968C7 /* RBBLinearInterpolation.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D5EA87181AE8620014896C /* RBBLinearInterpolation.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		549ECAC718F8157200D968C7 /* RBBLinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */; };
+		549ECAC818F8157200D968C7 /* RBBEasingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 545D5AC0180B5E8400FC94AB /* RBBEasingFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549ECAC918F8157200D968C7 /* RBBEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AC1180B5E8400FC94AB /* RBBEasingFunction.m */; };
+		549ECACA18F8157200D968C7 /* RBBCubicBezier.h in Headers */ = {isa = PBXBuildFile; fileRef = 545D5ABD180B2D3F00FC94AB /* RBBCubicBezier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549ECACB18F8157200D968C7 /* RBBCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5ABE180B2D3F00FC94AB /* RBBCubicBezier.m */; };
+		549ECACC18F8157200D968C7 /* RBBBlockBasedArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 5466C55F18082BEB00652BDC /* RBBBlockBasedArray.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		549ECACD18F8157200D968C7 /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */; };
+		549ECACE18F8157500D968C7 /* RBBAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F3AE321807394800E1E688 /* RBBAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54D5EA89181AE8620014896C /* RBBLinearInterpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */; };
 		54F3AE2E1807394800E1E688 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
 		54F3AE331807394800E1E688 /* RBBAnimation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54F3AE321807394800E1E688 /* RBBAnimation.h */; };
@@ -34,9 +57,10 @@
 		54F3AE3C1807394800E1E688 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE3B1807394800E1E688 /* XCTest.framework */; };
 		54F3AE3D1807394800E1E688 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
 		54F3AE3F1807394800E1E688 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE3E1807394800E1E688 /* UIKit.framework */; };
-		54F3AE421807394800E1E688 /* libRBBAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2A1807394800E1E688 /* libRBBAnimation.a */; };
-		5EFA48C4C2284A9AA5BD1B09 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD960C698C3E4DB198BD591C /* libPods-Specs.a */; };
+		54F3AE421807394800E1E688 /* libRBBAnimation iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2A1807394800E1E688 /* libRBBAnimation iOS.a */; };
 		6439C0B3C2C941869D563894 /* libPods-RBBAnimationTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9764F4EDA8D64676ADE7428E /* libPods-RBBAnimationTest.a */; };
+		88D1CBC6B26446F4BE5A393F /* libPods-Specs-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E856D162B1FB41A29C1DD243 /* libPods-Specs-Mac.a */; };
+		CA49CA861D544AAD806A9A8B /* libPods-Specs-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C7CF8386EA4D9896C0AD15 /* libPods-Specs-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +70,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 54F3AE291807394800E1E688;
 			remoteInfo = RBBAnimation;
+		};
+		549ECAAC18F814A000D968C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54F3AE221807394800E1E688 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 549ECA9318F814A000D968C7;
+			remoteInfo = "RBBAnimation Mac";
 		};
 		54F3AE401807394800E1E688 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -70,6 +101,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		540F65A018F8188F005A6BB8 /* RBBAnimation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RBBAnimation-Info.plist"; sourceTree = "<group>"; };
+		540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-RBBAnimationTest.xcconfig"; path = "Pods/Pods-RBBAnimationTest.xcconfig"; sourceTree = "<group>"; };
 		545D5AB2180AFCA500FC94AB /* CAAnimation+Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Name.h"; sourceTree = "<group>"; };
 		545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+Name.m"; sourceTree = "<group>"; };
 		545D5AB4180AFCA500FC94AB /* RBBAnimationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBAnimationListViewController.h; sourceTree = "<group>"; };
@@ -100,20 +133,28 @@
 		5479BEA2181D8008009811FD /* RBBCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBCustomAnimation.h; sourceTree = "<group>"; };
 		5479BEA3181D8008009811FD /* RBBCustomAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBCustomAnimation.m; sourceTree = "<group>"; };
 		549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBSpringAnimationSpec.m; sourceTree = "<group>"; };
+		549ECA9418F814A000D968C7 /* RBBAnimation Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "RBBAnimation Mac.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		549ECA9518F814A000D968C7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		549ECA9818F814A000D968C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		549ECA9918F814A000D968C7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		549ECA9A18F814A000D968C7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		549ECAA918F814A000D968C7 /* Specs-Mac.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Specs-Mac.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D5EA87181AE8620014896C /* RBBLinearInterpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBLinearInterpolation.h; sourceTree = "<group>"; };
 		54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBLinearInterpolation.m; sourceTree = "<group>"; };
-		54F3AE2A1807394800E1E688 /* libRBBAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRBBAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F3AE2A1807394800E1E688 /* libRBBAnimation iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libRBBAnimation iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F3AE2D1807394800E1E688 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		54F3AE311807394800E1E688 /* RBBAnimation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RBBAnimation-Prefix.pch"; sourceTree = "<group>"; };
 		54F3AE321807394800E1E688 /* RBBAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBBAnimation.h; sourceTree = "<group>"; };
 		54F3AE341807394800E1E688 /* RBBAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBBAnimation.m; sourceTree = "<group>"; };
-		54F3AE3A1807394800E1E688 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		54F3AE3A1807394800E1E688 /* Specs-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Specs-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F3AE3B1807394800E1E688 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		54F3AE3E1807394800E1E688 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		54F3AE5318073A1900E1E688 /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
-		9342CE394B974700B637D41C /* Pods-RBBAnimationTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBBAnimationTest.xcconfig"; path = "Pods/Pods-RBBAnimationTest.xcconfig"; sourceTree = "<group>"; };
 		9764F4EDA8D64676ADE7428E /* libPods-RBBAnimationTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RBBAnimationTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC82F1A3B2AC473AB09336C0 /* Pods-Specs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.xcconfig"; path = "Pods/Pods-Specs.xcconfig"; sourceTree = "<group>"; };
+		A1C7CF8386EA4D9896C0AD15 /* libPods-Specs-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0948F68E34B4F709D3DF063 /* Pods-Specs-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs-iOS.xcconfig"; path = "Pods/Pods-Specs-iOS.xcconfig"; sourceTree = "<group>"; };
+		CC5CA24990AD48078DC318EC /* Pods-Specs-Mac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs-Mac.xcconfig"; path = "Pods/Pods-Specs-Mac.xcconfig"; sourceTree = "<group>"; };
+		E856D162B1FB41A29C1DD243 /* libPods-Specs-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD960C698C3E4DB198BD591C /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,11 +163,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5466C59518084B6A00652BDC /* libRBBAnimation.a in Frameworks */,
+				5466C59518084B6A00652BDC /* libRBBAnimation iOS.a in Frameworks */,
 				5466C56B180849D100652BDC /* CoreGraphics.framework in Frameworks */,
 				5466C56C180849D100652BDC /* UIKit.framework in Frameworks */,
 				5466C569180849D100652BDC /* Foundation.framework in Frameworks */,
 				6439C0B3C2C941869D563894 /* libPods-RBBAnimationTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549ECA9018F814A000D968C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549ECA9618F814A000D968C7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549ECAA618F814A000D968C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549ECAAE18F814A000D968C7 /* RBBAnimation Mac.framework in Frameworks */,
+				549ECAAB18F814A000D968C7 /* Cocoa.framework in Frameworks */,
+				549ECAAA18F814A000D968C7 /* XCTest.framework in Frameworks */,
+				88D1CBC6B26446F4BE5A393F /* libPods-Specs-Mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,10 +204,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54F3AE3C1807394800E1E688 /* XCTest.framework in Frameworks */,
-				54F3AE421807394800E1E688 /* libRBBAnimation.a in Frameworks */,
+				54F3AE421807394800E1E688 /* libRBBAnimation iOS.a in Frameworks */,
 				54F3AE3F1807394800E1E688 /* UIKit.framework in Frameworks */,
 				54F3AE3D1807394800E1E688 /* Foundation.framework in Frameworks */,
-				5EFA48C4C2284A9AA5BD1B09 /* libPods-Specs.a in Frameworks */,
+				CA49CA861D544AAD806A9A8B /* libPods-Specs-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +242,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		549ECA9718F814A000D968C7 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				549ECA9818F814A000D968C7 /* Foundation.framework */,
+				549ECA9918F814A000D968C7 /* CoreData.framework */,
+				549ECA9A18F814A000D968C7 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 		54F3AE211807394800E1E688 = {
 			isa = PBXGroup;
 			children = (
@@ -190,17 +260,20 @@
 				5466C56D180849D200652BDC /* RBBAnimationTest */,
 				54F3AE2C1807394800E1E688 /* Frameworks */,
 				54F3AE2B1807394800E1E688 /* Products */,
-				FC82F1A3B2AC473AB09336C0 /* Pods-Specs.xcconfig */,
-				9342CE394B974700B637D41C /* Pods-RBBAnimationTest.xcconfig */,
+				540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */,
+				CC5CA24990AD48078DC318EC /* Pods-Specs-Mac.xcconfig */,
+				C0948F68E34B4F709D3DF063 /* Pods-Specs-iOS.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		54F3AE2B1807394800E1E688 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54F3AE2A1807394800E1E688 /* libRBBAnimation.a */,
-				54F3AE3A1807394800E1E688 /* Specs.xctest */,
+				54F3AE2A1807394800E1E688 /* libRBBAnimation iOS.a */,
+				54F3AE3A1807394800E1E688 /* Specs-iOS.xctest */,
 				5466C568180849D100652BDC /* RBBAnimationTest.app */,
+				549ECA9418F814A000D968C7 /* RBBAnimation Mac.framework */,
+				549ECAA918F814A000D968C7 /* Specs-Mac.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +288,10 @@
 				FD960C698C3E4DB198BD591C /* libPods-Specs.a */,
 				5466C56A180849D100652BDC /* CoreGraphics.framework */,
 				9764F4EDA8D64676ADE7428E /* libPods-RBBAnimationTest.a */,
+				549ECA9518F814A000D968C7 /* Cocoa.framework */,
+				549ECA9718F814A000D968C7 /* Other Frameworks */,
+				E856D162B1FB41A29C1DD243 /* libPods-Specs-Mac.a */,
+				A1C7CF8386EA4D9896C0AD15 /* libPods-Specs-iOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				54F3AE311807394800E1E688 /* RBBAnimation-Prefix.pch */,
+				540F65A018F8188F005A6BB8 /* RBBAnimation-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -271,6 +349,24 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		549ECA9118F814A000D968C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549ECAC218F8157200D968C7 /* RBBTweenAnimation.h in Headers */,
+				549ECAC818F8157200D968C7 /* RBBEasingFunction.h in Headers */,
+				549ECACE18F8157500D968C7 /* RBBAnimation.h in Headers */,
+				549ECAC418F8157200D968C7 /* RBBSpringAnimation.h in Headers */,
+				549ECACA18F8157200D968C7 /* RBBCubicBezier.h in Headers */,
+				549ECAC018F8157200D968C7 /* RBBCustomAnimation.h in Headers */,
+				549ECAC618F8157200D968C7 /* RBBLinearInterpolation.h in Headers */,
+				549ECACC18F8157200D968C7 /* RBBBlockBasedArray.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		5466C567180849D100652BDC /* RBBAnimationTest */ = {
 			isa = PBXNativeTarget;
@@ -292,9 +388,47 @@
 			productReference = 5466C568180849D100652BDC /* RBBAnimationTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		54F3AE291807394800E1E688 /* RBBAnimation */ = {
+		549ECA9318F814A000D968C7 /* RBBAnimation Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54F3AE4D1807394800E1E688 /* Build configuration list for PBXNativeTarget "RBBAnimation" */;
+			buildConfigurationList = 549ECAB718F814A000D968C7 /* Build configuration list for PBXNativeTarget "RBBAnimation Mac" */;
+			buildPhases = (
+				549ECA8F18F814A000D968C7 /* Sources */,
+				549ECA9018F814A000D968C7 /* Frameworks */,
+				549ECA9118F814A000D968C7 /* Headers */,
+				549ECA9218F814A000D968C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RBBAnimation Mac";
+			productName = "RBBAnimation Mac";
+			productReference = 549ECA9418F814A000D968C7 /* RBBAnimation Mac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		549ECAA818F814A000D968C7 /* Specs-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 549ECABA18F814A000D968C7 /* Build configuration list for PBXNativeTarget "Specs-Mac" */;
+			buildPhases = (
+				7854BEC60F31406CA9C284E7 /* Check Pods Manifest.lock */,
+				549ECAA518F814A000D968C7 /* Sources */,
+				549ECAA618F814A000D968C7 /* Frameworks */,
+				549ECAA718F814A000D968C7 /* Resources */,
+				95F54BF0BB504B1783E7A15E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				549ECAAD18F814A000D968C7 /* PBXTargetDependency */,
+			);
+			name = "Specs-Mac";
+			productName = "RBBAnimation MacTests";
+			productReference = 549ECAA918F814A000D968C7 /* Specs-Mac.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		54F3AE291807394800E1E688 /* RBBAnimation iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54F3AE4D1807394800E1E688 /* Build configuration list for PBXNativeTarget "RBBAnimation iOS" */;
 			buildPhases = (
 				54F3AE261807394800E1E688 /* Sources */,
 				54F3AE271807394800E1E688 /* Frameworks */,
@@ -304,14 +438,14 @@
 			);
 			dependencies = (
 			);
-			name = RBBAnimation;
+			name = "RBBAnimation iOS";
 			productName = RBBAnimation;
-			productReference = 54F3AE2A1807394800E1E688 /* libRBBAnimation.a */;
+			productReference = 54F3AE2A1807394800E1E688 /* libRBBAnimation iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		54F3AE391807394800E1E688 /* Specs */ = {
+		54F3AE391807394800E1E688 /* Specs-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54F3AE501807394800E1E688 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildConfigurationList = 54F3AE501807394800E1E688 /* Build configuration list for PBXNativeTarget "Specs-iOS" */;
 			buildPhases = (
 				8F58412594AB4B62BD72EB53 /* Check Pods Manifest.lock */,
 				54F3AE361807394800E1E688 /* Sources */,
@@ -325,9 +459,9 @@
 			dependencies = (
 				54F3AE411807394800E1E688 /* PBXTargetDependency */,
 			);
-			name = Specs;
+			name = "Specs-iOS";
 			productName = Specs;
-			productReference = 54F3AE3A1807394800E1E688 /* Specs.xctest */;
+			productReference = 54F3AE3A1807394800E1E688 /* Specs-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -339,6 +473,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Robert Böhnke";
 				TargetAttributes = {
+					549ECAA818F814A000D968C7 = {
+						TestTargetID = 549ECA9318F814A000D968C7;
+					};
 					54F3AE391807394800E1E688 = {
 						TestTargetID = 54F3AE291807394800E1E688;
 					};
@@ -356,8 +493,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				54F3AE291807394800E1E688 /* RBBAnimation */,
-				54F3AE391807394800E1E688 /* Specs */,
+				54F3AE291807394800E1E688 /* RBBAnimation iOS */,
+				54F3AE391807394800E1E688 /* Specs-iOS */,
+				549ECA9318F814A000D968C7 /* RBBAnimation Mac */,
+				549ECAA818F814A000D968C7 /* Specs-Mac */,
 				5466C567180849D100652BDC /* RBBAnimationTest */,
 			);
 		};
@@ -373,10 +512,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		549ECA9218F814A000D968C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549ECAA718F814A000D968C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54F3AE381807394800E1E688 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				540F65A318F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +565,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		7854BEC60F31406CA9C284E7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		80B0D276277B4291ABDAD6CF /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,7 +592,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8F58412594AB4B62BD72EB53 /* Check Pods Manifest.lock */ = {
@@ -439,6 +608,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95F54BF0BB504B1783E7A15E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Disabled for the time being since it picks up the .xcassets\n# catalogue in the test app\n# \"${SRCROOT}/Pods/Pods-Specs-Mac-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5CEBE251F3B4BF0A09218AC /* Copy Pods Resources */ = {
@@ -471,6 +655,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		549ECA8F18F814A000D968C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549ECAC518F8157200D968C7 /* RBBSpringAnimation.m in Sources */,
+				549ECAC918F8157200D968C7 /* RBBEasingFunction.m in Sources */,
+				549ECAC118F8157200D968C7 /* RBBCustomAnimation.m in Sources */,
+				549ECAC318F8157200D968C7 /* RBBTweenAnimation.m in Sources */,
+				549ECAC718F8157200D968C7 /* RBBLinearInterpolation.m in Sources */,
+				549ECABF18F8157200D968C7 /* RBBAnimation.m in Sources */,
+				549ECACD18F8157200D968C7 /* RBBBlockBasedArray.m in Sources */,
+				549ECACB18F8157200D968C7 /* RBBCubicBezier.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549ECAA518F814A000D968C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				549ECABD18F8155800D968C7 /* RBBBlockBasedArraySpec.m in Sources */,
+				549ECABE18F8155B00D968C7 /* RBBSpringAnimationSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		54F3AE261807394800E1E688 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -500,12 +708,17 @@
 /* Begin PBXTargetDependency section */
 		5466C59418084B6400652BDC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 54F3AE291807394800E1E688 /* RBBAnimation */;
+			target = 54F3AE291807394800E1E688 /* RBBAnimation iOS */;
 			targetProxy = 5466C59318084B6400652BDC /* PBXContainerItemProxy */;
+		};
+		549ECAAD18F814A000D968C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 549ECA9318F814A000D968C7 /* RBBAnimation Mac */;
+			targetProxy = 549ECAAC18F814A000D968C7 /* PBXContainerItemProxy */;
 		};
 		54F3AE411807394800E1E688 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 54F3AE291807394800E1E688 /* RBBAnimation */;
+			target = 54F3AE291807394800E1E688 /* RBBAnimation iOS */;
 			targetProxy = 54F3AE401807394800E1E688 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -524,7 +737,7 @@
 /* Begin XCBuildConfiguration section */
 		5466C58E180849D200652BDC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9342CE394B974700B637D41C /* Pods-RBBAnimationTest.xcconfig */;
+			baseConfigurationReference = 540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -547,7 +760,7 @@
 		};
 		5466C58F180849D200652BDC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9342CE394B974700B637D41C /* Pods-RBBAnimationTest.xcconfig */;
+			baseConfigurationReference = 540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -561,6 +774,100 @@
 				INFOPLIST_FILE = "RBBAnimationTest/RBBAnimationTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		549ECAB818F814A000D968C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RBBAnimation/RBBAnimation-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "RBBAnimation/RBBAnimation-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		549ECAB918F814A000D968C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RBBAnimation/RBBAnimation-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "RBBAnimation/RBBAnimation-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		549ECABB18F814A000D968C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC5CA24990AD48078DC318EC /* Pods-Specs-Mac.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		549ECABC18F814A000D968C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC5CA24990AD48078DC318EC /* Pods-Specs-Mac.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -658,7 +965,7 @@
 		};
 		54F3AE511807394800E1E688 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC82F1A3B2AC473AB09336C0 /* Pods-Specs.xcconfig */;
+			baseConfigurationReference = C0948F68E34B4F709D3DF063 /* Pods-Specs-iOS.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -677,7 +984,7 @@
 		};
 		54F3AE521807394800E1E688 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC82F1A3B2AC473AB09336C0 /* Pods-Specs.xcconfig */;
+			baseConfigurationReference = C0948F68E34B4F709D3DF063 /* Pods-Specs-iOS.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -702,6 +1009,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		549ECAB718F814A000D968C7 /* Build configuration list for PBXNativeTarget "RBBAnimation Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				549ECAB818F814A000D968C7 /* Debug */,
+				549ECAB918F814A000D968C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		549ECABA18F814A000D968C7 /* Build configuration list for PBXNativeTarget "Specs-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				549ECABB18F814A000D968C7 /* Debug */,
+				549ECABC18F814A000D968C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		54F3AE251807394800E1E688 /* Build configuration list for PBXProject "RBBAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -711,7 +1036,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54F3AE4D1807394800E1E688 /* Build configuration list for PBXNativeTarget "RBBAnimation" */ = {
+		54F3AE4D1807394800E1E688 /* Build configuration list for PBXNativeTarget "RBBAnimation iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54F3AE4E1807394800E1E688 /* Debug */,
@@ -720,7 +1045,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54F3AE501807394800E1E688 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+		54F3AE501807394800E1E688 /* Build configuration list for PBXNativeTarget "Specs-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54F3AE511807394800E1E688 /* Debug */,

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "54F3AE291807394800E1E688"
-               BuildableName = "libRBBAnimation.a"
-               BlueprintName = "RBBAnimation"
+               BlueprintIdentifier = "549ECA9318F814A000D968C7"
+               BuildableName = "RBBAnimation Mac.framework"
+               BlueprintName = "RBBAnimation Mac"
                ReferencedContainer = "container:RBBAnimation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "54F3AE391807394800E1E688"
-               BuildableName = "Specs.xctest"
-               BlueprintName = "Specs"
+               BlueprintIdentifier = "549ECAA818F814A000D968C7"
+               BuildableName = "Specs-Mac.xctest"
+               BlueprintName = "Specs-Mac"
                ReferencedContainer = "container:RBBAnimation.xcodeproj">
             </BuildableReference>
          </TestableReference>
