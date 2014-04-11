@@ -148,36 +148,36 @@ static CGColorRef RBBColorRefWithHSBA(CGFloat hue, CGFloat saturation, CGFloat b
 static RBBLinearInterpolation RBBInterpolateColor(id from, id to) {
     CGFloat fromHue = 0.0f;
     CGFloat toHue = 0.0f;
-    
+
     CGFloat fromSaturation = 0.0f;
     CGFloat toSaturation = 0.0f;
-    
+
     CGFloat fromBrightness = 0.0f;
     CGFloat toBrightness = 0.0f;
-    
+
     CGFloat fromAlpha = 0.0f;
     CGFloat toAlpha = 0.0f;
-    
+
     // TODO: Color spaces can present a problem. For example, if [UIColor/NSColor whiteColor] is used, the color space is white, and this fails.
     // A comprehensive conversion process should always bring the colors into an HSB-compatible color space. In the mean time, always
     // create colors using the [UIColor/NSColor colorWithHue:saturation:brightness:alpha:] method. :-\
-    
+
     RBBGetHSBAFromColor(from, &fromHue, &fromSaturation, &fromBrightness, &fromAlpha);
     RBBGetHSBAFromColor(to, &toHue, &toSaturation, &toBrightness, &toAlpha);
-    
+
     CGFloat deltaHue = toHue - fromHue;
     CGFloat deltaSaturation = toSaturation - fromSaturation;
     CGFloat deltaBrightness = toBrightness - fromBrightness;
     CGFloat deltaAlpha = toAlpha - fromAlpha;
-    
+
     return ^(CGFloat fraction) {
         CGFloat interpolatedHue = fromHue + fraction * deltaHue;
         CGFloat interpolatedSaturation = fromSaturation + fraction * deltaSaturation;
         CGFloat interpolatedBrightness = fromBrightness + fraction * deltaBrightness;
         CGFloat interpolatedAlpha = fromAlpha + fraction * deltaAlpha;
-        
+
         CGColorRef colorRef = RBBColorRefWithHSBA(interpolatedHue, interpolatedSaturation, interpolatedBrightness, interpolatedAlpha);
-        
+
         return (__bridge id)colorRef;
     };
 }
@@ -185,9 +185,9 @@ static RBBLinearInterpolation RBBInterpolateColor(id from, id to) {
 extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to) {
     BOOL valuesAreNumbers = ([from isKindOfClass:NSNumber.class] && [to isKindOfClass:NSNumber.class]);
     BOOL valuesAreColorRefs = ((CFGetTypeID((CFTypeRef)from) == CGColorGetTypeID()) && (CFGetTypeID((CFTypeRef)to) == CGColorGetTypeID()));
-    
+
     NSCParameterAssert(valuesAreNumbers || valuesAreColorRefs || strcmp(from.objCType, to.objCType) == 0);
-    
+
     if (valuesAreNumbers) {
         #if CGFLOAT_IS_DOUBLE
         return RBBInterpolateCGFloat([(NSNumber *)from doubleValue], [(NSNumber *)to doubleValue]);
@@ -195,11 +195,11 @@ extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to) {
         return RBBInterpolateCGFloat([(NSNumber *)from floatValue], [(NSNumber *)to doubleValue]);
         #endif
     }
-    
+
     if (valuesAreColorRefs) {
         id fromColor = nil;
         id toColor = nil;
-        
+
         #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
         fromColor = [UIColor colorWithCGColor:(CGColorRef)from];
         toColor = [UIColor colorWithCGColor:(CGColorRef)to];
@@ -207,7 +207,7 @@ extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to) {
         fromColor = [NSColor colorWithCGColor:(CGColorRef)from];
         toColor = [NSColor colorWithCGColor:(CGColorRef)to];
         #endif
-        
+
         return RBBInterpolateColor(fromColor, toColor);
     }
 
