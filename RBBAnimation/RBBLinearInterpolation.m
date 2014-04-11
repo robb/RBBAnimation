@@ -159,13 +159,7 @@ static RBBLinearInterpolation RBBInterpolateColor(RBBColor *from, RBBColor *to) 
 }
 
 extern RBBLinearInterpolation RBBInterpolate(id from, id to) {
-    BOOL valuesAreNumbers = ([from isKindOfClass:NSNumber.class] && [to isKindOfClass:NSNumber.class]);
-    BOOL valuesAreNSValues = ([from isKindOfClass:NSValue.class] && [to isKindOfClass:NSValue.class]);
-    BOOL valuesAreColorRefs = ((CFGetTypeID((CFTypeRef)from) == CGColorGetTypeID()) && (CFGetTypeID((CFTypeRef)to) == CGColorGetTypeID()));
-
-    NSCParameterAssert(valuesAreNumbers || valuesAreColorRefs || (valuesAreNSValues && strcmp([from objCType], [to objCType]) == 0));
-
-    if (valuesAreNumbers) {
+    if ([from isKindOfClass:NSNumber.class] && [to isKindOfClass:NSNumber.class]) {
         #if CGFLOAT_IS_DOUBLE
         return RBBInterpolateCGFloat([(NSNumber *)from doubleValue], [(NSNumber *)to doubleValue]);
         #else
@@ -173,27 +167,29 @@ extern RBBLinearInterpolation RBBInterpolate(id from, id to) {
         #endif
     }
 
-    if (valuesAreColorRefs) {
+    if ((CFGetTypeID((CFTypeRef)from) == CGColorGetTypeID()) && (CFGetTypeID((CFTypeRef)to) == CGColorGetTypeID())) {
         RBBColor *fromColor = [RBBColor colorWithCGColor:(CGColorRef)from];
         RBBColor *toColor = [RBBColor colorWithCGColor:(CGColorRef)to];
 
         return RBBInterpolateColor(fromColor, toColor);
     }
 
-    if (strcmp([from objCType], @encode(CATransform3D)) == 0) {
-        return RBBInterpolateCATransform3D([from CATransform3DValue], [to CATransform3DValue]);
-    }
+    if (([from isKindOfClass:NSValue.class] && [to isKindOfClass:NSValue.class]) && strcmp([from objCType], [to objCType]) == 0) {
+        if (strcmp([from objCType], @encode(CATransform3D)) == 0) {
+            return RBBInterpolateCATransform3D([from CATransform3DValue], [to CATransform3DValue]);
+        }
 
-    if (strcmp([from objCType], @encode(CGRect)) == 0) {
-        return RBBInterpolateCGRect([from rbb_CGRectValue], [to rbb_CGRectValue]);
-    }
+        if (strcmp([from objCType], @encode(CGRect)) == 0) {
+            return RBBInterpolateCGRect([from rbb_CGRectValue], [to rbb_CGRectValue]);
+        }
 
-    if (strcmp([from objCType], @encode(CGPoint)) == 0) {
-        return RBBInterpolateCGPoint([from rbb_CGPointValue ], [to rbb_CGPointValue]);
-    }
+        if (strcmp([from objCType], @encode(CGPoint)) == 0) {
+            return RBBInterpolateCGPoint([from rbb_CGPointValue ], [to rbb_CGPointValue]);
+        }
 
-    if (strcmp([from objCType], @encode(CGSize)) == 0) {
-        return RBBInterpolateCGSize([from rbb_CGSizeValue], [to rbb_CGSizeValue]);
+        if (strcmp([from objCType], @encode(CGSize)) == 0) {
+            return RBBInterpolateCGSize([from rbb_CGSizeValue], [to rbb_CGSizeValue]);
+        }
     }
 
     return ^(CGFloat fraction) {
