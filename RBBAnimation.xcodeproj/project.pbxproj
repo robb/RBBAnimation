@@ -11,6 +11,8 @@
 		540F65A718F82347005A6BB8 /* NSValue+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		540F65A818F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */; };
 		540F65A918F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */; };
+		540F65AB18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */; };
+		540F65AC18F82C67005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */; };
 		545D5AB6180AFCA500FC94AB /* CAAnimation+Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */; };
 		545D5AB7180AFCA500FC94AB /* RBBAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB5180AFCA500FC94AB /* RBBAnimationListViewController.m */; };
 		545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */; };
@@ -108,6 +110,7 @@
 		540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-RBBAnimationTest.xcconfig"; path = "Pods/Pods-RBBAnimationTest.xcconfig"; sourceTree = "<group>"; };
 		540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+PlatformIndependence.h"; sourceTree = "<group>"; };
 		540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+PlatformIndependence.m"; sourceTree = "<group>"; };
+		540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBLinearInterpolationSpec.m; sourceTree = "<group>"; };
 		545D5AB2180AFCA500FC94AB /* CAAnimation+Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Name.h"; sourceTree = "<group>"; };
 		545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+Name.m"; sourceTree = "<group>"; };
 		545D5AB4180AFCA500FC94AB /* RBBAnimationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBAnimationListViewController.h; sourceTree = "<group>"; };
@@ -340,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */,
+				540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */,
 				549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */,
 				54F3AE441807394800E1E688 /* Supporting Files */,
 			);
@@ -685,6 +689,7 @@
 			files = (
 				549ECABD18F8155800D968C7 /* RBBBlockBasedArraySpec.m in Sources */,
 				549ECABE18F8155B00D968C7 /* RBBSpringAnimationSpec.m in Sources */,
+				540F65AC18F82C67005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +715,7 @@
 			files = (
 				5466C56318082D4200652BDC /* RBBBlockBasedArraySpec.m in Sources */,
 				549ECA8418F6ECFC00D968C7 /* RBBSpringAnimationSpec.m in Sources */,
+				540F65AB18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
