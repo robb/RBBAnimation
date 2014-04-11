@@ -6,28 +6,19 @@
 //  Copyright (c) 2013 Robert Böhnke. All rights reserved.
 //
 
-#import "RBBLinearInterpolation.h"
-
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-
 #import <UIKit/UIKit.h>
-#define VALUE_FOR_RECT(rect) [NSValue valueWithCGRect:rect]
-#define RECT_VALUE(value) [value CGRectValue]
-#define VALUE_FOR_SIZE(size) [NSValue valueWithCGSize:size]
-#define SIZE_VALUE(value) [value CGSizeValue]
-#define VALUE_FOR_POINT(point) [NSValue valueWithCGPoint:point]
-#define POINT_VALUE(value) [value CGPointValue]
 
-#elif TARGET_OS_MAC
+#define RBBColor UIColor
+#else
+#import <AppKit/AppKit.h>
 
-#define VALUE_FOR_RECT(rect) [NSValue valueWithRect:rect]
-#define RECT_VALUE(value) [value rectValue]
-#define VALUE_FOR_SIZE(size) [NSValue valueWithSize:size]
-#define SIZE_VALUE(value) [value sizeValue]
-#define VALUE_FOR_POINT(point) [NSValue valueWithPoint:point]
-#define POINT_VALUE(value) [value pointValue]
-
+#define RBBColor NSColor
 #endif
+
+#import "NSValue+PlatformIndependence.h"
+
+#import "RBBLinearInterpolation.h"
 
 static RBBLinearInterpolation RBBInterpolateCATransform3D(CATransform3D from, CATransform3D to) {
     CATransform3D delta = {
@@ -87,7 +78,7 @@ static RBBLinearInterpolation RBBInterpolateCGRect(CGRect from, CGRect to) {
             .size.height = from.size.height + fraction * deltaHeight
         };
 
-        return VALUE_FOR_RECT(rect);
+        return [NSValue rbb_valueWithCGRect:rect];
     };
 }
 
@@ -101,7 +92,7 @@ static RBBLinearInterpolation RBBInterpolateCGPoint(CGPoint from, CGPoint to) {
             .y = from.y + fraction * deltaY,
         };
 
-        return VALUE_FOR_POINT(point);
+        return [NSValue rbb_valueWithCGPoint:point];
     };
 }
 
@@ -115,7 +106,7 @@ static RBBLinearInterpolation RBBInterpolateCGSize(CGSize from, CGSize to) {
             .height = from.height + fraction * deltaHeight,
         };
 
-        return VALUE_FOR_SIZE(size);
+        return [NSValue rbb_valueWithCGSize:size];
     };
 }
 
@@ -127,43 +118,28 @@ static RBBLinearInterpolation RBBInterpolateCGFloat(CGFloat from, CGFloat to) {
     };
 };
 
-static void RBBGetHSBAFromColor(id color, CGFloat *hue, CGFloat *saturation, CGFloat *brightness, CGFloat *alpha) {
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-    [(UIColor *)color getHue:hue saturation:saturation brightness:brightness alpha:alpha];
-#elif TARGET_OS_MAC
-    [(NSColor *)color getHue:hue saturation:saturation brightness:brightness alpha:alpha];
-#endif
-};
-
-static CGColorRef RBBColorRefWithHSBA(CGFloat hue, CGFloat saturation, CGFloat brightness, CGFloat alpha) {
-    CGColorRef colorRef = NULL;
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-    colorRef = [[UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha] CGColor];
-#elif TARGET_OS_MAC
-    colorRef = [[NSColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha] CGColor];
-#endif
-    return colorRef;
-}
-
-static RBBLinearInterpolation RBBInterpolateColor(id from, id to) {
+// TODO: Color spaces can present a problem.
+//
+// For example, if [UIColor/NSColor whiteColor] is used, the color space is
+// white, and this fails.
+//
+// A comprehensive conversion process should always bring the colors into an
+// HSBA-compatible color space. In the mean time, always create colors using
+// +olorWithHue:saturation:brightness:alpha: method.
+static RBBLinearInterpolation RBBInterpolateColor(RBBColor *from, RBBColor *to) {
     CGFloat fromHue = 0.0f;
-    CGFloat toHue = 0.0f;
-
     CGFloat fromSaturation = 0.0f;
-    CGFloat toSaturation = 0.0f;
-
     CGFloat fromBrightness = 0.0f;
-    CGFloat toBrightness = 0.0f;
-
     CGFloat fromAlpha = 0.0f;
+
+    [from getHue:&fromHue saturation:&fromSaturation brightness:&fromBrightness alpha:&fromAlpha];
+
+    CGFloat toHue = 0.0f;
+    CGFloat toSaturation = 0.0f;
+    CGFloat toBrightness = 0.0f;
     CGFloat toAlpha = 0.0f;
 
-    // TODO: Color spaces can present a problem. For example, if [UIColor/NSColor whiteColor] is used, the color space is white, and this fails.
-    // A comprehensive conversion process should always bring the colors into an HSB-compatible color space. In the mean time, always
-    // create colors using the [UIColor/NSColor colorWithHue:saturation:brightness:alpha:] method. :-\
-
-    RBBGetHSBAFromColor(from, &fromHue, &fromSaturation, &fromBrightness, &fromAlpha);
-    RBBGetHSBAFromColor(to, &toHue, &toSaturation, &toBrightness, &toAlpha);
+    [to getHue:&toHue saturation:&toSaturation brightness:&toBrightness alpha:&toAlpha];
 
     CGFloat deltaHue = toHue - fromHue;
     CGFloat deltaSaturation = toSaturation - fromSaturation;
@@ -171,22 +147,23 @@ static RBBLinearInterpolation RBBInterpolateColor(id from, id to) {
     CGFloat deltaAlpha = toAlpha - fromAlpha;
 
     return ^(CGFloat fraction) {
-        CGFloat interpolatedHue = fromHue + fraction * deltaHue;
-        CGFloat interpolatedSaturation = fromSaturation + fraction * deltaSaturation;
-        CGFloat interpolatedBrightness = fromBrightness + fraction * deltaBrightness;
-        CGFloat interpolatedAlpha = fromAlpha + fraction * deltaAlpha;
+        CGFloat hue = fromHue + fraction * deltaHue;
+        CGFloat saturation = fromSaturation + fraction * deltaSaturation;
+        CGFloat brightness = fromBrightness + fraction * deltaBrightness;
+        CGFloat alpha = fromAlpha + fraction * deltaAlpha;
 
-        CGColorRef colorRef = RBBColorRefWithHSBA(interpolatedHue, interpolatedSaturation, interpolatedBrightness, interpolatedAlpha);
+        CGColorRef colorRef = [RBBColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha].CGColor;
 
         return (__bridge id)colorRef;
     };
 }
 
-extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to) {
+extern RBBLinearInterpolation RBBInterpolate(id from, id to) {
     BOOL valuesAreNumbers = ([from isKindOfClass:NSNumber.class] && [to isKindOfClass:NSNumber.class]);
+    BOOL valuesAreNSValues = ([from isKindOfClass:NSValue.class] && [to isKindOfClass:NSValue.class]);
     BOOL valuesAreColorRefs = ((CFGetTypeID((CFTypeRef)from) == CGColorGetTypeID()) && (CFGetTypeID((CFTypeRef)to) == CGColorGetTypeID()));
 
-    NSCParameterAssert(valuesAreNumbers || valuesAreColorRefs || strcmp(from.objCType, to.objCType) == 0);
+    NSCParameterAssert(valuesAreNumbers || valuesAreColorRefs || (valuesAreNSValues && strcmp([from objCType], [to objCType]) == 0));
 
     if (valuesAreNumbers) {
         #if CGFLOAT_IS_DOUBLE
@@ -197,34 +174,26 @@ extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to) {
     }
 
     if (valuesAreColorRefs) {
-        id fromColor = nil;
-        id toColor = nil;
-
-        #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-        fromColor = [UIColor colorWithCGColor:(CGColorRef)from];
-        toColor = [UIColor colorWithCGColor:(CGColorRef)to];
-        #elif TARGET_OS_MAC
-        fromColor = [NSColor colorWithCGColor:(CGColorRef)from];
-        toColor = [NSColor colorWithCGColor:(CGColorRef)to];
-        #endif
+        RBBColor *fromColor = [RBBColor colorWithCGColor:(CGColorRef)from];
+        RBBColor *toColor = [RBBColor colorWithCGColor:(CGColorRef)to];
 
         return RBBInterpolateColor(fromColor, toColor);
     }
 
-    if (strcmp(from.objCType, @encode(CATransform3D)) == 0) {
-        return RBBInterpolateCATransform3D(from.CATransform3DValue, to.CATransform3DValue);
+    if (strcmp([from objCType], @encode(CATransform3D)) == 0) {
+        return RBBInterpolateCATransform3D([from CATransform3DValue], [to CATransform3DValue]);
     }
 
-    if (strcmp(from.objCType, @encode(CGRect)) == 0) {
-        return RBBInterpolateCGRect(RECT_VALUE(from), RECT_VALUE(to));
+    if (strcmp([from objCType], @encode(CGRect)) == 0) {
+        return RBBInterpolateCGRect([from rbb_CGRectValue], [to rbb_CGRectValue]);
     }
 
-    if (strcmp(from.objCType, @encode(CGPoint)) == 0) {
-        return RBBInterpolateCGPoint(POINT_VALUE(from), POINT_VALUE(to));
+    if (strcmp([from objCType], @encode(CGPoint)) == 0) {
+        return RBBInterpolateCGPoint([from rbb_CGPointValue ], [to rbb_CGPointValue]);
     }
 
-    if (strcmp(from.objCType, @encode(CGSize)) == 0) {
-        return RBBInterpolateCGSize(SIZE_VALUE(from), SIZE_VALUE(to));
+    if (strcmp([from objCType], @encode(CGSize)) == 0) {
+        return RBBInterpolateCGSize([from rbb_CGSizeValue], [to rbb_CGSizeValue]);
     }
 
     return ^(CGFloat fraction) {

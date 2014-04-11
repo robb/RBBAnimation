@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		540F65A318F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */; };
+		540F65A718F82347005A6BB8 /* NSValue+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		540F65A818F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */; };
+		540F65A918F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */; };
 		545D5AB6180AFCA500FC94AB /* CAAnimation+Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */; };
 		545D5AB7180AFCA500FC94AB /* RBBAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB5180AFCA500FC94AB /* RBBAnimationListViewController.m */; };
 		545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */; };
@@ -103,6 +106,8 @@
 /* Begin PBXFileReference section */
 		540F65A018F8188F005A6BB8 /* RBBAnimation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RBBAnimation-Info.plist"; sourceTree = "<group>"; };
 		540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-RBBAnimationTest.xcconfig"; path = "Pods/Pods-RBBAnimationTest.xcconfig"; sourceTree = "<group>"; };
+		540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+PlatformIndependence.h"; sourceTree = "<group>"; };
+		540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+PlatformIndependence.m"; sourceTree = "<group>"; };
 		545D5AB2180AFCA500FC94AB /* CAAnimation+Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Name.h"; sourceTree = "<group>"; };
 		545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+Name.m"; sourceTree = "<group>"; };
 		545D5AB4180AFCA500FC94AB /* RBBAnimationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBAnimationListViewController.h; sourceTree = "<group>"; };
@@ -315,6 +320,8 @@
 				545D5ABE180B2D3F00FC94AB /* RBBCubicBezier.m */,
 				5466C55F18082BEB00652BDC /* RBBBlockBasedArray.h */,
 				5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */,
+				540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */,
+				540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */,
 				54F3AE301807394800E1E688 /* Supporting Files */,
 			);
 			path = RBBAnimation;
@@ -361,6 +368,7 @@
 				549ECACA18F8157200D968C7 /* RBBCubicBezier.h in Headers */,
 				549ECAC018F8157200D968C7 /* RBBCustomAnimation.h in Headers */,
 				549ECAC618F8157200D968C7 /* RBBLinearInterpolation.h in Headers */,
+				540F65A718F82347005A6BB8 /* NSValue+PlatformIndependence.h in Headers */,
 				549ECACC18F8157200D968C7 /* RBBBlockBasedArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,6 +675,7 @@
 				549ECABF18F8157200D968C7 /* RBBAnimation.m in Sources */,
 				549ECACD18F8157200D968C7 /* RBBBlockBasedArray.m in Sources */,
 				549ECACB18F8157200D968C7 /* RBBCubicBezier.m in Sources */,
+				540F65A918F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +700,7 @@
 				545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */,
 				545D5AC5180C138D00FC94AB /* RBBSpringAnimation.m in Sources */,
 				54F3AE351807394800E1E688 /* RBBAnimation.m in Sources */,
+				540F65A818F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
