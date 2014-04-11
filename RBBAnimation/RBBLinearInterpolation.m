@@ -9,9 +9,13 @@
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <UIKit/UIKit.h>
 
+#import "UIColor+PlatformIndependence.h"
+
 #define RBBColor UIColor
 #else
 #import <AppKit/AppKit.h>
+
+#import "NSColor+PlatformIndependence.h"
 
 #define RBBColor NSColor
 #endif
@@ -152,7 +156,7 @@ static RBBLinearInterpolation RBBInterpolateColor(RBBColor *from, RBBColor *to) 
         CGFloat brightness = fromBrightness + fraction * deltaBrightness;
         CGFloat alpha = fromAlpha + fraction * deltaAlpha;
 
-        CGColorRef colorRef = [RBBColor colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha].CGColor;
+        CGColorRef colorRef = [RBBColor rbb_colorWithHue:hue saturation:saturation brightness:brightness alpha:alpha].CGColor;
 
         return (__bridge id)colorRef;
     };
@@ -167,7 +171,7 @@ extern RBBLinearInterpolation RBBInterpolate(id from, id to) {
         #endif
     }
 
-    if ((CFGetTypeID((CFTypeRef)from) == CGColorGetTypeID()) && (CFGetTypeID((CFTypeRef)to) == CGColorGetTypeID())) {
+    if ((CFGetTypeID((__bridge CFTypeRef)from) == CGColorGetTypeID()) && (CFGetTypeID((__bridge CFTypeRef)to) == CGColorGetTypeID())) {
         RBBColor *fromColor = [RBBColor colorWithCGColor:(CGColorRef)from];
         RBBColor *toColor = [RBBColor colorWithCGColor:(CGColorRef)to];
 
