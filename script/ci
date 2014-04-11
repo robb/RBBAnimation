@@ -71,7 +71,7 @@ main ()
 
     build_scheme 'RBBAnimation Mac' macosx || status=1
     echo
-    build_scheme 'RBBAnimation iOS' iphonesimulator7.1 || status=1
+    build_scheme 'RBBAnimation iOS' iphonesimulator || status=1
 
     exit $status
 }
