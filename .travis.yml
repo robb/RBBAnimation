@@ -12,4 +12,4 @@ notifications:
         on_failure: always
 
 script:
-    - (xcodebuild -workspace RBBAnimation.xcworkspace -scheme "RBBAnimation Mac" -sdk macosx test && xcodebuild -workspace RBBAnimation.xcworkspace -scheme "RBBAnimation iOS" -sdk iphonesimulator test) | xcpretty -c
+    - script/ci
