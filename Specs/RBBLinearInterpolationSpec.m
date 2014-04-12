@@ -9,9 +9,13 @@
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 #import <UIKit/UIKit.h>
 
+#import "UIColor+PlatformIndependence.h"
+
 #define SpecsColor UIColor
 #else
 #import <AppKit/AppKit.h>
+
+#import "NSColor+PlatformIndependence.h"
 
 #define SpecsColor NSColor
 #endif
@@ -34,8 +38,8 @@ describe(@"Interpolating numbers", ^{
 
 describe(@"Interpolating colors", ^{
     it(@"should interpolate HSBA components separately", ^{
-        CGColorRef from = [SpecsColor colorWithHue:0.2 saturation:0.3 brightness:0.4 alpha:0.5].CGColor;
-        CGColorRef to = [SpecsColor colorWithHue:0.4 saturation:0.5 brightness:0.6 alpha:0.7].CGColor;
+        CGColorRef from = [SpecsColor rbb_colorWithHue:0.2 saturation:0.3 brightness:0.4 alpha:0.5].CGColor;
+        CGColorRef to = [SpecsColor rbb_colorWithHue:0.4 saturation:0.5 brightness:0.6 alpha:0.7].CGColor;
 
         lerp = RBBInterpolate((__bridge id)from, (__bridge id)to);
 
