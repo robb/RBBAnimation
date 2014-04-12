@@ -22,9 +22,11 @@
 
 SpecBegin(RBBLinearInterpolation)
 
+__block RBBLinearInterpolation lerp;
+
 describe(@"Interpolating numbers", ^{
     it(@"should interpolate them as floats", ^{
-        RBBLinearInterpolation lerp = RBBInterpolate(@2, @4);
+        lerp = RBBInterpolate(@2, @4);
 
         expect(lerp(0.5)).to.beCloseToWithin(3, 0.01);
     });
@@ -35,7 +37,7 @@ describe(@"Interpolating colors", ^{
         CGColorRef from = [SpecsColor colorWithHue:0.2 saturation:0.3 brightness:0.4 alpha:0.5].CGColor;
         CGColorRef to = [SpecsColor colorWithHue:0.4 saturation:0.5 brightness:0.6 alpha:0.7].CGColor;
 
-        RBBLinearInterpolation lerp = RBBInterpolate((__bridge id)from, (__bridge id)to);
+        lerp = RBBInterpolate((__bridge id)from, (__bridge id)to);
 
         CGFloat hue, saturation, brightness, alpha;
 
@@ -65,7 +67,7 @@ describe(@"Interpolating CATransform3D", ^{
             15, 16, 17, 18
         };
 
-        RBBLinearInterpolation lerp = RBBInterpolate([NSValue valueWithCATransform3D:from], [NSValue valueWithCATransform3D:to]);
+        lerp = RBBInterpolate([NSValue valueWithCATransform3D:from], [NSValue valueWithCATransform3D:to]);
 
         CATransform3D transform = [lerp(0.5) CATransform3DValue];
 
@@ -93,7 +95,7 @@ describe(@"Interpolating CGRects", ^{
         CGRect from = CGRectMake(1, 2, 3, 4);
         CGRect to = CGRectMake(5, 6, 7, 8);
 
-        RBBLinearInterpolation lerp = RBBInterpolate([NSValue rbb_valueWithCGRect:from], [NSValue rbb_valueWithCGRect:to]);
+        lerp = RBBInterpolate([NSValue rbb_valueWithCGRect:from], [NSValue rbb_valueWithCGRect:to]);
 
         expect(lerp(0.5)).to.equal([NSValue rbb_valueWithCGRect:CGRectMake(3, 4, 5, 6)]);
     });
@@ -104,7 +106,7 @@ describe(@"Interpolating CGPoints", ^{
         CGPoint from = CGPointMake(1, 2);
         CGPoint to = CGPointMake(5, 6);
 
-        RBBLinearInterpolation lerp = RBBInterpolate([NSValue rbb_valueWithCGPoint:from], [NSValue rbb_valueWithCGPoint:to]);
+        lerp = RBBInterpolate([NSValue rbb_valueWithCGPoint:from], [NSValue rbb_valueWithCGPoint:to]);
 
         expect(lerp(0.5)).to.equal([NSValue rbb_valueWithCGPoint:CGPointMake(3, 4)]);
     });
@@ -115,7 +117,7 @@ describe(@"Interpolating CGSizes", ^{
         CGSize from = CGSizeMake(1, 2);
         CGSize to = CGSizeMake(5, 6);
 
-        RBBLinearInterpolation lerp = RBBInterpolate([NSValue rbb_valueWithCGSize:from], [NSValue rbb_valueWithCGSize:to]);
+        lerp = RBBInterpolate([NSValue rbb_valueWithCGSize:from], [NSValue rbb_valueWithCGSize:to]);
 
         expect(lerp(0.5)).to.equal([NSValue rbb_valueWithCGSize:CGSizeMake(3, 4)]);
     });
@@ -126,7 +128,7 @@ describe(@"Interpolating mismatched value types", ^{
         NSValue *from = [NSValue rbb_valueWithCGPoint:CGPointMake(1, 2)];
         NSValue *to = [NSValue rbb_valueWithCGRect:CGRectMake(5, 6, 7, 8)];
 
-        RBBLinearInterpolation lerp = RBBInterpolate(from, to);
+        lerp = RBBInterpolate(from, to);
 
         expect(lerp(0.25)).to.equal(from);
         expect(lerp(0.75)).to.equal(to);
@@ -135,7 +137,7 @@ describe(@"Interpolating mismatched value types", ^{
 
 describe(@"Interpolating anything else", ^{
     it(@"should change between both input values", ^{
-         RBBLinearInterpolation lerp = RBBInterpolate(@"foo", @"bar");
+        lerp = RBBInterpolate(@"foo", @"bar");
 
         expect(lerp(0.25)).to.equal(@"foo");
         expect(lerp(0.75)).to.equal(@"bar");
