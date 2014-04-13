@@ -17,8 +17,8 @@
 @property (readwrite, nonatomic, assign) CGFloat stiffness;
 @property (readwrite, nonatomic, assign) CGFloat velocity;
 
-@property (readwrite, nonatomic, strong) NSValue *fromValue;
-@property (readwrite, nonatomic, strong) NSValue *toValue;
+@property (readwrite, nonatomic, strong) id fromValue;
+@property (readwrite, nonatomic, strong) id toValue;
 
 @property (readwrite, nonatomic, assign) BOOL allowsOverdamping;
 

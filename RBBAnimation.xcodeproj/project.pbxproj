@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		540F65A318F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */; };
+		540F65A718F82347005A6BB8 /* NSValue+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		540F65A818F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */; };
+		540F65A918F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */; };
+		540F65AB18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */; };
+		540F65AC18F82C67005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */; };
+		540F65AF18F83EB3005A6BB8 /* NSColor+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 540F65AD18F83EB3005A6BB8 /* NSColor+PlatformIndependence.h */; };
+		540F65B018F83EB3005A6BB8 /* NSColor+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65AE18F83EB3005A6BB8 /* NSColor+PlatformIndependence.m */; };
+		540F65B318F83F98005A6BB8 /* UIColor+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65B218F83F98005A6BB8 /* UIColor+PlatformIndependence.m */; };
+		540F65B518F8407B005A6BB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540F65B418F8407B005A6BB8 /* QuartzCore.framework */; };
 		545D5AB6180AFCA500FC94AB /* CAAnimation+Name.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */; };
 		545D5AB7180AFCA500FC94AB /* RBBAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB5180AFCA500FC94AB /* RBBAnimationListViewController.m */; };
 		545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */; };
@@ -103,6 +112,14 @@
 /* Begin PBXFileReference section */
 		540F65A018F8188F005A6BB8 /* RBBAnimation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RBBAnimation-Info.plist"; sourceTree = "<group>"; };
 		540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-RBBAnimationTest.xcconfig"; path = "Pods/Pods-RBBAnimationTest.xcconfig"; sourceTree = "<group>"; };
+		540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+PlatformIndependence.h"; sourceTree = "<group>"; };
+		540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+PlatformIndependence.m"; sourceTree = "<group>"; };
+		540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBLinearInterpolationSpec.m; sourceTree = "<group>"; };
+		540F65AD18F83EB3005A6BB8 /* NSColor+PlatformIndependence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+PlatformIndependence.h"; sourceTree = "<group>"; };
+		540F65AE18F83EB3005A6BB8 /* NSColor+PlatformIndependence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+PlatformIndependence.m"; sourceTree = "<group>"; };
+		540F65B118F83F98005A6BB8 /* UIColor+PlatformIndependence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PlatformIndependence.h"; sourceTree = "<group>"; };
+		540F65B218F83F98005A6BB8 /* UIColor+PlatformIndependence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PlatformIndependence.m"; sourceTree = "<group>"; };
+		540F65B418F8407B005A6BB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		545D5AB2180AFCA500FC94AB /* CAAnimation+Name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Name.h"; sourceTree = "<group>"; };
 		545D5AB3180AFCA500FC94AB /* CAAnimation+Name.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+Name.m"; sourceTree = "<group>"; };
 		545D5AB4180AFCA500FC94AB /* RBBAnimationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBAnimationListViewController.h; sourceTree = "<group>"; };
@@ -175,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				540F65B518F8407B005A6BB8 /* QuartzCore.framework in Frameworks */,
 				549ECA9618F814A000D968C7 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +299,7 @@
 		54F3AE2C1807394800E1E688 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				540F65B418F8407B005A6BB8 /* QuartzCore.framework */,
 				545D5ABB180B239000FC94AB /* UIKit.framework */,
 				54F3AE2D1807394800E1E688 /* Foundation.framework */,
 				54F3AE3B1807394800E1E688 /* XCTest.framework */,
@@ -315,6 +334,12 @@
 				545D5ABE180B2D3F00FC94AB /* RBBCubicBezier.m */,
 				5466C55F18082BEB00652BDC /* RBBBlockBasedArray.h */,
 				5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */,
+				540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */,
+				540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */,
+				540F65AD18F83EB3005A6BB8 /* NSColor+PlatformIndependence.h */,
+				540F65AE18F83EB3005A6BB8 /* NSColor+PlatformIndependence.m */,
+				540F65B118F83F98005A6BB8 /* UIColor+PlatformIndependence.h */,
+				540F65B218F83F98005A6BB8 /* UIColor+PlatformIndependence.m */,
 				54F3AE301807394800E1E688 /* Supporting Files */,
 			);
 			path = RBBAnimation;
@@ -333,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */,
+				540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */,
 				549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */,
 				54F3AE441807394800E1E688 /* Supporting Files */,
 			);
@@ -361,6 +387,8 @@
 				549ECACA18F8157200D968C7 /* RBBCubicBezier.h in Headers */,
 				549ECAC018F8157200D968C7 /* RBBCustomAnimation.h in Headers */,
 				549ECAC618F8157200D968C7 /* RBBLinearInterpolation.h in Headers */,
+				540F65A718F82347005A6BB8 /* NSValue+PlatformIndependence.h in Headers */,
+				540F65AF18F83EB3005A6BB8 /* NSColor+PlatformIndependence.h in Headers */,
 				549ECACC18F8157200D968C7 /* RBBBlockBasedArray.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,11 +690,13 @@
 				549ECAC518F8157200D968C7 /* RBBSpringAnimation.m in Sources */,
 				549ECAC918F8157200D968C7 /* RBBEasingFunction.m in Sources */,
 				549ECAC118F8157200D968C7 /* RBBCustomAnimation.m in Sources */,
+				540F65B018F83EB3005A6BB8 /* NSColor+PlatformIndependence.m in Sources */,
 				549ECAC318F8157200D968C7 /* RBBTweenAnimation.m in Sources */,
 				549ECAC718F8157200D968C7 /* RBBLinearInterpolation.m in Sources */,
 				549ECABF18F8157200D968C7 /* RBBAnimation.m in Sources */,
 				549ECACD18F8157200D968C7 /* RBBBlockBasedArray.m in Sources */,
 				549ECACB18F8157200D968C7 /* RBBCubicBezier.m in Sources */,
+				540F65A918F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +706,7 @@
 			files = (
 				549ECABD18F8155800D968C7 /* RBBBlockBasedArraySpec.m in Sources */,
 				549ECABE18F8155B00D968C7 /* RBBSpringAnimationSpec.m in Sources */,
+				540F65AC18F82C67005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,12 +716,14 @@
 			files = (
 				5479BEA4181D8008009811FD /* RBBCustomAnimation.m in Sources */,
 				545D5ABF180B2D3F00FC94AB /* RBBCubicBezier.m in Sources */,
+				540F65B318F83F98005A6BB8 /* UIColor+PlatformIndependence.m in Sources */,
 				54D5EA89181AE8620014896C /* RBBLinearInterpolation.m in Sources */,
 				545D5AC2180B5E8400FC94AB /* RBBEasingFunction.m in Sources */,
 				5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */,
 				545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */,
 				545D5AC5180C138D00FC94AB /* RBBSpringAnimation.m in Sources */,
 				54F3AE351807394800E1E688 /* RBBAnimation.m in Sources */,
+				540F65A818F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +733,7 @@
 			files = (
 				5466C56318082D4200652BDC /* RBBBlockBasedArraySpec.m in Sources */,
 				549ECA8418F6ECFC00D968C7 /* RBBSpringAnimationSpec.m in Sources */,
+				540F65AB18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,9 +831,9 @@
 				);
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "RBBAnimation/RBBAnimation-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -821,9 +855,9 @@
 				GCC_PREFIX_HEADER = "RBBAnimation/RBBAnimation-Prefix.pch";
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "RBBAnimation/RBBAnimation-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -945,6 +979,7 @@
 				DSTROOT = /tmp/RBBAnimation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RBBAnimation/RBBAnimation-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -957,6 +992,7 @@
 				DSTROOT = /tmp/RBBAnimation.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RBBAnimation/RBBAnimation-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
