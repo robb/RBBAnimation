@@ -6,9 +6,7 @@
 //  Copyright (c) 2014 Robert Böhnke. All rights reserved.
 //
 
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-#import <UIKit/UIKit.h>
-#endif
+#import "NSValue+PlatformIndependence.h"
 
 #import "RBBDampedHarmonicOscillaton.h"
 
@@ -71,11 +69,7 @@
     return ^(CGFloat t, CGFloat _) {
         CGPoint p = { .x = x0 + oscillationX(t), .y = y0 + oscillationY(t) };
 
-        #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-        return [NSValue valueWithCGPoint:p];
-        #elif TARGET_OS_MAC
-        return [NSValue valueWithPoint:p];
-        #endif
+        return [NSValue rbb_valueWithCGPoint:p];
     };
 }
 

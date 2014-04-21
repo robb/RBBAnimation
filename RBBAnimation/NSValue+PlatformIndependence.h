@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Robert Böhnke. All rights reserved.
 //
 
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#import <UIKit/UIKit.h>
+#endif
+
 #import <Foundation/Foundation.h>
 
 @interface NSValue (PlatformIndependence)
