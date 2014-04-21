@@ -10,4 +10,4 @@
 
 typedef id (^RBBLinearInterpolation)(CGFloat fraction);
 
-extern RBBLinearInterpolation RBBInterpolate(NSValue *from, NSValue *to);
+extern RBBLinearInterpolation RBBInterpolate(id from, id to);

@@ -11,4 +11,5 @@ notifications:
         on_success: change
         on_failure: always
 
-script: xcodebuild -workspace RBBAnimation.xcworkspace -scheme RBBAnimation -sdk iphonesimulator test | xcpretty -c
+script:
+    - script/ci

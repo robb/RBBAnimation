@@ -1,0 +1,79 @@
+#!/bin/bash
+
+find_pattern ()
+{
+    ls -d $1 2>/dev/null | head -n 1
+}
+
+config ()
+{
+    # The workspace to build.
+    #
+    # If not set and no workspace is found, the -workspace flag will not be passed
+    # to `xctool`.
+    #
+    # Only one of `XCWORKSPACE` and `XCODEPROJ` needs to be set. The former will
+    # take precedence.
+    : ${XCWORKSPACE=$(find_pattern "*.xcworkspace")}
+
+    # The project to build.
+    #
+    # If not set and no project is found, the -project flag will not be passed
+    # to `xctool`.
+    #
+    # Only one of `XCWORKSPACE` and `XCODEPROJ` needs to be set. The former will
+    # take precedence.
+    : ${XCODEPROJ=$(find_pattern "*.xcodeproj")}
+
+    # Extra options to pass to xctool.
+    : ${XCODEBUILD_OPTIONS="RUN_CLANG_STATIC_ANALYZER=NO"}
+
+    export XCWORKSPACE
+    export XCODEPROJ
+    export XCODEBUILD_OPTIONS
+}
+
+run_xcodebuild ()
+{
+    if [ -n "$XCWORKSPACE" ]
+    then
+        xcodebuild -workspace "$XCWORKSPACE" $XCODEBUILD_OPTIONS "$@" 2>&1
+    elif [ -n "$XCODEPROJ" ]
+    then
+        xcodebuild -project "$XCODEPROJ" $XCODEBUILD_OPTIONS "$@" 2>&1
+    else
+        echo "*** No workspace or project file found."
+        exit 1
+    fi
+}
+
+build_scheme ()
+{
+    local scheme=$1
+    local sdk=$2
+
+    echo "*** Cleaning $scheme..."
+    run_xcodebuild -scheme "$scheme" clean >/dev/null || exit $?
+
+    echo "*** Building and testing $scheme..."
+    echo
+
+    run_xcodebuild -scheme "$scheme" -sdk "$sdk" test | xcpretty -c
+
+    return "${PIPESTATUS[0]}"
+}
+
+main ()
+{
+    config
+
+    local status=0
+
+    build_scheme 'RBBAnimation Mac' macosx || status=1
+    echo
+    build_scheme 'RBBAnimation iOS' iphonesimulator || status=1
+
+    exit $status
+}
+
+main
