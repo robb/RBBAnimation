@@ -7,14 +7,10 @@
 //
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-#import <UIKit/UIKit.h>
-
 #import "UIColor+PlatformIndependence.h"
 
 #define SpecsColor UIColor
 #else
-#import <AppKit/AppKit.h>
-
 #import "NSColor+PlatformIndependence.h"
 
 #define SpecsColor NSColor

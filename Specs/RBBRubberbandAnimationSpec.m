@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Robert Böhnke. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "NSValue+PlatformIndependence.h"
 
 #import "RBBSpringAnimation.h"
 
@@ -22,8 +22,8 @@ it(@"should initialize", ^{
 
 it(@"should behave like RBBSpringAnimations if v is 0", ^{
     RBBSpringAnimation *spring = [RBBSpringAnimation animationWithKeyPath:@"position"];
-    spring.fromValue = [NSValue valueWithCGPoint:CGPointMake(100, 200)];
-    spring.toValue = [NSValue valueWithCGPoint:CGPointMake(300, 400)];
+    spring.fromValue = [NSValue rbb_valueWithCGPoint:CGPointMake(100, 200)];
+    spring.toValue = [NSValue rbb_valueWithCGPoint:CGPointMake(300, 400)];
     spring.velocity = 0;
 
     RBBRubberbandAnimation *rubberband = [RBBRubberbandAnimation animationWithKeyPath:@"position"];
@@ -44,7 +44,7 @@ it(@"should take the velocity into account even if ∆x and ∆y are 0", ^{
     CGFloat maxX = -HUGE_VALF;
 
     for (NSValue *value in animation.values) {
-        if (value.CGPointValue.x > maxX) maxX = value.CGPointValue.x;
+        if (value.rbb_CGPointValue.x > maxX) maxX = value.rbb_CGPointValue.x;
     }
 
     expect(maxX).to.beCloseToWithin(27, 0.5);
