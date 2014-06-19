@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   s.author = { "Robert Böhnke" => "robb@robb.is" }
 
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '6.1'
   s.osx.deployment_target = '10.8'
 
   s.source = { :git => "https://github.com/robb/RBBAnimation.git", :tag => "v0.4.0" }
