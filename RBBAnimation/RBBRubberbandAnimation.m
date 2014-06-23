@@ -1,18 +1,18 @@
 //
-//  RBBSpringAnimation.m
+//  RBBRubberbandAnimation.m
 //  RBBAnimation
 //
-//  Created by Robert Böhnke on 10/14/13.
-//  Copyright (c) 2013 Robert Böhnke. All rights reserved.
+//  Created by Robert Böhnke on 06/04/14.
+//  Copyright (c) 2014 Robert Böhnke. All rights reserved.
 //
 
-#import "RBBBlockBasedArray.h"
+#import "NSValue+PlatformIndependence.h"
+
 #import "RBBDampedHarmonicOscillaton.h"
-#import "RBBLinearInterpolation.h"
 
-#import "RBBSpringAnimation.h"
+#import "RBBRubberbandAnimation.h"
 
-@implementation RBBSpringAnimation
+@implementation RBBRubberbandAnimation
 
 #pragma mark - Lifecycle
 
@@ -23,8 +23,6 @@
     self.damping = 10;
     self.mass = 1;
     self.stiffness = 100;
-
-    self.calculationMode = kCAAnimationDiscrete;
 
     return self;
 }
@@ -37,8 +35,8 @@
         @"mass",
         @"stiffness",
         @"velocity",
-        @"fromValue",
-        @"toValue",
+        @"from",
+        @"to",
         @"allowsOverdamping"
     ]];
 }
@@ -59,18 +57,26 @@
 #pragma mark - RBBAnimation
 
 - (RBBAnimationBlock)animationBlock {
-    CGFloat (^oscillation)(CGFloat) = RBBDampedHarmonicOscillation(-1, self.damping, self.mass, self.stiffness, self.velocity, self.allowsOverdamping);
+    CGFloat deltaX = self.from.x - self.to.x;
+    CGFloat deltaY = self.from.y - self.to.y;
 
-    RBBLinearInterpolation lerp = RBBInterpolate(self.fromValue, self.toValue);
+    RBBOsciallation oscillationX = RBBDampedHarmonicOscillation(deltaX, self.damping, self.mass, self.stiffness, self.velocity.x, self.allowsOverdamping);
+    RBBOsciallation oscillationY = RBBDampedHarmonicOscillation(deltaY, self.damping, self.mass, self.stiffness, self.velocity.y, self.allowsOverdamping);
+
+    CGFloat x0 = self.to.x;
+    CGFloat y0 = self.to.y;
+
     return ^(CGFloat t, CGFloat _) {
-        return lerp(1 + oscillation(t));
+        CGPoint p = { .x = x0 + oscillationX(t), .y = y0 + oscillationY(t) };
+
+        return [NSValue rbb_valueWithCGPoint:p];
     };
 }
 
 #pragma mark - NSObject
 
 - (id)copyWithZone:(NSZone *)zone {
-    RBBSpringAnimation *copy = [super copyWithZone:zone];
+    RBBRubberbandAnimation *copy = [super copyWithZone:zone];
     if (copy == nil) return nil;
 
     copy->_damping = _damping;
@@ -78,8 +84,8 @@
     copy->_stiffness = _stiffness;
     copy->_velocity = _velocity;
 
-    copy->_fromValue = _fromValue;
-    copy->_toValue = _toValue;
+    copy->_from = _from;
+    copy->_to = _to;
 
     copy->_allowsOverdamping = _allowsOverdamping;
 

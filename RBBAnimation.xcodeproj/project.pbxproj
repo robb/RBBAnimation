@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5409356419052226007565F7 /* RBBDampedHarmonicOscillaton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466A9B418F6C2260090E3E6 /* RBBDampedHarmonicOscillaton.m */; };
+		540935651905223A007565F7 /* RBBDampedHarmonicOscillaton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5466A9B318F6C2260090E3E6 /* RBBDampedHarmonicOscillaton.h */; };
+		540935661905223D007565F7 /* RBBRubberbandAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 545FEFD418F177B000900B78 /* RBBRubberbandAnimation.h */; };
+		5409356719052241007565F7 /* RBBRubberbandAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545FEFD518F177B000900B78 /* RBBRubberbandAnimation.m */; };
+		540935681905224C007565F7 /* RBBDampedHarmonicOscillatonSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 549ECA8518F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m */; };
+		5409356919052251007565F7 /* RBBRubberbandAnimationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 549ECA8718F7028E00D968C7 /* RBBRubberbandAnimationSpec.m */; };
 		540F65A318F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */; };
 		540F65A718F82347005A6BB8 /* NSValue+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		540F65A818F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */; };
@@ -24,6 +30,8 @@
 		545D5ABF180B2D3F00FC94AB /* RBBCubicBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5ABE180B2D3F00FC94AB /* RBBCubicBezier.m */; };
 		545D5AC2180B5E8400FC94AB /* RBBEasingFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AC1180B5E8400FC94AB /* RBBEasingFunction.m */; };
 		545D5AC5180C138D00FC94AB /* RBBSpringAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D5AC4180C138D00FC94AB /* RBBSpringAnimation.m */; };
+		545FEFD618F177B000900B78 /* RBBRubberbandAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 545FEFD518F177B000900B78 /* RBBRubberbandAnimation.m */; };
+		5466A9B518F6C2260090E3E6 /* RBBDampedHarmonicOscillaton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466A9B418F6C2260090E3E6 /* RBBDampedHarmonicOscillaton.m */; };
 		5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */; };
 		5466C56318082D4200652BDC /* RBBBlockBasedArraySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */; };
 		5466C569180849D100652BDC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE2D1807394800E1E688 /* Foundation.framework */; };
@@ -37,6 +45,8 @@
 		5466C59818084BA200652BDC /* RBBAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5466C59718084BA200652BDC /* RBBAnimationViewController.m */; };
 		5479BEA4181D8008009811FD /* RBBCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5479BEA3181D8008009811FD /* RBBCustomAnimation.m */; };
 		549ECA8418F6ECFC00D968C7 /* RBBSpringAnimationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */; };
+		549ECA8618F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 549ECA8518F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m */; };
+		549ECA8818F7028E00D968C7 /* RBBRubberbandAnimationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 549ECA8718F7028E00D968C7 /* RBBRubberbandAnimationSpec.m */; };
 		549ECA9618F814A000D968C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549ECA9518F814A000D968C7 /* Cocoa.framework */; };
 		549ECAAA18F814A000D968C7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F3AE3B1807394800E1E688 /* XCTest.framework */; };
 		549ECAAB18F814A000D968C7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 549ECA9518F814A000D968C7 /* Cocoa.framework */; };
@@ -133,6 +143,10 @@
 		545D5AC1180B5E8400FC94AB /* RBBEasingFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBEasingFunction.m; sourceTree = "<group>"; };
 		545D5AC3180C138D00FC94AB /* RBBSpringAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBSpringAnimation.h; sourceTree = "<group>"; };
 		545D5AC4180C138D00FC94AB /* RBBSpringAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBSpringAnimation.m; sourceTree = "<group>"; };
+		545FEFD418F177B000900B78 /* RBBRubberbandAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBRubberbandAnimation.h; sourceTree = "<group>"; };
+		545FEFD518F177B000900B78 /* RBBRubberbandAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBRubberbandAnimation.m; sourceTree = "<group>"; };
+		5466A9B318F6C2260090E3E6 /* RBBDampedHarmonicOscillaton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBDampedHarmonicOscillaton.h; sourceTree = "<group>"; };
+		5466A9B418F6C2260090E3E6 /* RBBDampedHarmonicOscillaton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBDampedHarmonicOscillaton.m; sourceTree = "<group>"; };
 		5466C55F18082BEB00652BDC /* RBBBlockBasedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBBlockBasedArray.h; sourceTree = "<group>"; };
 		5466C56018082BEB00652BDC /* RBBBlockBasedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBBlockBasedArray.m; sourceTree = "<group>"; };
 		5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBBlockBasedArraySpec.m; sourceTree = "<group>"; };
@@ -150,6 +164,8 @@
 		5479BEA2181D8008009811FD /* RBBCustomAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBCustomAnimation.h; sourceTree = "<group>"; };
 		5479BEA3181D8008009811FD /* RBBCustomAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBCustomAnimation.m; sourceTree = "<group>"; };
 		549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBSpringAnimationSpec.m; sourceTree = "<group>"; };
+		549ECA8518F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBDampedHarmonicOscillatonSpec.m; sourceTree = "<group>"; };
+		549ECA8718F7028E00D968C7 /* RBBRubberbandAnimationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBRubberbandAnimationSpec.m; sourceTree = "<group>"; };
 		549ECA9418F814A000D968C7 /* RBBAnimation Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "RBBAnimation Mac.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		549ECA9518F814A000D968C7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		549ECA9818F814A000D968C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -326,6 +342,10 @@
 				545D5AB9180B1FAE00FC94AB /* RBBTweenAnimation.m */,
 				545D5AC3180C138D00FC94AB /* RBBSpringAnimation.h */,
 				545D5AC4180C138D00FC94AB /* RBBSpringAnimation.m */,
+				545FEFD418F177B000900B78 /* RBBRubberbandAnimation.h */,
+				545FEFD518F177B000900B78 /* RBBRubberbandAnimation.m */,
+				5466A9B318F6C2260090E3E6 /* RBBDampedHarmonicOscillaton.h */,
+				5466A9B418F6C2260090E3E6 /* RBBDampedHarmonicOscillaton.m */,
 				54D5EA87181AE8620014896C /* RBBLinearInterpolation.h */,
 				54D5EA88181AE8620014896C /* RBBLinearInterpolation.m */,
 				545D5AC0180B5E8400FC94AB /* RBBEasingFunction.h */,
@@ -358,8 +378,10 @@
 			isa = PBXGroup;
 			children = (
 				5466C56218082D4200652BDC /* RBBBlockBasedArraySpec.m */,
+				549ECA8518F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m */,
 				540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */,
 				549ECA8318F6ECFC00D968C7 /* RBBSpringAnimationSpec.m */,
+				549ECA8718F7028E00D968C7 /* RBBRubberbandAnimationSpec.m */,
 				54F3AE441807394800E1E688 /* Supporting Files */,
 			);
 			path = Specs;
@@ -386,6 +408,8 @@
 				549ECAC418F8157200D968C7 /* RBBSpringAnimation.h in Headers */,
 				549ECACA18F8157200D968C7 /* RBBCubicBezier.h in Headers */,
 				549ECAC018F8157200D968C7 /* RBBCustomAnimation.h in Headers */,
+				540935651905223A007565F7 /* RBBDampedHarmonicOscillaton.h in Headers */,
+				540935661905223D007565F7 /* RBBRubberbandAnimation.h in Headers */,
 				549ECAC618F8157200D968C7 /* RBBLinearInterpolation.h in Headers */,
 				540F65A718F82347005A6BB8 /* NSValue+PlatformIndependence.h in Headers */,
 				540F65AF18F83EB3005A6BB8 /* NSColor+PlatformIndependence.h in Headers */,
@@ -695,6 +719,8 @@
 				549ECAC718F8157200D968C7 /* RBBLinearInterpolation.m in Sources */,
 				549ECABF18F8157200D968C7 /* RBBAnimation.m in Sources */,
 				549ECACD18F8157200D968C7 /* RBBBlockBasedArray.m in Sources */,
+				5409356719052241007565F7 /* RBBRubberbandAnimation.m in Sources */,
+				5409356419052226007565F7 /* RBBDampedHarmonicOscillaton.m in Sources */,
 				549ECACB18F8157200D968C7 /* RBBCubicBezier.m in Sources */,
 				540F65A918F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */,
 			);
@@ -707,6 +733,8 @@
 				549ECABD18F8155800D968C7 /* RBBBlockBasedArraySpec.m in Sources */,
 				549ECABE18F8155B00D968C7 /* RBBSpringAnimationSpec.m in Sources */,
 				540F65AC18F82C67005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */,
+				5409356919052251007565F7 /* RBBRubberbandAnimationSpec.m in Sources */,
+				540935681905224C007565F7 /* RBBDampedHarmonicOscillatonSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +748,8 @@
 				54D5EA89181AE8620014896C /* RBBLinearInterpolation.m in Sources */,
 				545D5AC2180B5E8400FC94AB /* RBBEasingFunction.m in Sources */,
 				5466C56118082BEB00652BDC /* RBBBlockBasedArray.m in Sources */,
+				545FEFD618F177B000900B78 /* RBBRubberbandAnimation.m in Sources */,
+				5466A9B518F6C2260090E3E6 /* RBBDampedHarmonicOscillaton.m in Sources */,
 				545D5ABA180B1FAE00FC94AB /* RBBTweenAnimation.m in Sources */,
 				545D5AC5180C138D00FC94AB /* RBBSpringAnimation.m in Sources */,
 				54F3AE351807394800E1E688 /* RBBAnimation.m in Sources */,
@@ -733,6 +763,8 @@
 			files = (
 				5466C56318082D4200652BDC /* RBBBlockBasedArraySpec.m in Sources */,
 				549ECA8418F6ECFC00D968C7 /* RBBSpringAnimationSpec.m in Sources */,
+				549ECA8618F7010400D968C7 /* RBBDampedHarmonicOscillatonSpec.m in Sources */,
+				549ECA8818F7028E00D968C7 /* RBBRubberbandAnimationSpec.m in Sources */,
 				540F65AB18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
