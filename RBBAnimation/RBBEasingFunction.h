@@ -26,3 +26,7 @@ extern RBBEasingFunction const RBBEasingFunctionEaseInOutQuart;
 
 extern RBBEasingFunction const RBBEasingFunctionEaseInBounce;
 extern RBBEasingFunction const RBBEasingFunctionEaseOutBounce;
+
+extern RBBEasingFunction const RBBEasingFunctionEaseInExpo;
+extern RBBEasingFunction const RBBEasingFunctionEaseOutExpo;
+extern RBBEasingFunction const RBBEasingFunctionEaseInOutExpo;
