@@ -14,19 +14,19 @@
 #define POW(X, Y) powf(X, Y)
 #endif
 
-RBBEasingFunction const RBBEasingFunctionLinear = ^(CGFloat t) {
+RBBEasingFunction const RBBEasingFunctionLinear = ^CGFloat(CGFloat t) {
     return t;
 };
 
-RBBEasingFunction const RBBEasingFunctionEaseInQuad = ^(CGFloat t) {
+RBBEasingFunction const RBBEasingFunctionEaseInQuad = ^CGFloat(CGFloat t) {
     return t * t;
 };
 
-RBBEasingFunction const RBBEasingFunctionEaseOutQuad = ^(CGFloat t) {
+RBBEasingFunction const RBBEasingFunctionEaseOutQuad = ^CGFloat(CGFloat t) {
     return t * (2 - t);
 };
 
-RBBEasingFunction const RBBEasingFunctionEaseInOutQuad = ^(CGFloat t) {
+RBBEasingFunction const RBBEasingFunctionEaseInOutQuad = ^CGFloat(CGFloat t) {
     if (t < 0.5) {
         return 2 * t * t;
     } else {
@@ -34,15 +34,15 @@ RBBEasingFunction const RBBEasingFunctionEaseInOutQuad = ^(CGFloat t) {
     }
 };
 
-RBBEasingFunction const RBBEasingFunctionEaseInCubic = ^(CGFloat t) {
+RBBEasingFunction const RBBEasingFunctionEaseInCubic = ^CGFloat(CGFloat t) {
     return t * t * t;
 };
 
-RBBEasingFunction const RBBEasingFunctionEaseOutCubic = ^(CGFloat t) {
+RBBEasingFunction const RBBEasingFunctionEaseOutCubic = ^CGFloat(CGFloat t) {
     return POW(t - 1, 3) + 1;
 };
 
-RBBEasingFunction const RBBEasingFunctionEaseInOutCubic = ^(CGFloat t) {
+RBBEasingFunction const RBBEasingFunctionEaseInOutCubic = ^CGFloat(CGFloat t) {
     if (t < 0.5) {
         return 4 * POW(t, 3);
     } else {
@@ -86,17 +86,17 @@ RBBEasingFunction const RBBEasingFunctionEaseOutBounce = ^CGFloat(CGFloat t) {
     return 63.0 / 64.0 + POW(11.0 / 4.0, 2) * POW(t - 21.0 / 22.0, 2);
 };
 
-RBBEasingFunction const RBBEasingFunctionEaseInExpo = ^(CGFloat t) {
-    return t == 0.0 ? 0.0 : POW(2, 10 * (t - 1));
+RBBEasingFunction const RBBEasingFunctionEaseInExpo = ^CGFloat(CGFloat t) {
+    return t == 0 ? 0.0 : POW(2, 10 * (t - 1));
 };
 
-RBBEasingFunction const RBBEasingFunctionEaseOutExpo = ^(CGFloat t) {
-    return t == 1.0 ? 1.0 : 1 - POW(2, - 10 * t);
+RBBEasingFunction const RBBEasingFunctionEaseOutExpo = ^CGFloat(CGFloat t) {
+    return (t == 1.0) ? 1 : 1 - POW(2, - 10 * t);
 };
 
-RBBEasingFunction const RBBEasingFunctionEaseInOutExpo = ^(CGFloat t) {
-    if (t == 0.0) return 0.0;
-    if (t == 1.0) return 1.0;
+RBBEasingFunction const RBBEasingFunctionEaseInOutExpo = ^CGFloat(CGFloat t) {
+    if (t == 0) {return 0.0;}
+    if (t == 1) {return 1.0;}
     
     if (t < 0.5) {
         return POW(2, 10 * (2 * t - 1)) / 2;
