@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		540F65A318F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */; };
+		540F65A318F81DC9005A6BB8 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		540F65A718F82347005A6BB8 /* NSValue+PlatformIndependence.h in Headers */ = {isa = PBXBuildFile; fileRef = 540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		540F65A818F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */; };
 		540F65A918F82347005A6BB8 /* NSValue+PlatformIndependence.m in Sources */ = {isa = PBXBuildFile; fileRef = 540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */; };
@@ -110,8 +110,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		288615584456976E0663A0C5 /* Pods-RBBAnimationTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBBAnimationTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RBBAnimationTest/Pods-RBBAnimationTest.release.xcconfig"; sourceTree = "<group>"; };
+		3E441AF5FD5F61A5ACBC325F /* Pods-Specs-Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs-Mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs-Mac/Pods-Specs-Mac.debug.xcconfig"; sourceTree = "<group>"; };
 		540F65A018F8188F005A6BB8 /* RBBAnimation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RBBAnimation-Info.plist"; sourceTree = "<group>"; };
-		540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-RBBAnimationTest.xcconfig"; path = "Pods/Pods-RBBAnimationTest.xcconfig"; sourceTree = "<group>"; };
 		540F65A518F82347005A6BB8 /* NSValue+PlatformIndependence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+PlatformIndependence.h"; sourceTree = "<group>"; };
 		540F65A618F82347005A6BB8 /* NSValue+PlatformIndependence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+PlatformIndependence.m"; sourceTree = "<group>"; };
 		540F65AA18F82B3E005A6BB8 /* RBBLinearInterpolationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBLinearInterpolationSpec.m; sourceTree = "<group>"; };
@@ -167,11 +168,13 @@
 		54F3AE3B1807394800E1E688 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		54F3AE3E1807394800E1E688 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		54F3AE5318073A1900E1E688 /* Specs-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		74ABD43AFADA521EF3D0EC21 /* Pods-Specs-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs-iOS/Pods-Specs-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7582873345F4B52FF68854CB /* Pods-Specs-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs-iOS/Pods-Specs-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		9764F4EDA8D64676ADE7428E /* libPods-RBBAnimationTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RBBAnimationTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C7CF8386EA4D9896C0AD15 /* libPods-Specs-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0948F68E34B4F709D3DF063 /* Pods-Specs-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs-iOS.xcconfig"; path = "Pods/Pods-Specs-iOS.xcconfig"; sourceTree = "<group>"; };
-		CC5CA24990AD48078DC318EC /* Pods-Specs-Mac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs-Mac.xcconfig"; path = "Pods/Pods-Specs-Mac.xcconfig"; sourceTree = "<group>"; };
+		D2A7704395D460556362784E /* Pods-Specs-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs-Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs-Mac/Pods-Specs-Mac.release.xcconfig"; sourceTree = "<group>"; };
 		E856D162B1FB41A29C1DD243 /* libPods-Specs-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED73BC249900E38EB30B303F /* Pods-RBBAnimationTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RBBAnimationTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RBBAnimationTest/Pods-RBBAnimationTest.debug.xcconfig"; sourceTree = "<group>"; };
 		FD960C698C3E4DB198BD591C /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -278,9 +281,7 @@
 				5466C56D180849D200652BDC /* RBBAnimationTest */,
 				54F3AE2C1807394800E1E688 /* Frameworks */,
 				54F3AE2B1807394800E1E688 /* Products */,
-				540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */,
-				CC5CA24990AD48078DC318EC /* Pods-Specs-Mac.xcconfig */,
-				C0948F68E34B4F709D3DF063 /* Pods-Specs-iOS.xcconfig */,
+				AF8189F9DF1EC1EA504BCBB0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -371,6 +372,19 @@
 				54F3AE5318073A1900E1E688 /* Specs-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF8189F9DF1EC1EA504BCBB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED73BC249900E38EB30B303F /* Pods-RBBAnimationTest.debug.xcconfig */,
+				288615584456976E0663A0C5 /* Pods-RBBAnimationTest.release.xcconfig */,
+				3E441AF5FD5F61A5ACBC325F /* Pods-Specs-Mac.debug.xcconfig */,
+				D2A7704395D460556362784E /* Pods-Specs-Mac.release.xcconfig */,
+				74ABD43AFADA521EF3D0EC21 /* Pods-Specs-iOS.debug.xcconfig */,
+				7582873345F4B52FF68854CB /* Pods-Specs-iOS.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,7 +572,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				540F65A318F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig in Resources */,
+				540F65A318F81DC9005A6BB8 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,7 +634,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Specs-iOS-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs-iOS/Pods-Specs-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8F58412594AB4B62BD72EB53 /* Check Pods Manifest.lock */ = {
@@ -650,7 +664,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Disabled for the time being since it picks up the .xcassets\n# catalogue in the test app\n# \"${SRCROOT}/Pods/Pods-Specs-Mac-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs-Mac/Pods-Specs-Mac-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5CEBE251F3B4BF0A09218AC /* Copy Pods Resources */ = {
@@ -665,7 +679,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-RBBAnimationTest-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RBBAnimationTest/Pods-RBBAnimationTest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -771,7 +785,7 @@
 /* Begin XCBuildConfiguration section */
 		5466C58E180849D200652BDC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */;
+			baseConfigurationReference = ED73BC249900E38EB30B303F /* Pods-RBBAnimationTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -794,7 +808,7 @@
 		};
 		5466C58F180849D200652BDC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 540F65A218F81DC9005A6BB8 /* Pods-RBBAnimationTest.xcconfig */;
+			baseConfigurationReference = 288615584456976E0663A0C5 /* Pods-RBBAnimationTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -833,7 +847,7 @@
 				INFOPLIST_FILE = "RBBAnimation/RBBAnimation-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -857,14 +871,14 @@
 				INFOPLIST_FILE = "RBBAnimation/RBBAnimation-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
 		549ECABB18F814A000D968C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC5CA24990AD48078DC318EC /* Pods-Specs-Mac.xcconfig */;
+			baseConfigurationReference = 3E441AF5FD5F61A5ACBC325F /* Pods-Specs-Mac.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -887,7 +901,7 @@
 		};
 		549ECABC18F814A000D968C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC5CA24990AD48078DC318EC /* Pods-Specs-Mac.xcconfig */;
+			baseConfigurationReference = D2A7704395D460556362784E /* Pods-Specs-Mac.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1001,7 +1015,7 @@
 		};
 		54F3AE511807394800E1E688 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0948F68E34B4F709D3DF063 /* Pods-Specs-iOS.xcconfig */;
+			baseConfigurationReference = 74ABD43AFADA521EF3D0EC21 /* Pods-Specs-iOS.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1020,7 +1034,7 @@
 		};
 		54F3AE521807394800E1E688 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0948F68E34B4F709D3DF063 /* Pods-Specs-iOS.xcconfig */;
+			baseConfigurationReference = 7582873345F4B52FF68854CB /* Pods-Specs-iOS.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

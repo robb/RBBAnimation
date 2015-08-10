@@ -1,15 +1,5 @@
 language: objective-c
 
-before_install:
-    - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
-    - export LANG=en_US.UTF-8
-    - gem update --system
-    - gem install cocoapods xcpretty
-
-notifications:
-    email:
-        on_success: change
-        on_failure: always
-
 script:
-    - script/ci
+    - xcodebuild -workspace RBBAnimation.xcworkspace -scheme "RBBAnimation iOS" test
+    - xcodebuild -workspace RBBAnimation.xcworkspace -scheme "RBBAnimation Mac" test
