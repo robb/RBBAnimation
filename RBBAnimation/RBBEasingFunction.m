@@ -91,12 +91,12 @@ RBBEasingFunction const RBBEasingFunctionEaseInExpo = ^CGFloat(CGFloat t) {
 };
 
 RBBEasingFunction const RBBEasingFunctionEaseOutExpo = ^CGFloat(CGFloat t) {
-    return (t == 1.0) ? 1 : 1 - POW(2, - 10 * t);
+    return t == 1.0 ? 1 : 1 - POW(2, - 10 * t);
 };
 
 RBBEasingFunction const RBBEasingFunctionEaseInOutExpo = ^CGFloat(CGFloat t) {
-    if (t == 0) {return 0.0;}
-    if (t == 1) {return 1.0;}
+    if (t == 0) return 0.0;
+    if (t == 1) return 1.0;
     
     if (t < 0.5) {
         return POW(2, 10 * (2 * t - 1)) / 2;
