@@ -55,7 +55,7 @@ RBBEasingFunction const RBBEasingFunctionEaseInQuart = ^(CGFloat t) {
 };
 
 RBBEasingFunction const RBBEasingFunctionEaseOutQuart = ^(CGFloat t) {
-    return POW(t - 1, 4) + 1;
+    return 1 - POW(t - 1, 4);
 };
 
 RBBEasingFunction const RBBEasingFunctionEaseInOutQuart = ^(CGFloat t) {
